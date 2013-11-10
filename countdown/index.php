@@ -42,7 +42,21 @@
     <!--  -->
 
     <div id="countdown">
-      <span class="days" ></span>:<span class="hours" ></span>:<span class="minutes" ></span>:<span class="seconds" ></span>
+      <span class="days1"></span>
+      <span class="days2"></span>
+      <span class="unity_days">d</span>
+
+      <span class="hours1" ></span>
+      <span class="hours2" ></span>
+      <span class="unity_hours">h</span>
+
+      <span class="minutes1" ></span>
+      <span class="minutes2" ></span>
+      <span class="unity_minutes">m</span>
+
+      <span class="seconds1" ></span>
+      <span class="seconds2" ></span>
+      <span class="unity_seconds">s</span>
     </div>
 
    </body>

@@ -18,36 +18,88 @@ var countdown =
 		var hours = Math.floor((countSeconds - (days * 60 * 60 * 24)) / (60 * 60));
 		var minutes = Math.floor((countSeconds - ((days * 60 * 60 * 24 + hours * 60 * 60))) / 60);
 		var seconds = Math.floor(countSeconds - ((days * 60 * 60 * 24 + hours * 60 * 60 + minutes * 60)));
-		if(this.days != days)
-		{
-			this.fadeNewDate('date',date);
+
+		var tab = new Array();
+		tab[0] = parseInt(days/10).toString();
+		tab[1] = (days%10).toString();
+		tab[2] = parseInt(hours/10).toString();
+		tab[3] = (hours%10).toString();
+		tab[4] = parseInt(minutes/10).toString();
+		tab[5] = (minutes%10).toString();
+		tab[6] = parseInt(seconds/10).toString();
+		tab[7] = (seconds%10).toString();
+		
+		if(this.days != days){
+			if(parseInt(this.days/10) != parseInt(days/10))
+			{
+				this.fadeNewDate('days1',tab[0]);
+			}
+			this.fadeNewDate('days2',tab[1]);
 		}
-		else
-		{
-			$('.days').html(days);
+		else{
+			if(days != 0){
+				$('.unity_days').show();
+				$('.days1').html(tab[0]);
+				$('.days2').html(tab[1]);
+			}
+			else{
+				$('.unity_days').hide();
+			}	
 		}
 
-		if(this.hours != hours)
-		{
-
-			this.fadeNewDate('hours',hours);
+		if(this.hours != hours){
+			if(parseInt(this.hours/10) != parseInt(hours/10))
+			{
+				this.fadeNewDate('hours1',tab[2]);
+			}
+			this.fadeNewDate('hours2',tab[3]);
 		}
-		else
-		{
-			$('.hours').html(hours);
-		}
-
-		if(this.minutes != minutes)
-		{
-
-			this.fadeNewDate('minutes',minutes);
-		}
-		else
-		{
-			$('.minutes').html(minutes);
+		else{
+			if(hours != 0){
+				$('.unity_hours').show();
+				$('.hours1').html(tab[2]);
+				$('.hours2').html(tab[3]);
+			}	
+			else{
+				$('.unity_hours').hide();
+			}
 		}
 
-		this.fadeNewDate('seconds',	seconds);
+		if(this.minutes != minutes){
+			if(parseInt(this.minutes/10) != parseInt(minutes/10))
+			{
+				this.fadeNewDate('minutes1',tab[4]);
+			}
+			this.fadeNewDate('minutes2',tab[5]);
+		}
+		else{
+			if(minutes != 0){
+				$('.unity_minutes').show();
+				$('.minutes1').html(tab[4]);
+				$('.minutes2').html(tab[5]);
+			}	
+			else{
+				$('.unity_minutes').hide();
+			}	
+		}
+
+		if(this.seconds != seconds){
+			if(parseInt(this.seconds/10) != parseInt(seconds/10))
+			{
+				this.fadeNewDate('seconds1',tab[6]);
+			}
+			this.fadeNewDate('seconds2',tab[7]);
+		}
+		else{
+			if(seconds != 0){
+				$('.unity_seconds').show();
+				$('.seconds1').html(tab[6]);
+				$('.seconds2').html(tab[7]);
+			}	
+			else{
+				$('.unity_seconds').hide();
+			}	
+		}
 		this.update(days,hours,minutes,seconds);
 	},
 
@@ -60,8 +112,8 @@ var countdown =
 		this.seconds = seconds;
 	},
 
-	fadeNewDate : function(target,value)
-	{		
+	fadeNewDate : function(target,figure)
+	{	
 		$("."+target).animate(
 		{
 			"top" : "+=100",
@@ -69,7 +121,7 @@ var countdown =
 		}, 100,
 		function()
 		{
-			$("."+target).html(value);
+			$("."+target).html(figure);
 			$("."+target).css('top', "-=200");
 			$("."+target).animate({
 				"top" : "+=100",

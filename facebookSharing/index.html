@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+	<head>
+    <title>Facebook Sharing</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <style>
+      li{float: left;list-style: none;cursor: pointer;}
+
+     </style>
+ </head>
+ 
+  <body>
+     <!-- Facebook Connect  -->
+    <div id="fb-root"></div>
+    <script src="js/facebookConnect.js" type="text/javascript"></script>
+    <div id="facebookContent"></div>
+    <!-- TODO: Updater les permissions -->
+    <fb:login-button show-faces="false" width="200" perms="email,publish_actions" id="fbConnectButton"></fb:login-button>
+    <!--  --> 
+
+    <ul id="moods">
+
+      <li>
+        <img id="happy" src="img/happy.png"/>
+      </li>
+
+      <li>
+        <img id="asto" src="img/astonished.png"/>
+      </li>
+
+      <li>
+        <img id="sad" src="img/sad.png"/>
+      </li>
+
+    </ul>
+
+
+    <div id="shareCallback"></div>
+
+   
+
+</html>
+
+

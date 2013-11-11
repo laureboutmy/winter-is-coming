@@ -1,65 +1,64 @@
-$(function(){
-	// var player = document.getElementById('player');
-	// player.addEventListener('timeupdate', checkTime);
+// SETUP
+player.init({
+	video: '#video',
+	progress: '.progress',
+	control: '#progress-bar',
+	button: '#play-button',
+	file: 'random.json',
+	loaded: function(){
+		console.log('loaded');
+		player.playPause();
+	},
+	playing: function(){
+		console.log('playing');
+		$(player.prop.video).addClass('play');
+		$(player.prop.button).text('pause');
 
-	
-
-	var p = new player({
-	    media: '#video',
-	  	controller: '#progress-bar',
-	  	progress: '#progress-bar :nth-child(1)',
-	  	buffer: '#progress-bar :nth-child(2)',
-	  	loaded: function(player){ 
-	  		document.getElementById('button').classList.remove('loading');
-	  		console.log('loaded');
-	  		player.playPause(); 
-	  	},
-	  	played: function(){
-	  		document.getElementById('video').classList.add('play');
-	  		document.getElementById('button').classList.add('off');
-	  		console.log('playing'); 
-	  	},
-	  	paused: function(){
-	  		document.getElementById('button').classList.remove('off');
-	  		console.log('paused'); 
-	  	},
-	  	moved: function(){
-	  	  	console.log('video moved'); 
-	  	},
-	  	onTimeUpdate: checkTime
-	});
-  	document.getElementById('button').addEventListener('click', p.playPause, false);
-  	document.getElementById('progress-bar').addEventListener('click', p.setVideoTime, false);
-  	document.getElementById('video').addEventListener('click', p.playPause, false);
-
-
-
-  	function checkTime() {
-		if(this.currentTime > 2){
-			$('.e').addClass('visible');
-		}
-		if(this.currentTime > 4){
-			$('.e').prependTo('#feed')
-		}
-		if(this.currentTime > 5){
-			$('.f').addClass('visible');
-		}
-		if(this.currentTime > 7){
-			$('.f').prependTo('#feed')
-		}
-
-		if(this.currentTime > 7){
-			$('.g').addClass('visible');
-		}
-		if(this.currentTime > 8){
-			$('.g').prependTo('#feed')
-		}
-
-		if(this.currentTime > 9){
-			$('.h').addClass('visible');
-		}
-		if(this.currentTime > 12){
-			$('.h').prependTo('#feed')
-		}
+	},
+	randomized: function(){
+		// behaviors
+	},
+	paused: function(){
+		$(player.prop.video).removeClass('play');
+		$(player.prop.button).text('play');
+	},
+	onTimeUpdate: function(currentTime){
+		checkTime(currentTime);
 	}
 });
+
+player.load();
+$('#video, #play-button').on('click', player.playPause);
+$('#progress-bar').on('click',player.setTime);
+
+console.log(timeline);
+
+var timeline = timeline;
+
+  	function checkTime(currentTime) {
+  		for (key in timeline) {
+  			var evt = timeline[key];
+
+			if(currentTime > evt.displayTime && !evt.displayed){
+				var evtDiv = $('<div>').text(evt.content).addClass('evt visible').attr('data-key', evt.displayTime);
+				evt.displayed = true;
+				console.log(evt.displayed);
+				$('#main').append(evtDiv);
+				// placeMarker();
+				var evtMarker = $('<a>').addClass('evt').attr('href', '#').attr('data-key', evt.displayTime).text('.');
+				evtMarker.css({
+					left: 50 * 100 / $('#player nav').width() + evt.displayTime * 100 / player.media.duration + '%'
+				}).appendTo('#player nav')
+				evtMarker.on('click', goToMarker);
+			} 
+			if(currentTime > evt.hiddenTime && !evt.hidden){
+				$('#main').find('div[data-key=' + evt.displayTime + ']').prependTo('#timeline');
+				evt.hidden = true;
+			}
+		}
+	}
+
+	function goToMarker(e){
+		e.preventDefault();
+		player.setTime(e, $(this).data('key'));
+	}

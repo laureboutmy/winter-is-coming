@@ -1,0 +1,22 @@
+timeline = [
+	{
+		"displayed": false,
+		"displayTime": 1,
+		"hidden": false,
+		"hiddenTime": 4,
+		"category": "goods",
+		"title": "title",
+		"content": "Discover this fantastic necklace Laure is wearing in this scene !",
+		"link": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 3,
+		"hidden": false,
+		"hiddenTime": 5,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"link": "http://www.google.fr"
+	}
+]

@@ -38,6 +38,20 @@ var player = {
 		}
 	}, 
 
+	play: function(){
+		if(player.media.paused){
+			player.media.play();
+			player.prop.playing.call(this);
+		} 
+	}, 
+
+	pause: function(){
+		if(!player.media.paused){
+			player.media.pause();
+			player.prop.paused.call(this);
+		}
+	},
+
 	setTime: function(e, time){
 		if(time){
 			player.media.currentTime = time;

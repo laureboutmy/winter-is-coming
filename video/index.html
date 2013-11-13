@@ -18,43 +18,52 @@
 
 	<!-- STYLESHEETS -->      
 	<link href="assets/styles/reset.css" rel="stylesheet" type="text/css" /> 
+	<link href="assets/styles/nanoscroller.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/global.css" rel="stylesheet" type="text/css" />
     <!-- /STYLESHEETS -->
 
 </head>
 <body>
-	<section id="main">
-		<section id="player">
-			<video id="video" preload="none" src="assets/videos/video.mp4" muted>
-				Plz get Internet
-			</video>
-			
-			<nav>
-				<div id="play-button">
-					play
-					<span></span>
-					<span></span>
-				</div><!-- 
-				 --><div id="progress-bar">
-					<span class="progress"></span>
-					<span class="buffer"></span>
+	<section id="wrapper">
+		<section id="wrapper-rel">
+			<section id="main">
+				<section id="player">
+					<video id="video" preload="none" src="assets/videos/video.mp4" muted>
+						Plz get Internet
+					</video>
+					<nav>
+						<div id="play-button">
+							play
+							<span></span>
+							<span></span>
+						</div><!-- /div#play-button 
+						 --><div id="progress-bar">
+							<span class="progress"></span>
+							<span class="buffer"></span>
+						</div><!-- /div#progress-bar -->
+					</nav>
+				</section><!-- /section#player -->
+				<section id="timeline" class="nano">
+					<div class="content">
+						<a href="#" class="browser">FEEEEEED</a>
+					</div>
+				</section><!-- /section#timeline -->
+			</section>
+
+			<section id="browser">
+				<a href="#" id="close-browser">x</a>
+				<div>
 				</div>
-			</nav>
-		</section>
-		<section id="timeline">
-			FEEEEEED
-		</section>
-		
-	</section>
-	<!-- <p class="current-time">attentiooooon...</p> -->
+			</section><!-- /section#browser -->
+		</section><!-- /section#wrapper-rel -->
+	</section><!-- /section#wrapper -->
 
 	<!-- SCRIPTS -->
 	<script src="assets/scripts/libs/jquery-1.10.1.min.js"></script>
+	<script src="assets/scripts/libs/jquery.nanoscroller.js"></script>
 	<script src="assets/scripts/libs/video.js"></script>
 	<script src="assets/data/timeline.jsonp"></script>
 	<script src="assets/scripts/scripts.js"></script>
-
-
 	<!-- /SCRIPTS -->
 </body>
 </html>

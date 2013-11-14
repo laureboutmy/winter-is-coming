@@ -1,4 +1,4 @@
-timeline = [
+cards = [
 	{
 		"displayed": false,
 		"displayTime": 1,

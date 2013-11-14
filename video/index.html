@@ -25,6 +25,7 @@
 </head>
 <body>
 	<section id="wrapper">
+		<div id="close-browser"></div>
 		<section id="wrapper-rel">
 			<section id="main">
 				<section id="player">
@@ -43,12 +44,25 @@
 						</div><!-- /div#progress-bar -->
 					</nav>
 				</section><!-- /section#player -->
-				<section id="timeline" class="nano">
-					<div class="content">
-						<a href="#" class="browser">FEEEEEED</a>
-					</div>
-				</section><!-- /section#timeline -->
-			</section>
+				<section id="sidebar">
+					<nav>
+						<ul>
+							<li><a href="#">Timeline</a></li>
+							<li><a href="#">Feed</a></li>
+							<li><a href="#">Badges</a></li>
+						</ul>
+					</nav>
+
+					<section id="timeline" class="nano">
+						<div class="content">
+							<a href="#" class="browser">FEEEEEED</a>
+						</div>
+					</section><!-- /section#timeline -->
+
+					<section id="feed">
+					</section><!-- /section#feed -->
+				</section><!-- /section#sidebar -->
+			</section><!-- /section#main -->
 
 			<section id="browser">
 				<a href="#" id="close-browser">x</a>
@@ -62,7 +76,8 @@
 	<script src="assets/scripts/libs/jquery-1.10.1.min.js"></script>
 	<script src="assets/scripts/libs/jquery.nanoscroller.js"></script>
 	<script src="assets/scripts/libs/video.js"></script>
-	<script src="assets/data/timeline.jsonp"></script>
+	<script src="assets/data/cards.jsonp"></script>
+	<script src="assets/scripts/libs/timeline.js"></script>
 	<script src="assets/scripts/scripts.js"></script>
 	<!-- /SCRIPTS -->
 </body>

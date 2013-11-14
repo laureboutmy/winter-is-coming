@@ -32,71 +32,46 @@ player.init({
 
 player.load();
 $('#video, #play-button').on('click', player.playPause);
-$('#progress-bar').on('click',player.setTime);
+$('#progress-bar').on('click', player.setTime);
 
-console.log(timeline);
 
-var timeline = timeline;
+var cards = cards;
+
+timeline.init({
+	timeline: '#timeline .content',
+	rendered: function(){
+		console.log('displayed');
+	}
+});
+
+// markers.init({
+
+// })
 
 function checkTime(currentTime) {
-	for (key in timeline) {
-		var evt = timeline[key];
+	for (key in cards) {
+		var card = cards[key];
 
-		if(currentTime > evt.displayTime && !evt.displayed){
-			if(evt.browser){
-				var evtA = $('<a>').attr('data-url', evt.url).attr('href', '#').addClass('browser').attr('data-key', evt.displayTime);
-				var evtDiv = $('<div>').text(evt.content).addClass('evt visible').attr('data-key', evt.displayTime);
-				evtDiv = evtA.append(evtDiv);
-				console.log(evtDiv);
-			} else {
-				var evtDiv = $('<div>').text(evt.content).addClass('evt visible').attr('data-key', evt.displayTime);
-			}
-
-			evt.displayed = true;
-			$('#main').append(evtDiv);
-			if(evt.browser){ evtDiv.on('click', showBrowser); }
-			displayMarker(evt);
+		if(currentTime > card.displayTime && !card.displayed){
+			timeline.render(card);
+			timeline.addMarker(card);
 		} 
 
-		if(currentTime > evt.hiddenTime && !evt.hidden){
-			if(evt.browser){
-				$('#main').find('a.browser[data-key=' + evt.displayTime + ']').prependTo('#timeline .content');
-				unbindLinks();
-				bindLinks();
-			} else {
-				$('#main').find('div[data-key=' + evt.displayTime + ']').prependTo('#timeline .content');
-			}
-			evt.hidden = true;
+		if(currentTime > card.hiddenTime && !card.hidden){
+			timeline.move(card);
 		}
 	}
 }
 
-function displayMarker(evt){
-	console.log('hey');
-	var evtMarker = $('<a>').addClass('evt').attr('href', '#').attr('data-key', evt.displayTime).text('.');
-	evtMarker.css({
-		left: 50 * 100 / $('#player nav').width() + evt.displayTime * 100 / player.media.duration + '%'
-	}).appendTo('#player nav')
-	evtMarker.on('click', goToMarker);
-}
-
-function goToMarker(e){
-	e.preventDefault();
-	player.setTime(e, $(this).data('key'));
-}
-
-function bindLinks(){
-	$('a.browser').on('click', showBrowser);
-}
-
-function unbindLinks(){
-	$('a.browser').off('click', showBrowser);
-}
+$('#main').on('click', 'a.browser', showBrowser);
+$('#player nav').on('click', 'a.evt', goToMarker);
 
 function showBrowser(e){
 	e.preventDefault();
 	player.pause();
 	var url = $(this).data('url');
+
+	$('div#close-browser').addClass('visible');
 
 	if(!$('#wrapper-rel').hasClass('display-browser')){
 		$('#wrapper-rel').addClass('display-browser');
@@ -117,6 +92,25 @@ function showBrowser(e){
 function hideBrowser(e){
 	e.preventDefault();
 	$('#wrapper-rel').removeClass('display-browser');
+	$('div#close-browser').removeClass('visible');
 	$('#close-browser').off('click', hideBrowser);
 	player.play();
 }
+
+function displayMarker(card){
+	console.log('hey');
+	var evtMarker = $('<a>').addClass('evt').attr('href', '#').attr('data-key', card.displayTime).text('.');
+	evtMarker.css({
+		left: 50 * 100 / $('#player nav').width() + card.displayTime * 100 / player.media.duration + '%'
+	}).appendTo('#player nav')
+	
+}
+
+function goToMarker(e){
+	e.preventDefault();
+	player.setTime(e, $(this).data('key'));
+}
+
+
+
+

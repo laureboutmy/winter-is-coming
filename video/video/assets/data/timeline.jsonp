@@ -1,0 +1,126 @@
+timeline = [
+	{
+		"displayed": false,
+		"displayTime": 1,
+		"hidden": false,
+		"hiddenTime": 2,
+		"category": "goods",
+		"title": "title",
+		"content": "Discover this fantastic necklace Laure is wearing in this scene !",
+		"browser": true,
+		"url": "assets/data/test.html"
+	}, 
+	{
+		"displayed": false,
+		"displayTime": 2,
+		"hidden": false,
+		"hiddenTime": 3,
+		"category": "goods",
+		"title": "title",
+		"content": "Discover this fantastic necklace Laure is wearing in this scene !",
+		"browser": true,
+		"url": "assets/data/test2.html"
+	}, 
+	
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 5,
+		"hidden": false,
+		"hiddenTime": 6,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 7,
+		"hidden": false,
+		"hiddenTime": 8,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"browser": true,
+		"url": "assets/data/test2.html"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 9,
+		"hidden": false,
+		"hiddenTime": 10,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 10,
+		"hidden": false,
+		"hiddenTime": 11,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 12,
+		"hidden": false,
+		"hiddenTime": 13,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 13,
+		"hidden": false,
+		"hiddenTime": 14,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"link": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 15,
+		"hidden": false,
+		"hiddenTime": 16,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 16,
+		"hidden": false,
+		"hiddenTime": 17,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 23,
+		"hidden": false,
+		"hiddenTime": 25,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}, 
+	{
+		"title": "title",
+		"displayed": false,
+		"displayTime": 26,
+		"hidden": false,
+		"hiddenTime": 27,
+		"category": "soundtrack",
+		"content": "OK (feat. Elif Biçer) Ben Klock",
+		"url": "http://www.google.fr"
+	}
+]

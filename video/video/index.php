@@ -53,6 +53,8 @@
 				<section id="timeline" class="nano">
 
 					<!-- Rajout Dorian -->
+
+					<!-- NAV UL LI -->
 					<section id="menu">
 						<span class="menuTimeline" >Timeline</span>
 						<span class="menuTweets" >Tweets</span>
@@ -61,7 +63,6 @@
 					<section class="tweets">
 						<div id="twitterConnect">
 					      <a href="assets/twitter/twitterConnect.php">Se connecter avec Twitter</a> 
-					      <!-- <a href="#" onclick="window.open('http://doriancamilleri.fr/player/video/video/assets/twitter/twitterConnect.php', 'Twitter', 'width=640,height=480');">Login to Twitter</a> -->
 					    </div>
 						<section id="tweetBox">
 							<span class="nbCharacter"></span>

@@ -60,7 +60,6 @@ function checkTime(currentTime) {
 
 		if(currentTime > evt.hiddenTime && !evt.hidden){
 			if(evt.browser){
-				console.log('heeeey')
 				$('#main').find('a.browser[data-key=' + evt.displayTime + ']').prependTo('#timeline .content');
 				unbindLinks();
 				bindLinks();
@@ -73,6 +72,7 @@ function checkTime(currentTime) {
 }
 
 function displayMarker(evt){
+	console.log('hey');
 	var evtMarker = $('<a>').addClass('evt').attr('href', '#').attr('data-key', evt.displayTime).text('.');
 	evtMarker.css({
 		left: 50 * 100 / $('#player nav').width() + evt.displayTime * 100 / player.media.duration + '%'
@@ -97,7 +97,7 @@ function showBrowser(e){
 	e.preventDefault();
 	player.pause();
 	var url = $(this).data('url');
-	
+
 	if(!$('#wrapper-rel').hasClass('display-browser')){
 		$('#wrapper-rel').addClass('display-browser');
 		$('#close-browser').on('click', hideBrowser);
@@ -118,4 +118,5 @@ function hideBrowser(e){
 	e.preventDefault();
 	$('#wrapper-rel').removeClass('display-browser');
 	$('#close-browser').off('click', hideBrowser);
+	player.play();
 }

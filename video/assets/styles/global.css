@@ -25,11 +25,11 @@ video { opacity: 1; -webkit-transition: opacity 5s; display: block; margin: 0 au
 #progress-bar .progress { z-index: 7; }
 #progress-bar .buffer { opacity: .5; }
 
-#player nav > .evt { z-index: 10; width: 20px; height: 20px; position: absolute; top: -25px; display: block; margin-left: -20px; background-color: #fff; text-align: center;}
-#player nav > .evt:hover { background-color: #f6465e; }
-#player nav > .evt:before { content: ''; z-index: 20; position: relative; top: 20px; left: 5%; color: #fff; width: 20px; padding-bottom: 40px; border-left: 1px solid #fff;}
+#player nav .evt { z-index: 10; width: 20px; height: 20px; position: absolute; top: -25px; display: block; margin-left: -20px; background-color: #fff; text-align: center;}
+#player nav .evt:hover { background-color: #f6465e; }
+#player nav .evt:before { content: ''; z-index: 20; position: relative; top: 20px; left: 5%; color: #fff; width: 20px; padding-bottom: 40px; border-left: 1px solid #fff;}
 
-#main  .evt, #timeline .evt {
+#main > .evt, #timeline .evt {
 	border: 1px solid #eee;
 	background: rgba(0,0,0,0.5);
 	width: 40%;

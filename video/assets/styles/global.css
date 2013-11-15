@@ -8,23 +8,18 @@ body { background: #000; color: #fff; font-family: 'Proxima Nova'; }
 
 
 #player { width: 80%; height: 100%; position: relative; left: 0; top: 0; }
-#timeline { width: 20%; height: 100%; background-color: rgba(0, 0, 0, 1); position: absolute; right: 0; top: 0; overflow-y: hidden;}
+#sidebar { width: 20%; height: 100%; background-color: rgba(0, 0, 0, 1); position: absolute; right: 0; top: 0; overflow: hidden;}
+#sidebar nav { text-align: center; }
+#sidebar nav ul li { display: inline-block; }
+#timeline { color: #fff; top: 20px; width: 100%; height: 100%; position: absolute; right: 0;  -webkit-transition: right 0.3s ease-out; }
+#feed { width: 100%; top: 20px; height: 100%; position: absolute; right: 0; -webkit-transition: right 0.3s ease-out; }
+#badges { width: 100%; top: 20px; height: 100%; position: absolute; right: 0; -webkit-transition: right 0.3s ease-out; }
+#timeline.hidden, #feed.hidden, #badges.hidden { right: -100%; }
+
 #browser { width: 50%; position: relative; left: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); display: inline-block; }
 #browser a#close-browser { display: block; width: 20px; height: 20px; position: absolute; right: 0; top: 0; background: pink; }
-div#close-browser {
-	display: none;
-	position: absolute;
-	width: 25%;
-	height: 100%;
-	cursor: pointer;
-	visibility: hidden;
-	z-index: 0;
-}
-div#close-browser.visible {
-	display: block;
-	visibility: visible;
-	z-index: 100;
-}
+div#close-browser { display: none; position: absolute; width: 25%; height: 100%; visibility: hidden; z-index: 0; }
+div#close-browser.visible { display: block; visibility: visible; z-index: 100; }
 
 video { opacity: 1; -webkit-transition: opacity 5s; display: block; margin: 0 auto; width: 100%; height: 100%; }
 
@@ -43,48 +38,18 @@ video { opacity: 1; -webkit-transition: opacity 5s; display: block; margin: 0 au
 #player nav .evt:hover { background-color: #f6465e; }
 #player nav .evt:before { content: ''; z-index: 20; position: relative; top: 20px; left: 5%; color: #fff; width: 20px; padding-bottom: 40px; border-left: 1px solid #fff;}
 
-#main > .evt, #timeline .evt {
-	border: 1px solid #eee;
-	background: rgba(0,0,0,0.5);
-	width: 40%;
-	height: 80px;
-	opacity: 0;
-	position: absolute;
-	top: 20px;
-	z-index: 100;
-	left: 50%;
-	margin-left: -30%;
-}
-
-#main .evt.visible {
-	opacity: 1;
-}
-
-#timeline .evt {
-	position: static;
-	width: 90%;
-	margin: 5%;
-	opacity: 1;
-	border-color: #f6465e;
-}
+#main > .evt, 
+#timeline .evt { border: 1px solid #eee; background: rgba(0,0,0,0.5); width: 40%; height: 80px; opacity: 0; position: absolute; top: 20px; z-index: 100; left: 50%; margin-left: -30%; }
+#main .evt.visible { opacity: 1; }
+#timeline .evt { position: static; width: 90%; margin: 5%; opacity: 1; border-color: #f6465e; }
 
 @-webkit-keyframes loading {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); } 
 }
 
-
 .loader { border: 5px solid #fff; border-top: 5px solid rgba(255, 255, 255,0); border-bottom: 5px solid rgba(255, 255, 255,0); width: 30px; height: 30px; border-radius: 30px; margin: 5% auto; -webkit-animation: loading .6s infinite linear; }
 
-@-webkit-keyframes loading {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    };
-}
-
-
+#feed #tweet-box #user .user-img { float: left; }
+#feed #tweet-box textarea.focus { height: 60px; }
 /* @end of Global */

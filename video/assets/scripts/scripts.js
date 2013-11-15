@@ -34,6 +34,41 @@ player.load();
 $('#video, #play-button').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
 
+var currentSidebar = 'timeline';
+$('#sidebar nav').find('a').on('click', changeSidebar);
+function changeSidebar(e){
+	e.preventDefault();
+	var futureSidebar = $(this).attr('href');
+	if(futureSidebar == currentSidebar) {
+		return;
+	} 
+	
+	if(futureSidebar == 'timeline'){
+		if(currentSidebar == 'feed'){
+			$('#feed').addClass('hidden');
+		} else if (currentSidebar == 'badges'){
+			$('#badges').addClass('hidden');
+		} 
+		$('#timeline').removeClass('hidden');
+	} else if(futureSidebar == 'feed'){
+		if(currentSidebar == 'timeline'){
+			$('#timeline').addClass('hidden');
+		} else if (currentSidebar == 'badges'){
+			$('#badges').addClass('hidden');
+		}
+		$('#feed').removeClass('hidden');
+
+	} else if(futureSidebar == 'badges'){
+		if(currentSidebar == 'timeline'){
+			$('#timeline').addClass('hidden');
+		} else if (currentSidebar == 'feed'){
+			$('#feed').addClass('hidden');
+		}
+		$('#badges').removeClass('hidden');
+
+	}
+	currentSidebar = futureSidebar;
+}
 
 var cards = cards;
 
@@ -98,7 +133,6 @@ function hideBrowser(e){
 }
 
 function displayMarker(card){
-	console.log('hey');
 	var evtMarker = $('<a>').addClass('evt').attr('href', '#').attr('data-key', card.displayTime).text('.');
 	evtMarker.css({
 		left: 50 * 100 / $('#player nav').width() + card.displayTime * 100 / player.media.duration + '%'

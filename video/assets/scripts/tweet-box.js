@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-	$('#tweet-box textarea').on('click', function() {
-		console.log('hey');
-		$("#tweet-box textarea").addClass('.focus')
-	});
+	
 
 	$('#tweet-box textarea').keypress(function(e){
 		// If user didn't press enter
@@ -14,24 +11,10 @@ $(document).ready(function() {
 			if(length == 0){
 				$('.nb-chars').css('color', 'red');
 			} else {
-				$('.nb-chars').css('color', 'black');
+				$('.nb-chars').css('color', '#fff');
 			}
 
-		} else {
-			$.ajax({
-                url: 'assets/twitter/sendTweet.php', 
-                type: 'post', 
-                data: {
-                	tweet: $('#tweet-box textarea').val(),
-                	hashtag: 'GoT',
-                	minutes: getPlayerTime()
-                },
-                success: function() { 
-                    $('.nb-chars').html('Tweet envoyé');
-                    $('#tweet-box textarea').val('')
-                }
-            });
-		}
+		} 
 	});
 
 

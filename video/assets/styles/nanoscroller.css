@@ -10,12 +10,12 @@
   overflow      : scroll;
   overflow-x    : hidden;
   top           : 0;
-  right         : 0;
+  /*right         : 0;*/
   bottom        : 0;
   left          : 0;
 }
 .nano .content:focus {
-  outline: thin dotted;
+  /*outline: thin dotted;*/
 }
 .nano .content::-webkit-scrollbar {
   visibility: hidden;
@@ -24,9 +24,9 @@
   visibility: visible;
 }
 .nano > .pane {
-  background : rgba(255, 255, 255,.25);
+  background : transparent;
   position   : absolute;
-  width      : 10px;
+  width      : 6px;
   right      : 0;
   top        : 0;
   bottom     : 0;
@@ -41,8 +41,8 @@
   border-radius         : 5px;
 }
 .nano > .pane > .slider {
-  background: #000;
-  background: rgba(0,0,0,.5);
+  background: #fff;
+  background: rgba(255, 255, 255,.25);
   position              : relative;
   margin                : 0 1px;
   -moz-border-radius    : 3px;

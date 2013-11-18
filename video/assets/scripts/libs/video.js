@@ -5,12 +5,16 @@ var player = {
 		progress: '#progress',
 		controller: '#control',
 		button: '#button',
+		duration: '#duration',
+		volume: '#volume',
 		file: 'random.json',
 		loaded: function(){},
 		playing: function(){},
 		paused: function(){},
 		randomized: function(){},
-		onTimeUpdate: function(){}
+		onTimeUpdate: function(){},
+		onVolumeChange: function(){},
+		muted: function(){}
 	},
 
 	init: function(options){
@@ -18,6 +22,7 @@ var player = {
 		this.prop = $.extend(this.params, options);
 		this.media = $(this.prop.video)[0];
 		$(this.prop.video).bind('timeupdate',this.updateProgress);
+		$(this.prop.video).bind('volumechange',this.updateVolume);
 	},
 
 	load: function(){
@@ -53,10 +58,12 @@ var player = {
 	},
 
 	setTime: function(e, time){
+		e.stopPropagation();
 		if(time){
 			player.media.currentTime = time;
+			return;
 		} else {
-			player.media.currentTime = e.offsetX * player.media.duration / $(this).width();
+			player.media.currentTime = e.offsetX * player.media.duration / $(player.prop.control).width();
 		}
 		
 	},
@@ -72,7 +79,7 @@ var player = {
 	}, 
 
 	random: function(e){
-		e.preventDefault();
+		e.stopPropagation();
 		$.ajax({
 			url: player.prop.file,
 			dataType: 'json', 
@@ -88,5 +95,53 @@ var player = {
 		// $.getJSON(player.prop.file, function(data){
 		// 	console.log(data);
 		// });
+	},
+
+	setVolume: function(e){
+		player.media.volume = e.offsetX * 1 / $(player.prop.volume).find('.level').width();
+	},
+
+	updateVolume: function(){
+		player.prop.onVolumeChange.call(this);
+		var volumeW = player.media.volume * 100 / 1;
+		$(player.prop.volume).find('.handle').width(volumeW + '%'); 
+	},
+
+	mute: function(){
+		if(player.media.muted){
+			player.media.muted = false;
+
+		} else {
+			player.media.muted = true;
+		}
+		 
+		player.prop.muted.call(this, player.media.muted);
+	},
+
+	getDuration: function(){
+		var duration = Math.floor(player.media.duration);
+		var durationMin = Math.floor(duration/60) + '';
+		var durationSec = Math.floor(duration%60) + '';
+		if(durationSec.length < 2){
+			durationSec = ' 0'+ durationSec;
+		}
+		if(durationMin.length < 2){
+			durationMin = ' 0' + durationMin;
+		}
+		$(player.prop.duration).find('.duration').text(durationMin + ':' + durationSec);
+	},
+
+	getCurrentTime: function(){
+		var currentTime = Math.floor(player.media.currentTime);
+		var currentTimeSec = Math.floor(currentTime%60) + '';
+		var currentTimeMin = Math.floor(currentTime/60) + '';
+		if(currentTimeSec.length < 2){
+			currentTimeSec = '0' + currentTimeSec;
+
+		}
+		if(currentTimeMin.length < 2){
+			currentTimeMin = '0' + currentTimeMin;
+		}
+		$(player.prop.duration).find('.current-time').text(currentTimeMin + ':' + currentTimeSec );
 	}
 }

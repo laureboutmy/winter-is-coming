@@ -41,6 +41,14 @@ bold*/
 	font-weight: 400;
 }
 
+/* Regular Italic */
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url(../fonts/HelveticaNeueLTStd-It.otf);
+	font-weight: 400;
+	font-style: italic;
+}
+
 /* Medium */
 @font-face {
 	font-family: 'HelveticaNeue';

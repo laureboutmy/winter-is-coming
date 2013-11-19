@@ -9,7 +9,7 @@ cards = [
 		"description": "The Dothraki language is the constructed language of the Dothraki, the fictional indigenous inhabitants...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/test.html",
+		"url": "assets/data/test2.html",
 		"time": "12",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"

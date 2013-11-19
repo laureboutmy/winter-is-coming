@@ -36,37 +36,40 @@
 		<section id="main">
 			<section id="player">
 				<video id="video" preload="none">
-					<source src="assets/videos/video.mp4" type="video/mp4" />
-					<source src="assets/videos/video.ogv" type="video/ogg" />
+					<source src="assets/videos/video.mp4" type="video/mp4">
+					<source src="assets/videos/video.ogv" type="video/ogg">
+					
 					Plz get Internet
 				</video>
-				<nav>
-					<h1><img src="assets/images/template/got-player-nav.png" alt="Game of Thrones" /></h1>
-					<hr />
-					<hr />
-					<div id="play-btn">
-						<img src="assets/images/template/btn-pause.png" alt="Pause" />
-					</div><!-- /div#play-button 
-					 --><div id="progress-bar">
-						<span class="progress"></span>
-						<span class="buffer"></span>
-					</div><!-- /div#progress-bar -->
-					<div id="duration">
-						<span class="current-time">22:22</span>
-						<span class="duration">40:39</span>
-					</div><!-- /div#duration -->
-					<hr />
-					<hr />
-					<div id="volume">
-						<img class="mute" src="assets/images/template/btn-volume.png" alt="Volume" />
-						<span class="level">
-							<span class="handle"> </span>
-						</span>
-					</div><!-- /div#volume -->
-					<div id="fullscreen-btn">
-						<img src="assets/images/template/btn-fullscreen.png" alt="Enter fullscreen" />
-					</div><!-- /div#fullscreen-button -->
-				</nav>
+				<div>
+					<nav>
+						<h1><img src="assets/images/template/got-player-nav.png" alt="Game of Thrones" /></h1>
+						<hr />
+						<hr />
+						<div id="play-btn">
+							<img src="assets/images/template/btn-pause.png" alt="Pause" />
+						</div><!-- /div#play-button 
+						 --><div id="progress-bar">
+							<span class="progress"></span>
+							<span class="buffer"></span>
+						</div><!-- /div#progress-bar -->
+						<div id="duration">
+							<span class="current-time">22:22</span>
+							<span class="duration">40:39</span>
+						</div><!-- /div#duration -->
+						<hr />
+						<hr />
+						<div id="volume">
+							<img class="mute" src="assets/images/template/btn-volume.png" alt="Volume" />
+							<span class="level">
+								<span class="handle"> </span>
+							</span>
+						</div><!-- /div#volume -->
+						<div id="fullscreen-btn">
+							<img src="assets/images/template/btn-fullscreen.png" alt="Enter fullscreen" />
+						</div><!-- /div#fullscreen-button -->
+					</nav>
+				</div>
 			</section><!-- /section#player -->
 			<section id="sidebar">
 				<nav>
@@ -186,7 +189,7 @@
 		</section><!-- /section#main -->
 
 		<section id="browser">
-			<a href="#" id="close-browser">x</a>
+			<i class="close-browser" aria-hidden="true">Close</i>
 			<div>
 			</div>
 		</section><!-- /section#browser -->

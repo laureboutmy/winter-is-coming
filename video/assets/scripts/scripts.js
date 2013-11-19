@@ -45,7 +45,8 @@ player.load();
 
 
 function setWidth(){
-	$('#player').width($(window).width() - 230);
+	$('div.close-browser').width(($(window).width() / 2) - 260);
+	$('#player').width($(window).width() - 260);
 	$('#timeline.nano, #badges.nano, #feed').height($(window).height() - 40);
 	if($('#feed #tweet-box').hasClass('focused')){
 		$('#feed #tweet-feed').height($(window).height() - 75);
@@ -102,7 +103,7 @@ function changeSidebar(e){
 		$('#badges').removeClass('hidden');
 	}
 
-	if($('#tweet-box').hasClass('focused')){ $('#tweet-box').removeClass('focused'); }
+	if($('#tweet-box').hasClass('focused') && $('#tweet-box textarea').val().length == 0){ $('#tweet-box').removeClass('focused'); }
 	currentSidebar = futureSidebar;
 }
 
@@ -164,7 +165,14 @@ function hideBrowser(e){
 
 function goToMarker(e){
 	e.preventDefault();
-	player.setTime(e, $(this).data('key'));
+	var key = $(this).data('key');
+	player.setTime(e, key);
+	$("#timeline div").animate({
+		scrollTop: $('article.card[data-key=' + key + ']').offset().top + 'px'
+	}, {
+		duration: 500,
+		easing: 'swing'
+	});
 }
 
 function extendForm(){
@@ -193,6 +201,19 @@ function submitTweet(e){
     });
 }
 
+function countChar(e){
+	// If user didn't press enter
+	if(e.keyCode != 13){
+		var length = 140 - $('#tweet-box textarea').val().length;
+		
+		if(length == 0){
+			$('.nb-chars').addClass('visible').html('no char left!').addClass('error');
+		} else {
+			$('.nb-chars').addClass('visible').html(length + ' chars left').removeClass('error')
+		}
+	} 
+}
+
 $('#video, #play-btn').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
 $('#volume .level').on('click', player.setVolume);
@@ -204,3 +225,11 @@ $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);
 $('#tweet-box textarea[name=tweet]').on('click', extendForm);
 $('#tweet-box form').submit(submitTweet);
+$('#tweet-box textarea').on('keydown', countChar);
+$(document).on('keydown', function(e){ 
+	console.log(e);
+	if(e.keyCode == 32){
+		console.log('hey');
+	}
+	
+})

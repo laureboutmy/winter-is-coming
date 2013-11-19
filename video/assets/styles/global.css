@@ -107,8 +107,19 @@ video { display: block; margin: 0 auto; width: 100%; height: 100%; }
 #sidebar nav { position: relative; z-index: 40; width: 230px; margin: 0 15px; text-align: center; height: 40px; box-shadow: 0px 3px 10px 6px rgba(0, 0, 0, 1); background: #000 url(../images/template/bg-sidebar-nav.png) no-repeat bottom;  }
 	
 #sidebar nav ul li { display: inline-block; }
+#sidebar nav ul li a { display: block; width: 70px; height: 35px; margin-top: 5px; }
+#sidebar nav ul li i { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; background: url(../images/template/i-sidebar.png) no-repeat; text-align: left; text-indent: -9999px; overflow: hidden; width: 30px; height: 30px; display: inline-block; }
+#sidebar nav ul li a:hover i { opacity: 0.7; }
+#sidebar nav ul li a:hover i.current { opacity: 1; }
+#sidebar nav ul li i.timeline { background-position: 0 0; }
+#sidebar nav ul li i.feed { background-position: 0px -30px; }
+#sidebar nav ul li i.badges { background-position: 0px -60px; }
 
-#feed { right: 0; position: absolute; top: 40px; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#sidebar nav ul li i.current.timeline { background-position: -30px 0; }
+#sidebar nav ul li i.current.feed { background-position: -30px -30px; }
+#sidebar nav ul li i.current.badges { background-position: -30px -60px; }
+
+#feed { right: -100%; position: absolute; top: 40px; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
 #feed #tweet-box { z-index: 20; background: rgba(0,0,0,1) url(../images/template/bg-tweet.png) no-repeat top; width: 230px; margin: 0 15px; height: 75px; position: absolute; bottom: 0; /*height: 75px;*/ padding: 25px 0px; box-shadow: 0px -3px 10px 6px rgba(0, 0, 0, 1); }
 #feed #tweet-box.focused { height: 165px; }
 #feed #tweet-box #user img { width: 34px; height: 34px; border-radius: 3px; float: left; margin-right: 6px; }
@@ -130,7 +141,7 @@ video { display: block; margin: 0 auto; width: 100%; height: 100%; }
 #feed #tweet-feed ul li .meta a.username { display: block; font-size: 1.538em; color: #fff; font-weight: 200; }
 ::-webkit-textarea-placeholder { font-style: italic; }
 
-#timeline { color: #666666; right: 0; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#timeline { color: #666666; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
 #timeline article.card { position: relative; z-index: 30; margin-top: 100px; width: 230px; margin: 0 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 1); }
 #timeline article.card > div.time { z-index: 20; font-size: 0.923em; position: relative; width: 20px; height: 20px; padding: 40px; margin: 0 auto; background: url(../images/template/bg-timecode.png) no-repeat center center; text-align: center; }
 #timeline article.card > div.time span { font-size: 7px; line-height: 6px; letter-spacing: 1px; display: block; text-transform: uppercase; }
@@ -148,8 +159,8 @@ video { display: block; margin: 0 auto; width: 100%; height: 100%; }
 #timeline article.card > div.text h2 { line-height: 1.200em; padding: 20px 10px 0; font-size: 1.538em; color: #fff; font-weight: 200; }
 #timeline article.card > div.text p { margin-bottom: 10px; font-weight: 300; padding: 10px; color: #666; line-height: 1.385em; background: url(../images/template/bg-hr.png) repeat-x bottom; }
 #timeline article.card > div.text span { display: block; margin-bottom: 5px; font-weight: 300; text-align: center; color: #666; line-height: 1.385em; }
-#badges { position: absolute; top: 40px; right: 0; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
-#timeline.hidden, #feed.hidden, #badges.hidden { right: -100%; }
+#badges { position: absolute; top: 40px; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#timeline.visible, #feed.visible, #badges.visible { right: 0; }
 
 #browser { width: 50%; position: relative; left: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); display: inline-block; border-left: 1px solid rgba(255, 255, 255, .08); -moz-box-sizing: border-box; box-sizing: border-box; }
 div.close-browser { display: none; position: absolute; width: 25%; height: 100%; visibility: hidden; z-index: 0; }

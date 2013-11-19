@@ -87,21 +87,33 @@ function changeSidebar(e){
 	e.preventDefault();
 	var futureSidebar = $(this).attr('href');
 	if(futureSidebar == currentSidebar) { return; } 
-	
+	$('#timeline, #feed, #badges').removeClass('visible');
+	$('#sidebar nav i.current').removeClass('current');
 	if(futureSidebar == 'timeline'){
-		if(currentSidebar == 'feed'){ $('#feed').addClass('hidden'); } 
-		else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); } 
-		$('#timeline').removeClass('hidden');
+		$('#timeline').addClass('visible');
+		$('#sidebar nav i.timeline').addClass('current');
 	} else if(futureSidebar == 'feed'){
-		if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
-		else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); }
-		$('#feed').removeClass('hidden');
-		
+		$('#feed').addClass('visible');
+		$('#sidebar nav i.feed').addClass('current');
 	} else if(futureSidebar == 'badges'){
-		if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
-		else if (currentSidebar == 'feed'){ $('#feed').addClass('hidden'); }
-		$('#badges').removeClass('hidden');
-	}
+		$('#badges').addClass('visible');
+		$('#sidebar nav i.badges').addClass('current');
+	} 
+	// if(futureSidebar == 'timeline'){
+	// 	if(currentSidebar == 'feed'){ $('#feed').addClass('hidden'); } 
+	// 	else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); } 
+	// 	$('#timeline').removeClass('hidden');
+	// } else if(futureSidebar == 'feed'){
+	// 	if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
+	// 	else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); }
+	// 	$('#feed').removeClass('hidden');
+	// 	$('#sidebar nav i.feed').addClass('current');
+		
+	// } else if(futureSidebar == 'badges'){
+	// 	if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
+	// 	else if (currentSidebar == 'feed'){ $('#feed').addClass('hidden'); }
+	// 	$('#badges').removeClass('hidden');
+	// }
 
 	if($('#tweet-box').hasClass('focused') && $('#tweet-box textarea').val().length == 0){ $('#tweet-box').removeClass('focused'); }
 	currentSidebar = futureSidebar;

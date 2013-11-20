@@ -143,5 +143,9 @@ var player = {
 			currentTimeMin = '0' + currentTimeMin;
 		}
 		$(player.prop.duration).find('.current-time').text(currentTimeMin + ':' + currentTimeSec );
+	},
+	// Returns the current time for Twitter hashtag
+	getTime : function(){
+		return parseInt(player.media.currentTime/60);
 	}
 }

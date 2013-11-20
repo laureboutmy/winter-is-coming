@@ -90,7 +90,6 @@
 					
 					<section id="tweet-box">						
 						
-				   
 					    <?php if(isset($_SESSION['profile_image_url']) && !empty($_SESSION['profile_image_url'])
 					    		&& isset($_SESSION['name']) && !empty($_SESSION['name']) 
 					    		&& isset($_SESSION['screen_name']) && !empty($_SESSION['screen_name'])): ?>
@@ -114,7 +113,7 @@
 						<?php endif; ?>
 					
 					</section>
-					<div id="tweet-feed">
+					<div id="tweet-feed" class="nano">
 						<div class="content">
 							<?php if(isset($_SESSION['access_token']['oauth_token'])
 									&& isset($_SESSION['access_token']['oauth_token_secret'])): ?>
@@ -182,7 +181,6 @@
 						<p>Mauris tincidunt augue ut tortor commodo elementum. Nulla faucibus purus in dui vehicula tincidunt. Nullam venenatis diam id felis tempus ultricies. Ut sodales, nulla at aliquet gravida, tellus ante tempor erat, ut dictum eros ligula sed erat. Nunc posuere eu erat in rutrum. Vestibulum accumsan, ligula nec tempor iaculis, arcu arcu pretium tellus, nec lacinia eros lectus eget metus. Nulla facilisi. Nunc tempor mattis mattis. Aenean ligula nibh, cursus in eros nec, gravida mattis nunc. Suspendisse lobortis egestas massa sed rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla elit velit, tincidunt in massa vitae, lacinia blandit metus. Morbi pharetra dui vitae facilisis ornare. Morbi id felis dignissim, porttitor eros eu, feugiat sem.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan at quam et rhoncus. Donec ac mi ac erat laoreet lacinia. Duis vitae sem eros. Morbi sed enim tellus. Sed vulputate ipsum cursus dui tincidunt, vel placerat ligula ultricies. Suspendisse gravida blandit libero, a blandit quam varius et. In hac habitasse platea dictumst. Cras ipsum dui, porttitor nec erat vitae, sagittis mattis lacus. Etiam vel eros in libero vulputate vestibulum sed id nibh. Nulla eu tempor nibh, eu lacinia tellus. Cras feugiat leo gravida, fringilla felis sed, elementum tellus. Proin mauris turpis, faucibus sit amet dolor vel, fermentum porta augue. Donec varius purus tellus, nec egestas lectus volutpat et. Pellentesque ac tellus et ante ornare aliquam.</p>
 						<p>Mauris tincidunt augue ut tortor commodo elementum. Nulla faucibus purus in dui vehicula tincidunt. Nullam venenatis diam id felis tempus ultricies. Ut sodales, nulla at aliquet gravida, tellus ante tempor erat, ut dictum eros ligula sed erat. Nunc posuere eu erat in rutrum. Vestibulum accumsan, ligula nec tempor iaculis, arcu arcu pretium tellus, nec lacinia eros lectus eget metus. Nulla facilisi. Nunc tempor mattis mattis. Aenean ligula nibh, cursus in eros nec, gravida mattis nunc. Suspendisse lobortis egestas massa sed rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla elit velit, tincidunt in massa vitae, lacinia blandit metus. Morbi pharetra dui vitae facilisis ornare. Morbi id felis dignissim, porttitor eros eu, feugiat sem.</p>
-				
 					</div>
 				</section><!-- /section#badges -->
 			</section><!-- /section#sidebar -->
@@ -201,13 +199,12 @@
 <script src="assets/scripts/libs/video.js"></script>
 <script src="assets/data/cards.jsonp"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
+<script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
-<script src="assets/scripts/scripts.js"></script>
-<script src="assets/scripts/tweet-box.js"></script>
 <script>
 	$('.tweets').tweetMachine('#GoT');
 </script>
-
+<script src="assets/scripts/scripts.js"></script>
 <!-- /SCRIPTS -->
 </body>
 </html>

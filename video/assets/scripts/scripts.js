@@ -187,6 +187,19 @@ function goToMarker(e){
 	});
 }
 
+tweet.init({
+	textarea: '#tweet-box textarea[name=tweet]',
+	replying: function(){
+		extendForm();
+	},
+	submitted: function(){
+		$('.nb-chars').html('Tweet envoyé');
+        $('#tweet-box textarea').val('');
+        $('#tweet-box').removeClass('focused');
+		$('#feed #tweet-feed').height($(window).height() - 75);
+	}
+})
+
 function extendForm(){
 	if(!$('#tweet-box').hasClass('focused')){
 		$('#tweet-box').addClass('focused');
@@ -194,37 +207,21 @@ function extendForm(){
 	} 
 }
 
-function submitTweet(e){
-	e.preventDefault();
-	$.ajax({
-        url: 'assets/twitter/sendTweet.php', 
-        type: 'post', 
-        data: {
-        	tweet: $('#tweet-box textarea').val(),
-        	hashtag: 'GoT',
-        	minutes: getPlayerTime()
-        },
-        success: function() { 
-            $('.nb-chars').html('Tweet envoyé');
-            $('#tweet-box textarea').val('');
-            $('#tweet-box').removeClass('focused');
-			$('#feed #tweet-feed').height($(window).height() - 75);
-        }
-    });
+function countChar(){
+	// If user didn't press enter
+	var length = 140 - $('#tweet-box textarea').val().length;
+	if(length == 0){
+		$('.nb-chars').addClass('visible').html('no char left!').addClass('error');
+	} else {
+		$('.nb-chars').addClass('visible').html(length + ' chars left').removeClass('error')
+	}
 }
 
-function countChar(e){
-	// If user didn't press enter
-	if(e.keyCode != 13){
-		var length = 140 - $('#tweet-box textarea').val().length;
-		
-		if(length == 0){
-			$('.nb-chars').addClass('visible').html('no char left!').addClass('error');
-		} else {
-			$('.nb-chars').addClass('visible').html(length + ' chars left').removeClass('error')
-		}
-	} 
-}
+
+
+
+
+/* /Rajout Dorian */
 
 $('#video, #play-btn').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
@@ -235,9 +232,18 @@ $('#main').on('click', 'a.browser', showBrowser);
 $('#progress-bar').on('click', 'a.marker', goToMarker);
 $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);
+/* RAJOUT DORIAN */
+$('#tweet-feed').on('click', 'button.reply', tweet.reply);
+$('#tweet-feed').on('click', 'button.retweet', tweet.retweet);
+$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);
+
+/* /RAJOUT DORIAN */
 $('#tweet-box textarea[name=tweet]').on('click', extendForm);
-$('#tweet-box form').submit(submitTweet);
-$('#tweet-box textarea').on('keydown', countChar);
+$('#tweet-box form').submit(tweet.submit);
+$('#tweet-box textarea').on({
+	'keydown': countChar, 
+	'change': countChar
+});
 $(document).on('keydown', function(e){ 
 	console.log(e);
 	if(e.keyCode == 32){

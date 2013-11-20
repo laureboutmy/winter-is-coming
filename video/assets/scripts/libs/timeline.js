@@ -23,7 +23,7 @@ var timeline = {
 					$('<div>').addClass('text').append(
 						$('<h2>').text(card.title),
 						$('<p>').text(card.description),
-						$('<span>').text(card.cta)
+						$('<span>').text(card.cta).append($('<i>'))
 					)
 				);
 			evtDiv = evtA.append(evtDiv);
@@ -55,7 +55,7 @@ var timeline = {
 			var tooltip = $('<div>').addClass('tooltip').append(
 				$('<img>').attr('src', card.imgMarker).attr('alt', card.title), 
 				$('<h3>').append(
-					$('<span>').addClass('time').text(card.time + 'min'), 
+					$('<span>').addClass('time').text(card.time + 'min').append($('<i>')), 
 					$('<span>').addClass('category').text(card.category),
 					$('<span>').addClass('title').text(card.title)
 				)

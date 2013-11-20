@@ -11,6 +11,7 @@ var timeline = {
 	},
 
 	render: function(card){
+
 		if(card.browser){
 			var evtA = $('<a>').attr('data-url', card.url).attr('href', '#').addClass('browser').attr('data-key', card.displayTime);
 			var evtDiv = $('<article>').addClass('card').attr('data-key', card.displayTime).append(
@@ -32,21 +33,21 @@ var timeline = {
 
 		card.displayed = true;
 
-		$(timeline.prop.main).append(evtDiv);
+		$(timeline.prop.timeline).append(evtDiv);
 
 		timeline.prop.rendered.call(this);
 	},
 
-	move: function(card){
-		if(card.browser){
-			$(timeline.prop.main).find('a.browser[data-key=' + card.displayTime + ']').prependTo(timeline.prop.timeline);
-		} else {
-			$(timeline.prop.main).find('div[data-key=' + card.displayTime + ']').prependTo(timeline.prop.timeline);
-		}
-		card.hidden = true;
-		timeline.prop.moved.call(this);
+	// move: function(card){
+	// 	if(card.browser){
+	// 		$(timeline.prop.main).find('a.browser[data-key=' + card.displayTime + ']').prependTo(timeline.prop.timeline);
+	// 	} else {
+	// 		$(timeline.prop.main).find('div[data-key=' + card.displayTime + ']').prependTo(timeline.prop.timeline);
+	// 	}
+	// 	card.hidden = true;
+	// 	timeline.prop.moved.call(this);
 
-	},
+	// },
 
 	addMarker: function(card){
 		var evtMarker = $('<a>').addClass('marker').attr('href', '#').attr('data-key', card.displayTime).append($('<span>').addClass('gradient').text(''));

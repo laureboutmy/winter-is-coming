@@ -186,9 +186,9 @@
 			</section><!-- /section#sidebar -->
 		</section><!-- /section#main -->
 
-		<section id="browser">
+		<section id="browser" class="nano">
 			<i class="close-browser" aria-hidden="true">Close</i>
-			<div>
+			<div class="content">
 			</div>
 		</section><!-- /section#browser -->
 	</section><!-- /section#wrapper-rel -->

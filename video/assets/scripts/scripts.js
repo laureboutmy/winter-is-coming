@@ -137,9 +137,9 @@ function checkTime(currentTime) {
 			timeline.addMarker(card);
 		} 
 
-		if(currentTime > card.hiddenTime && !card.hidden){
-			timeline.move(card);
-		}
+		// if(currentTime > card.hiddenTime && !card.hidden){
+		// 	timeline.move(card);
+		// }
 	}
 }
 

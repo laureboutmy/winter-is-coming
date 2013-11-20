@@ -74,8 +74,8 @@
 			<section id="sidebar">
 				<nav>
 					<ul>
-						<li><a href="timeline"><i class="current timeline">Timeline</i></a></li>
-						<li><a href="feed"><i class="feed">Feed</i></a></li>
+						<li><a href="timeline"><i class="current timeline">Timeline</i></a><hr /><hr /></li>
+						<li><a href="feed"><i class="feed">Feed</i></a><hr /><hr /></li>
 						<li><a href="badges"><i class="badges">Badges</i></a></li>
 					</ul>
 				</nav>

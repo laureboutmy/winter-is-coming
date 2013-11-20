@@ -21,7 +21,7 @@ cards = [
 		"hidden": false,
 		"hiddenTime": 23*60,
 		"category": "Location",
-		"title": "Casterly Rock,
+		"title": "Casterly Rock",
 		"description": "Casterly Rock is the ancestral stronghold of House Lannister. It is located on the Western coast of Westeros on a rocky promontory...",
 		"cta": "Read more",
 		"browser": true,
@@ -223,7 +223,7 @@ cards = [
 		"hiddenTime": 23*60,
 		"category": "Article",
 		"title": "The Wildlings",
-		"description": "The free folk are a race of people who live beyond the Wall. They are more commonly referred to as "wildlings" everywhere south of the Wall...",
+		"description": "The free folk are a race of people who live beyond the Wall. They are more commonly referred to as \"wildlings\" everywhere south of the Wall...",
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/article_thewildlings.html",
@@ -403,7 +403,7 @@ cards = [
 		"hidden": false,
 		"hiddenTime": 23*60,
 		"category": "Goods",
-		"title": "Support Hodor!,
+		"title": "Support Hodor!",
 		"description": "Everybody's mean to Hodor. Support him with this beautiful tee-shirt.",
 		"cta": "Buy it",
 		"browser": false,
@@ -418,7 +418,7 @@ cards = [
 		"displayTime": 25*60,
 		"hidden": false,
 		"hiddenTime": 23*60,
-		"category": "Character,
+		"category": "Character",
 		"title": "Orell",
 		"description": "Orell is a wildling. Like Bran Stark, he is a warg...",
 		"cta": "Read more",
@@ -610,7 +610,7 @@ cards = [
 		"time": "39",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
-	}
+	},
 
 	{
 		"displayed": false,
@@ -635,7 +635,7 @@ cards = [
 		"hiddenTime": 23*60,
 		"category": "Article",
 		"title": "The Rains of Castamere",
-		"description": "The "Rains of Castamere" is a song written about Lord Tywin Lannister's crushing victory over rebellious House Reyne of Castamere and the destruction of the House at the end of their rebellion. The song is typically sung as a reminder of the fate that awaits those who the Lannisters.",
+		"description": "The \"Rains of Castamere\" is a song written about Lord Tywin Lannister's crushing victory over rebellious House Reyne of Castamere and the destruction of the House at the end of their rebellion. The song is typically sung as a reminder of the fate that awaits those who the Lannisters.",
 		"browser": false,
 		"time": "42",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",

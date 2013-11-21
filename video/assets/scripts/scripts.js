@@ -13,10 +13,11 @@ player.init({
 		console.log('loaded');
 		player.playPause();
 		player.getDuration();
+		$(player.prop.video).removeClass('hidden');
+
 	},
 	playing: function(){
 		console.log('playing');
-		$(player.prop.video).addClass('play');
 		$(player.prop.button).find('img').attr('src', 'assets/images/template/btn-pause.png');
 	},
 	randomized: function(){
@@ -41,7 +42,7 @@ player.init({
 	}
 });
 
-player.load();
+// player.load();
 
 
 function setWidth(){
@@ -186,8 +187,7 @@ function goToMarker(e){
 	var key = $(this).data('key');
 	player.setTime(e, key);
 
-	$("#timeline div").animate({
-
+	$('#timeline div').animate({
 		scrollTop: $('article.card[data-key=' + key + ']').offset().top + 'px'
 	}, {
 		duration: 500,
@@ -225,8 +225,31 @@ function countChar(){
 	}
 }
 
-/* /Rajout Dorian */
+function launchPlayer(e){
+	e.preventDefault();
+	$('body').stop().animate({
+		scrollTop: 0 + 'px'
+	}, {
+		duration: 300,
+		complete: function(){
+			$('#homepage').addClass('hidden');
+			window.setTimeout(function(){
+				$('#homepage').hide();
+				$('#sidebar').addClass('visible');
+				window.setTimeout(function(){
+					$('#player div').addClass('visible');
+					window.setTimeout(function(){
+						$('#player div').removeClass('visible');
+						player.load();
+					}, 1000);
+				}, 1000);
+			}, 500);
+			
+		}
+	});
+}
 
+$('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
 $('#volume .level').on('click', player.setVolume);

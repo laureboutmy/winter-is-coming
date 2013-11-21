@@ -30,12 +30,48 @@
 
 </head>
 <body>
+<section id="homepage" class="nano">
+	<div class="content">
+		<header>
+			<div class="wrapper">
+				<h1><img src="assets/images/template/hbo-hp.png" alt="HBO"></h1>
+				<a href="#"><i class="left arrow">Arrow</i> Back to hbo.com</a>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<section id="episode">
+			<div class="wrapper">
+				<h1><img src="assets/images/template/got-hp.png" alt="Game of thrones" /><span>Season 3 - Episode 9</span></h1>
+				<h2>The Rains<br />of Castamere</h2>
+				<h3>Live the real adventure. Discover the thrill.</h3>
+				<a href="#" class="launch-player"><i class="play"></i>Play &quot;The Rains Of Castamere&quot;</a>
+				<div id="countdown">
+				</div>
+			</div>
+		</section>
+		<div class="rain">
+			<section id="unlock-badges">
+				<div class="sign-in">
+					<h2>Sign in to improve your experience, <span>start collecting badges!</span></h2>
+					<a href="#" class="facebook"><i class="facebook"></i>Sign in with Facebook</a>
+					<a href="#" class="twitter"><i class="twitter"></i>Sign in with Twitter</a>
+				</div>
+			</section>
+			<footer>
+				<p>This website is purely fictionnal.</p>
+				<p>HBO and Game of Thrones logos are property of HBO.</p>
+				<p>Game of Thrones is a registered trademark property of HBO.</p> 
+				<p class="produced">Produced with passion by Laure Boutmy, Dorian Camilleri, Thomas Iturralde, Julien Perrière and Anthony Roux.</p>
+			</footer>
+		</div><!-- /sieste.rain -->
+	</div><!-- /div.content -->
+</section><!-- /section#homepage -->
 <section id="wrapper">
 	<div class="close-browser"></div>
 	<section id="wrapper-rel">
 		<section id="main">
 			<section id="player">
-				<video id="video" preload="none">
+				<video id="video" class="hidden" preload="none">
 					<source src="assets/videos/video.mp4" type="video/mp4">
 					<source src="assets/videos/video.ogv" type="video/ogg">
 					

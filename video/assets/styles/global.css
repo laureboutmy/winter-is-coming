@@ -9,7 +9,8 @@ i.facebook { background: url(../images/template/i-fb.png) no-repeat; width: 11px
 i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px; height: 14px; }
 
 
-#homepage { font-weight: 100; }
+#homepage { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%;}
+#homepage.hidden { opacity: 0; }
 #homepage header { height: 22px; width: 100%; background: rgba(0, 0, 0, 1); padding: 14px 0; }
 #homepage header h1 { float: left; display: inline-block; }
 #homepage header a { display: block; float: right; color: #666666; font-size: 0.625em; text-transform: uppercase; font-weight: 400; padding: 6px 0;}
@@ -17,8 +18,7 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 #homepage section#episode { width: 100%; height: 410px; background: url(../images/template/bg-episode.jpg) no-repeat center center; padding: 130px 0 120px; position: relative; z-index: 10;
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 1),
 				inset 0 1px 0px rgba(255, 255, 255, 0.2),
-				inset 0 -1px 0px rgba(255, 255, 255, 0.2);
-}
+				inset 0 -1px 0px rgba(255, 255, 255, 0.2); }
 #homepage section#episode h1 img { float: left; }
 #homepage section#episode h1 span { display: inline-block; margin-top: 4px; margin-left: 20px; font-size: 0.625em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; height: 10px; padding: 10px 15px 6px; border-radius: 14px; 
 	box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1),
@@ -61,14 +61,16 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 #homepage footer p.produced { color: #4c4c4c; margin-top: 10px; }
 
 
-#wrapper { position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }
+#wrapper { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }
+#wrapper.hidden { opacity: 0; }
 #wrapper-rel { position: relative; width: 100%; height: 100%; top: 0; left: 0; -webkit-transition: left 0.3s ease-out; transition: left 0.3s ease-out; }
 #wrapper-rel.display-browser { left: -50%; }
 #main { position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: inline-block; float: left; }
 
 #player { width: 80%; height: 100%; position: relative; left: 0; top: 0; }
 
-video { display: block; margin: 0 auto; width: 100%; height: 100%; }
+video {  -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; display: block; margin: 0 auto; width: 100%; height: 100%; }
+video.hidden { opacity: 0; }
 #player > div { width: 100%; z-index: 10; position: absolute; height: 90px; bottom: 0; }
 #player nav { -webkit-transition: all 0.3s ease-out, opacity 0.2s ease-out; transition: all 0.3s ease-out, opacity 0.2s ease-out; opacity: 0; font-size: 0.813em; height: 44px; width: 970px; left: 50%; margin-left: -485px; border-radius: 3px; position: absolute; bottom: 10px; z-index: 10; 
 	box-shadow: 0 1px 3px rgba(1, 1, 1, 1),
@@ -76,7 +78,8 @@ video { display: block; margin: 0 auto; width: 100%; height: 100%; }
 	background: -ms-linear-gradient(top, rgba(42,42,42,1) 0%,rgba(0,0,0,1) 68%,rgba(18,18,18,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(42,42,42,1) 0%,rgba(0,0,0,1) 68%,rgba(18,18,18,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2a2a', endColorstr='#121212',GradientType=0 ); /* IE6-9 */ }
-#player div:hover nav { opacity: 1; bottom: 20px; }
+#player div:hover nav,
+#player div.visible nav { opacity: 1; bottom: 20px; }
 #player nav h1 { float: left; margin: 15px 19px; display: inline-block; }
 #player nav hr { float: left; height: 100%; border: 0; width: 1px; margin: 0 1px 0 0; display: inline-block;
 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 50%,rgba(255,255,255,0.01) 100%); /* IE10+ */
@@ -157,13 +160,13 @@ video { display: block; margin: 0 auto; width: 100%; height: 100%; }
 .loader { border: 5px solid #fff; border-top: 5px solid rgba(255, 255, 255,0); border-bottom: 5px solid rgba(255, 255, 255,0); width: 30px; height: 30px; border-radius: 30px; margin: 5% auto; -webkit-animation: loading .6s infinite linear; }
 
 
-#sidebar { background-color: rgba(0, 0, 0, 1); 
+#sidebar { -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; right: -260px; background-color: rgba(0, 0, 0, 1); 
 	background-image: -ms-linear-gradient(left, rgba(48,48,48,1) 0%,rgba(0,0,0,1) 6%); /* IE10+ */
 	background-image: linear-gradient(to right, rgba(48,48,48,1) 0%,rgba(0,0,0,1) 6%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 */ 
-	box-shadow: -2px 0 3px rgba(0, 0, 0, 1), inset 1px 0px 0px rgba(255, 255, 255, .08); width: 260px; height: 100%; color: #595959; position: absolute; right: 0; top: 0; overflow: hidden; font-size: 0.813em; }
-#sidebar nav { position: relative; z-index: 40; width: 230px; margin: 0 15px; text-align: center; height: 40px; box-shadow: 0px 3px 10px 6px rgba(0, 0, 0, 1); background: #000 url(../images/template/bg-sidebar-nav.png) no-repeat bottom;  }
-	
+	box-shadow: -2px 0 3px rgba(0, 0, 0, 1), inset 1px 0px 0px rgba(255, 255, 255, .08); width: 260px; height: 100%; color: #595959; position: absolute; top: 0; overflow: hidden; font-size: 0.813em; }
+#sidebar.visible { right: 0; }
+#sidebar nav { position: relative; z-index: 40; width: 230px; margin: 0 15px; text-align: center; height: 40px; box-shadow: 0px 3px 10px 6px rgba(0, 0, 0, 1); background: #000 url(../images/template/bg-sidebar-nav.png) no-repeat bottom; }	
 #sidebar nav ul li { display: inline-block; width: 76px; height: 40px; float: left;}
 #sidebar nav ul li a { display: inline-block; width: 72px; height: 35px; margin-top: 5px; float: left; text-align: center;  }
 #sidebar nav ul li i { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; background: url(../images/template/i-sidebar.png) no-repeat; width: 30px; height: 30px; }

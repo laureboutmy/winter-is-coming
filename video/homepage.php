@@ -60,7 +60,6 @@
 			<p>This website is purely fictionnal.</p>
 			<p>HBO and Game of Thrones logos are property of HBO.</p>
 			<p>Game of Thrones is a registered trademark property of HBO.</p> 
-
 			<p class="produced">Produced with passion by Laure Boutmy, Dorian Camilleri, Thomas Iturralde, Julien Perrière and Anthony Roux.</p>
 		</footer>
 	</div><!-- /sieste.rain -->

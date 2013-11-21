@@ -1,13 +1,26 @@
 cards = [
 	{
 		"displayed": false,
+		"displayTime": 71,
+		"category": "Soundtrack",
+		"title": "Main Title",
+		"cta": "Buy it on iTunes",
+		"browser": false,
+		"url": "https://itunes.apple.com/us/album/main-title/id441573161?i=441573162",
+		"time": "1",
+		"imgMarker": "assets/images/content/28min2sec-marker.png",
+		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
+	},
+
+	{
+		"displayed": false,
 		"displayTime": 2*60+7,
 		"category": "Character",
 		"title": "Robb Stark",
 		"description": "Robb Stark, also called Young Wolf, is the King in the North. He is the eldest son of Eddard Stark and Catelyn Tully...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_robbstark.html",
+		"url": "assets/data/character-robbstark.html",
 		"time": "2",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -21,7 +34,7 @@ cards = [
 		"description": "Casterly Rock is the ancestral stronghold of House Lannister. It is located on the Western coast of Westeros on a rocky promontory...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/location_casterlyrock.html",
+		"url": "assets/data/location-casterlyrock.html",
 		"time": "2",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -49,7 +62,7 @@ cards = [
 		"description": "Walder Frey rules the Twins as the head of House Frey and Lord of the Crossing. Though past ninety years old and infirm...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_walderfrey.html",
+		"url": "assets/data/character-walderfrey.html",
 		"time": "4",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -63,7 +76,7 @@ cards = [
 		"description": "Edmure is the son and heir of Lord Hoster Tully. Edmure is the new head of House Tully and thus has recently become the Lord of Riverrun...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_edmuretully.html",
+		"url": "assets/data/character-edmuretully.html",
 		"time": "5",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -101,7 +114,7 @@ cards = [
 		"description": "Daario is a Tyroshi sell-sword, employed as a lieutenant in the Second Sons. He killed his company's co-captains...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_daarionaharis.html",
+		"url": "assets/data/character-daarionaharis.html",
 		"time": "9",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -115,7 +128,7 @@ cards = [
 		"description": "Daenerys Targaryen is the only surviving child of King Aerys II Targaryen. She was sold into marriage to the Dothraki...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_daenerystargaryen.html",
+		"url": "assets/data/character-daenerystargaryen.html",
 		"time": "10",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -129,7 +142,7 @@ cards = [
 		"description": "The Wall is a colossal fortification which stretches for 300 miles along the northern border of the Seven Kingdoms...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/article_thewall.html",
+		"url": "assets/data/article-thewall.html",
 		"time": "11",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -155,7 +168,7 @@ cards = [
 		"description": "Sandor Clegane, nicknamed The Hound was the personal bodyguard of Joffrey Baratheon. He joined the Kingsguard...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_sandorclegane.html",
+		"url": "assets/data/character-sandorclegane.html",
 		"time": "13",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -167,7 +180,7 @@ cards = [
 		"category": "GIF",
 		"title": "The Hound's Punch",
 		"cta": "Watch",
-		"url": "assets/data/gif_thehoundspunch.html",
+		"url": "assets/data/gif-thehoundspunch.html",
 		"browser": true,
 		"time": "13",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
@@ -182,7 +195,7 @@ cards = [
 		"description": "Arya is the younger daughter of Lord Eddard Stark. She is fiercely independent and is often mistaken for a boy...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_aryastark.html",
+		"url": "assets/data/character-aryastark.html",
 		"time": "13",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -196,7 +209,7 @@ cards = [
 		"description": "The free folk are a race of people who live beyond the Wall. They are more commonly referred to as \"wildlings\" everywhere south of the Wall...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/article_thewildlings.html",
+		"url": "assets/data/article-thewildlings.html",
 		"time": "15",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -222,7 +235,7 @@ cards = [
 		"description": "Jon Snow is the bastard son of the late Lord Eddard Stark of Winterfell. Jon was raised at Winterfell on an equal footing...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_jonsnow.html",
+		"url": "assets/data/character-jonsnow.html",
 		"time": "16",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -236,7 +249,7 @@ cards = [
 		"description": "Tormund, better known as Tormund Thunderfist, is a trusted leader in his own right of a large warband of wildlings...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_tormund.html",
+		"url": "assets/data/character-tormund.html",
 		"time": "16",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -262,7 +275,7 @@ cards = [
 		"description": "Ygritte is a woman of the Free Folk who lives north of the Wall. She captured Jon Snow but didn’t kill him...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_ygritte.html",
+		"url": "assets/data/character-ygritte.html",
 		"time": "17",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -276,7 +289,7 @@ cards = [
 		"description": "Watch the Twins Bridge appear from nowhere.",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/visualfx_thetwinsbridge.html",
+		"url": "assets/data/visualfx-thetwinsbridge.html",
 		"time": "17",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -290,7 +303,7 @@ cards = [
 		"description": "The Twins, sometimes known as The Crossing, is a castle in the Riverlands. It is the seat of House Frey...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/location_thetwins.html",
+		"url": "assets/data/location-thetwins.html",
 		"time": "17",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -303,7 +316,7 @@ cards = [
 		"title": "The Hound's Chicken",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/gif_thehoundschicken.html",
+		"url": "assets/data/gif-thehoundschicken.html",
 		"time": "18",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -367,7 +380,7 @@ cards = [
 		"description": "Orell is a wildling. Like Bran Stark, he is a warg...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_orell.html",
+		"url": "assets/data/character-orell.html",
 		"time": "21",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -375,12 +388,12 @@ cards = [
 
 	{
 		"displayed": false,
-		"displayTime": 21*60+52,
+		"displayTime": 21*60+55,
 		"category": "Fact",
 		"title": "Reminds me of a pirate",
 		"description": "Mackenzie Crook played in the original version of The Office and in all three Pirates of the Caribbean movies....",
 		"browser": false,
-		"time": "22",
+		"time": "21",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
 	},
@@ -393,7 +406,7 @@ cards = [
 		"description": "Wargs are people with the ability to enter the minds of animals and perceive the world through their senses...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/article_warg.html",
+		"url": "assets/data/article-warg.html",
 		"time": "24",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -420,7 +433,7 @@ cards = [
 		"title": "Ygritte's rage face",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/gif_ygrittesrageface.html",
+		"url": "assets/data/gif-ygrittesrageface.html",
 		"time": "27",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -446,7 +459,7 @@ cards = [
 		"description": "What if we told you that there is nobody in that camp ?",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/visualfx_thecamp.html",
+		"url": "assets/data/visualfx-thecamp.html",
 		"time": "29",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -460,7 +473,7 @@ cards = [
 		"description": "Jojen tells Bran that even the wargs among the wildlings beyond the Wall cannot enter into the minds of humans. This is only partially true...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/article_wargshumans.html",
+		"url": "assets/data/article-wargshumans.html",
 		"time": "32",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -474,7 +487,7 @@ cards = [
 		"description": "Castle Black is the primary headquarters and redoubt of the Night's Watch. It is located...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/location_castleblack.html",
+		"url": "assets/data/location-castleblack.html",
 		"time": "32",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -514,7 +527,7 @@ cards = [
 		"description": "Roose Bolton is the head of House Bolton, a vassal family to House Stark of Winterfell...",
 		"cta": "Read more",
 		"browser": true,
-		"url": "assets/data/character_roosebolton.html",
+		"url": "assets/data/character-roosebolton.html",
 		"time": "37",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -577,7 +590,7 @@ cards = [
 		"description": "See how Frey's castle has been made from scratch.",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/visualfx_housefreyscastle.html",
+		"url": "assets/data/visualfx-housefreyscastle.html",
 		"time": "42",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -590,7 +603,7 @@ cards = [
 		"title": "Roose Bolton's armor",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/gif_rooseboltonsarmor.html",
+		"url": "assets/data/gif-rooseboltonsarmor.html",
 		"time": "44",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
@@ -603,7 +616,7 @@ cards = [
 		"title": "Walder Frey's excitment",
 		"cta": "Watch",
 		"browser": true,
-		"url": "assets/data/gif_walderfreysexcitment.html",
+		"url": "assets/data/gif-walderfreysexcitment.html",
 		"time": "44",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"

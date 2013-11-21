@@ -14,13 +14,15 @@ var player = {
 		randomized: function(){},
 		onTimeUpdate: function(){},
 		onVolumeChange: function(){},
-		muted: function(){}
+		muted: function(){},
+
 	},
 
 	init: function(options){
 		// this -> l'objet player
 		this.prop = $.extend(this.params, options);
 		this.media = $(this.prop.video)[0];
+		
 		$(this.prop.video).bind('timeupdate',this.updateProgress);
 		$(this.prop.video).bind('volumechange',this.updateVolume);
 	},
@@ -59,11 +61,19 @@ var player = {
 
 	setTime: function(e, time){
 		e.stopPropagation();
+
 		if(time){
 			player.media.currentTime = time;
 			return;
 		} else {
-			player.media.currentTime = e.offsetX * player.media.duration / $(player.prop.control).width();
+			console.log(e);
+			if(e.offsetX == undefined){
+				xPos = e.pageX - $(player.prop.control).offset().left;
+			} else {
+				xPos = e.offsetX;
+			}
+			console.log(player.media.duration);
+			player.media.currentTime = xPos * player.media.duration / $(player.prop.control).width();
 		}
 		
 	},
@@ -122,12 +132,8 @@ var player = {
 		var duration = Math.floor(player.media.duration);
 		var durationMin = Math.floor(duration/60) + '';
 		var durationSec = Math.floor(duration%60) + '';
-		if(durationSec.length < 2){
-			durationSec = ' 0'+ durationSec;
-		}
-		if(durationMin.length < 2){
-			durationMin = ' 0' + durationMin;
-		}
+		if(durationSec.length < 2){ durationSec = ' 0'+ durationSec; }
+		if(durationMin.length < 2){ durationMin = ' 0' + durationMin; }
 		$(player.prop.duration).find('.duration').text(durationMin + ':' + durationSec);
 	},
 
@@ -135,13 +141,8 @@ var player = {
 		var currentTime = Math.floor(player.media.currentTime);
 		var currentTimeSec = Math.floor(currentTime%60) + '';
 		var currentTimeMin = Math.floor(currentTime/60) + '';
-		if(currentTimeSec.length < 2){
-			currentTimeSec = '0' + currentTimeSec;
-
-		}
-		if(currentTimeMin.length < 2){
-			currentTimeMin = '0' + currentTimeMin;
-		}
+		if(currentTimeSec.length < 2){ currentTimeSec = '0' + currentTimeSec; }
+		if(currentTimeMin.length < 2){ currentTimeMin = '0' + currentTimeMin; }
 		$(player.prop.duration).find('.current-time').text(currentTimeMin + ':' + currentTimeSec );
 	},
 	// Returns the current time for Twitter hashtag

@@ -42,7 +42,7 @@
                     autoRefresh:    true, // CURRENTLY REQUIRED. Auto-refresh the tweets
                     animateOut:     false, // NOT YET SUPPORTED. Animate out old tweets.
                     animateIn:      true, // Fade in new tweets.
-                    tweetFormat: "<li class='tweet'><div class='meta'><img class='avatar' src=''/><a href='' class='username'></a><a href='' class='time'></a><div class='clear'></div></div><p class='tweet-content'></p><ul class='actions'><li><button class='reply'><i>Reply</i>Reply</button></li><li><button class='retweet'><i>Retweet</i> Retweet</button></li><li><button class='favorite'><i>Favorite</i>Favorite</button></li></ul></li>", // Format for each tweet
+                    tweetFormat: "<li class='tweet'><div class='meta'><img class='avatar' src=''/><a href='' class='name'></a><a href='' class='username'></a><div class='clear'></div></div><p class='tweet-content'></p><ul class='actions'><li><button class='reply'><i>Reply</i>Reply</button></li><li><button class='retweet'><i>Retweet</i> Retweet</button></li><li><button class='favorite'><i>Favorite</i>Favorite</button></li></ul></li>", // Format for each tweet
                     localization: { // Verbiage to use for timestamps
                         seconds:    'seconds ago',
                         minute:     'a minute ago',
@@ -108,18 +108,18 @@
                         var tweetMachine;
                         tweetMachine = this;
                         // Loop over each timestamp
-                        $(tweetMachine.container).find('.time').each(function () {
-                            var originalTime, timeElement;
+                        // $(tweetMachine.container).find('.time').each(function () {
+                        //     var originalTime, timeElement;
 
-                            // Save a reference to the time element
-                            timeElement = $(this);
+                        //     // Save a reference to the time element
+                        //     timeElement = $(this);
                             
-                            // Get the original time from the data stored on the timestamp
-                            originalTime = timeElement.data('timestamp');
+                        //     // Get the original time from the data stored on the timestamp
+                        //     originalTime = timeElement.data('timestamp');
 
-                            // Generate and show a new time based on the original time
-                            timeElement.html(tweetMachine.relativeTime(originalTime));
-                        });
+                        //     // Generate and show a new time based on the original time
+                        //     timeElement.html(tweetMachine.relativeTime(originalTime));
+                        // });
                     },
                     
                     /*
@@ -156,18 +156,23 @@
                             .attr('src', tweet.user.profile_image_url);
 
                         // Set the username
+                        tweetObj.find('.name')
+                            .attr('href', "http://twitter.com/" + tweet.user.screen_name)
+                            .attr('target', '_blank')
+                            .html("" + tweet.user.name);
+
                         tweetObj.find('.username')
                             .attr('href', "http://twitter.com/" + tweet.user.screen_name)
                             .attr('target', '_blank')
-                            .html("" + tweet.user.screen_name);
+                            .html("@" + tweet.user.screen_name);
 
                         // Set the timestamp
-                        tweetObj.find('.time')
-                            .attr('href', "http://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id_str)
-                            .attr('target', '_blank')
-                            .html(tweetMachine.relativeTime(tweet.created_at))
-                            // Save the created_at time as jQuery data so we can update it later
-                            .data('timestamp', tweet.created_at);
+                        // tweetObj.find('.time')
+                        //     .attr('href', "http://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id_str)
+                        //     .attr('target', '_blank')
+                        //     .html(tweetMachine.relativeTime(tweet.created_at))
+                        //     // Save the created_at time as jQuery data so we can update it later
+                        //     .data('timestamp', tweet.created_at);
 
                         // Set the text
                         tweetObj.find('.tweet-content')

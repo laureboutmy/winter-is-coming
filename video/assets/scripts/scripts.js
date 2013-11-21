@@ -1,7 +1,7 @@
 // SETUP
 
-// $(".nano").nanoScroller();
-
+$(".nano").nanoScroller();
+$('.tweets').tweetMachine('#GoT');
 player.init({
 	video: '#video',
 	progress: '.progress',
@@ -125,6 +125,7 @@ timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
 		console.log('displayed');
+		$('#timeline article.card.hidden').removeClass('hidden');
 	}
 });
 
@@ -164,7 +165,12 @@ function showBrowser(e){
 		success: function(data){
 			$('#browser > div').html(data);
 		}
-	});
+	})
+	if($(this).hasClass('gif')){
+		$.getScript('assets/scripts/tumblr.js');
+		$.getScript('http://platform.tumblr.com/v1/share.js');
+	}
+
 }
 
 function hideBrowser(e){
@@ -179,7 +185,9 @@ function goToMarker(e){
 	e.preventDefault();
 	var key = $(this).data('key');
 	player.setTime(e, key);
+
 	$("#timeline div").animate({
+
 		scrollTop: $('article.card[data-key=' + key + ']').offset().top + 'px'
 	}, {
 		duration: 500,
@@ -216,10 +224,6 @@ function countChar(){
 		$('.nb-chars').addClass('visible').html(length + ' chars left').removeClass('error')
 	}
 }
-
-
-
-
 
 /* /Rajout Dorian */
 

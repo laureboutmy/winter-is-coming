@@ -47,7 +47,7 @@
 						<hr />
 						<hr />
 						<div id="play-btn">
-							<img src="assets/images/template/btn-pause.png" alt="Pause" />
+							<img src="assets/images/template/btn-play.png" alt="Pause" />
 						</div><!-- /div#play-button 
 						 --><div id="progress-bar">
 							<span class="progress"></span>
@@ -201,9 +201,6 @@
 <script src="assets/scripts/libs/timeline.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
-<script>
-	$('.tweets').tweetMachine('#GoT');
-</script>
 <script src="assets/scripts/scripts.js"></script>
 <!-- /SCRIPTS -->
 </body>

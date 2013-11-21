@@ -388,12 +388,12 @@ cards = [
 
 	{
 		"displayed": false,
-		"displayTime": 21*60+52,
+		"displayTime": 21*60+55,
 		"category": "Fact",
 		"title": "Reminds me of a pirate",
 		"description": "Mackenzie Crook played in the original version of The Office and in all three Pirates of the Caribbean movies....",
 		"browser": false,
-		"time": "22",
+		"time": "21",
 		"imgMarker": "assets/images/content/28min2sec-marker.png",
 		"imgTimeline": "assets/images/content/28min2sec-timeline.png"
 	},

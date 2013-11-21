@@ -17,7 +17,7 @@ cards = [
 		"displayTime": 2*60+7,
 		"category": "Character",
 		"title": "Robb Stark",
-		"description": "Robb Starkkk, also called Young Wolf, is the King in the North. He is the eldest son of Eddard Stark and Catelyn Tully...",
+		"description": "Robb Stark, also called Young Wolf, is the King in the North. He is the eldest son of Eddard Stark and Catelyn Tully...",
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/character_robbstark.html",

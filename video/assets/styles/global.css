@@ -11,6 +11,7 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 
 #homepage { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%;}
 #homepage.hidden { opacity: 0; }
+#homepage > div.content { width: 100%; }
 #homepage header { height: 22px; width: 100%; background: rgba(0, 0, 0, 1); padding: 14px 0; }
 #homepage header h1 { float: left; display: inline-block; }
 #homepage header a { display: block; float: right; color: #666666; font-size: 0.625em; text-transform: uppercase; font-weight: 400; padding: 6px 0;}

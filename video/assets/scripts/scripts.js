@@ -245,7 +245,6 @@ function launchPlayer(e){
 					}, 1000);
 				}, 300);
 			}, 600);
-			
 		}
 	});
 }
@@ -260,12 +259,9 @@ $('#main').on('click', 'a.browser', showBrowser);
 $('#progress-bar').on('click', 'a.marker', goToMarker);
 $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);
-/* RAJOUT DORIAN */
 $('#tweet-feed').on('click', 'button.reply', tweet.reply);
 $('#tweet-feed').on('click', 'button.retweet', tweet.retweet);
-$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);
-
-/* /RAJOUT DORIAN */
+$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);s
 $('#tweet-box textarea[name=tweet]').on('click', extendForm);
 $('#tweet-box form').submit(tweet.submit);
 $('#tweet-box textarea').on({

@@ -227,10 +227,11 @@ function countChar(){
 
 function launchPlayer(e){
 	e.preventDefault();
-	$('body').stop().animate({
+	$('#homepage div').stop().animate({
 		scrollTop: 0 + 'px'
 	}, {
-		duration: 300,
+		duration: '300',
+		easing: 'swing',
 		complete: function(){
 			$('#homepage').addClass('hidden');
 			window.setTimeout(function(){
@@ -242,8 +243,8 @@ function launchPlayer(e){
 						$('#player div').removeClass('visible');
 						player.load();
 					}, 1000);
-				}, 1000);
-			}, 500);
+				}, 300);
+			}, 600);
 			
 		}
 	});

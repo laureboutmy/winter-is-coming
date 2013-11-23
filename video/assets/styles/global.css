@@ -66,13 +66,13 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 #homepage section#unlock-badges div.signed-in ul#all-badges { margin: 40px 0; overflow: hidden; }
 #homepage section#unlock-badges div.signed-in ul#all-badges li { opacity: 0.4; text-align: center; float: left; width: 200px; padding: 20px; }
 #homepage section#unlock-badges div.signed-in ul#all-badges li.claimed { opacity: 1; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li h3 { margin: 20px auto 5px; font-size: 1.375em; color: #fff; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; }
+#homepage section#unlock-badges div.signed-in ul#all-badges li h3 { margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
+#homepage section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; font-weight: 300; }
 
 
 #homepage footer { text-align: center; }
 #homepage footer p { font-size: 0.750em; color: #333333; font-weight: 300; }
-#homepage footer p.produced { color: #4c4c4c; margin-top: 10px; }
+#homepage footer p.produced { color: #4c4c4c; margin: 10px 0 30px; }
 
 
 #wrapper { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }
@@ -254,6 +254,19 @@ video.hidden { opacity: 0; }
 #timeline article.card > div.text span { display: block; margin-bottom: 5px; font-weight: 300; text-align: center; color: #666; line-height: 1.385em; }
 #timeline article.card > div.text span i { background-position: 0 1px; margin-left: 4px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAYAAACXDi8zAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3QjI4RDVGOTRBNUIxMUUzQjg2NkZBRkYwMDg4NTA4QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3QjI4RDVGQTRBNUIxMUUzQjg2NkZBRkYwMDg4NTA4QyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdCMjhENUY3NEE1QjExRTNCODY2RkFGRjAwODg1MDhDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdCMjhENUY4NEE1QjExRTNCODY2RkFGRjAwODg1MDhDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rA2GiwAAAF9JREFUeNpi9PX1ZQACOSB+xIAEmIBYEYjPArEdusR9IA4B4rXIkkxQ+iCSpD2yBLLkGiA2QJYAgf/oRjFAzQcZFQrEF5iwCB4ACbAAsQJUMARqDwNM4gEQG6N7ECDAAKlFEiF1wxBzAAAAAElFTkSuQmCC); width: 6px; height: 10px;}
 #badges { position: absolute; top: 40px; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#badges ul li { background: url(../images/template/bg-hr.png) repeat-x; width: 230px; padding: 25px 15px 20px; width: 230px; }
+#badges ul li div.badge { float: left; opacity: 0.4; }
+#badges ul li h3 { opacity: 0.4; margin-bottom: 5px; font-size: 1.538em; font-weight: 200; color: #fff; }
+#badges ul li p { opacity: 0.4; color: #666666; font-weight: 300; }
+#badges ul li.claimed div.badge,
+#badges ul li.claimed h3,
+#badges ul li.claimed p { opacity: 1; }
+
+
+
+
+
+
 #timeline.visible, #feed.visible, #badges.visible { right: 0; }
 
 #browser { width: 50%; position: relative; left: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); display: inline-block; border-left: 1px solid rgba(255, 255, 255, .08); -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -294,7 +307,15 @@ div.close-browser.visible { display: block; visibility: visible; z-index: 100; }
 .badge.big.please-not-the-wolf { background-position: -905px 0; }
 .badge.big.savant { background-position: -1086px 0; }
 .badge.big.walder-frey { background-position: -1267px 0; }
-
+.badge.small { background: url(../images/template/badges-small.png) no-repeat; margin: 0 auto; width: 101px; height: 78px; }
+.badge.small.acolyte { background-position: 0 0; }
+.badge.small.envoy { background-position: -101px 0; }
+.badge.small.dovecot { background-position: -202px 0; }
+.badge.small.lannister { background-position: -303px 0; }
+.badge.small.couch-potatoe { background-position: -404px 0; }
+.badge.small.please-not-the-wolf { background-position: -505px 0; }
+.badge.small.savant { background-position: -606px 0; }
+.badge.small.walder-frey { background-position: -707px 0; }
 
 
 

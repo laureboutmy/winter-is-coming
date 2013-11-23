@@ -20,10 +20,11 @@ function handleSessionReponse(session){
 	}
 
 	FB.api("/me", function(user){
-		console.log('heyyy');
+		badges.claim('acolyte');
 		$('#homepage #unlock-badges .sign-in').addClass('hidden');
+		$('#homepage #unlock-badges .signed-in a.sign-in-facebook').hide();
 		$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-		$("#homepage #unlock-badges .signed-in h2 span").html('Welcome, ' + user.name);
+		$('#homepage #unlock-badges .signed-in h2 span').html('Welcome, ' + user.name);
 		
 		return false;
 	});

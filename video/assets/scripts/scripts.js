@@ -1,6 +1,11 @@
 // SETUP
-
-$(".nano").nanoScroller();
+var badgeSavant = 0;
+// $(".nano").nanoScroller();
+if(signedInTwitter){
+	$('#homepage #unlock-badges .sign-in').addClass('hidden');
+	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
+	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome');
+}
 $('.tweets').tweetMachine('#GoT');
 player.init({
 	video: '#video',
@@ -11,10 +16,12 @@ player.init({
 	file: 'random.json',
 	loaded: function(){
 		console.log('loaded');
-		player.playPause();
+		
 		player.getDuration();
 		$(player.prop.video).removeClass('hidden');
-
+		if(localStorage.getItem("currentTime") == null){
+			localStorage.setItem('currentTime', JSON.stringify(0));
+		} 
 	},
 	playing: function(){
 		console.log('playing');
@@ -30,6 +37,7 @@ player.init({
 	onTimeUpdate: function(currentTime){
 		checkTime(currentTime);
 		player.getCurrentTime();
+		localStorage.setItem("currentTime", JSON.stringify(player.media.currentTime));
 	},
 	muted: function(muted){
 		if(muted){
@@ -42,7 +50,7 @@ player.init({
 	}
 });
 
-// player.load();
+player.load();
 
 
 function setWidth(){
@@ -130,18 +138,15 @@ timeline.init({
 	}
 });
 
+
+
 function checkTime(currentTime) {
 	for (key in cards) {
 		var card = cards[key];
-
 		if(currentTime > card.displayTime && !card.displayed){
 			timeline.render(card);
 			timeline.addMarker(card);
-		} 
-
-		// if(currentTime > card.hiddenTime && !card.hidden){
-		// 	timeline.move(card);
-		// }
+		}
 	}
 }
 
@@ -149,6 +154,10 @@ function checkTime(currentTime) {
 function showBrowser(e){
 	e.preventDefault();
 	player.pause();
+	badgeSavant++;
+	if(badgeSavant == 8){
+		badges.claim('savant');
+	}
 	var url = $(this).data('url');
 
 	$('div.close-browser').addClass('visible');
@@ -166,12 +175,11 @@ function showBrowser(e){
 		success: function(data){
 			$('#browser > div').html(data);
 		}
-	})
+	});
 	if($(this).hasClass('gif')){
 		$.getScript('assets/scripts/tumblr.js');
 		$.getScript('http://platform.tumblr.com/v1/share.js');
 	}
-
 }
 
 function hideBrowser(e){
@@ -201,6 +209,7 @@ tweet.init({
 		extendForm();
 	},
 	submitted: function(){
+		badges.claim('envoy');
 		$('.nb-chars').html('Tweet envoyé');
         $('#tweet-box textarea').val('');
         $('#tweet-box').removeClass('focused');
@@ -226,7 +235,7 @@ function countChar(){
 }
 
 function launchPlayer(e){
-	e.preventDefault();
+	e.stopPropagation();
 	$('#homepage div').stop().animate({
 		scrollTop: 0 + 'px'
 	}, {
@@ -241,13 +250,24 @@ function launchPlayer(e){
 					$('#player div').addClass('visible');
 					window.setTimeout(function(){
 						$('#player div').removeClass('visible');
-						player.load();
+						player.play();
 					}, 1000);
 				}, 300);
 			}, 600);
 		}
 	});
 }
+
+
+badges.init({
+	rendered: function(name){
+		console.log('badge ' + name + ' rendered');
+		$('.' + name).parent().addClass('claimed');
+	},
+	claimed: function(name){
+		console.log('badge ' + name + ' claimed');
+	}
+});
 
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);
@@ -270,11 +290,14 @@ $('#tweet-box textarea').on({
 });
 $(document).on('keydown', function(e){ 
 	console.log(e);
-	if(e.keyCode == 32){
-		console.log('hey');
+	if(!$('#tweet-box').hasClass('focused')){
+		if(e.keyCode == 32){
+			player.playPause();
+		
+		}
 	}
 	
+	
 })
-/* Initialisation des badges. */
-badges.init();
-/* END Initialisation des badges. */
+
+

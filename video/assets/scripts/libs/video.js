@@ -23,8 +23,9 @@ var player = {
 		this.prop = $.extend(this.params, options);
 		this.media = $(this.prop.video)[0];
 		
-		$(this.prop.video).bind('timeupdate',this.updateProgress);
-		$(this.prop.video).bind('volumechange',this.updateVolume);
+		$(this.prop.video).bind('timeupdate', this.updateProgress);
+		$(this.prop.video).bind('volumechange', this.updateVolume);
+		
 	},
 
 	load: function(){
@@ -32,7 +33,8 @@ var player = {
 		$(this.prop.video).on('canplaythrough', function(){
 			player.prop.loaded.call(this);
 			// Si on veut ajouter des arguments, on met this, blim, blam
-		})
+		});
+
 	},
 
 	playPause: function(){
@@ -60,25 +62,25 @@ var player = {
 	},
 
 	setTime: function(e, time){
-		e.stopPropagation();
+		e.stopPropagation(); 
 
 		if(time){
 			player.media.currentTime = time;
 			return;
 		} else {
-			console.log(e);
 			if(e.offsetX == undefined){
 				xPos = e.pageX - $(player.prop.control).offset().left;
 			} else {
 				xPos = e.offsetX;
 			}
-			console.log(player.media.duration);
+			
 			player.media.currentTime = xPos * player.media.duration / $(player.prop.control).width();
 		}
 		
 	},
 
 	updateProgress: function(){
+		
 		player.prop.onTimeUpdate.call(this, player.media.currentTime);
 
 		var progressW = player.media.currentTime * 100 / player.media.duration;

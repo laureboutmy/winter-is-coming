@@ -289,6 +289,7 @@
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="assets/scripts/libs/video.js"></script>
 <script src="assets/data/cards.jsonp"></script>
+<script src="assets/scripts/libs/badges.js"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>

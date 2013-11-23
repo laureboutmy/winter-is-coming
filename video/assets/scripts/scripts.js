@@ -261,7 +261,7 @@ $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);
 $('#tweet-feed').on('click', 'button.reply', tweet.reply);
 $('#tweet-feed').on('click', 'button.retweet', tweet.retweet);
-$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);s
+$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);
 $('#tweet-box textarea[name=tweet]').on('click', extendForm);
 $('#tweet-box form').submit(tweet.submit);
 $('#tweet-box textarea').on({

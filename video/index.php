@@ -4,7 +4,7 @@
 	include("assets/twitter/getUser.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# gotplayer: http://ogp.me/ns/fb/gotplayer#">
 <head>
 
 	<meta charset="utf-8" />
@@ -13,7 +13,15 @@
 	
 	<meta name="description" content="">
 	<meta name="robots" content="index, follow" />
-	  
+
+	<!-- OPEN GRAPH -->
+	<meta property="fb:app_id" content="452234728214767" /> 
+    <meta property="og:type"   content="gotplayer:got_episode" /> 
+    <meta property="og:url"    content="http://winter-is-coming.dev:8888/video/" /> 
+    <meta property="og:title"  content="The Rains of Castamere" /> 
+    <meta property="og:image"  content="http://doriancamilleri.fr/player/customActionsHome/img/hodor.png" /> 
+	<!-- /OPEN GRAPH -->
+
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!--[if lt IE 9]>
@@ -27,6 +35,7 @@
 	<link href="assets/styles/fonts.css" rel="stylesheet" type="text/css" />
 	<link href="assets/styles/global.css" rel="stylesheet" type="text/css" />
     <!-- /STYLESHEETS -->
+	
 
 </head>
 <body>
@@ -49,12 +58,62 @@
 				</div>
 			</div>
 		</section>
-		<div class="rain">
+		<!-- <div class="rain"> -->
+		<div class="wrapper">
 			<section id="unlock-badges">
 				<div class="sign-in">
 					<h2>Sign in to improve your experience, <span>start collecting badges!</span></h2>
-					<a href="#" class="facebook"><i class="facebook"></i>Sign in with Facebook</a>
-					<a href="#" class="twitter"><i class="twitter"></i>Sign in with Twitter</a>
+					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
+					<a href="#" class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
+				</div>
+				<div class="signed-in hidden">
+					<h2><span>Welcome, Julien Perrière.</span>
+					You’ve unlocked 1 badge, congrats!</h2>
+					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
+					<hr />
+					<ul id="all-badges">
+						<li class="claimed">
+							<div class="badge acolyte big">Acolyte</div>
+							<h3>Acolyte</h3>
+							<p>Join the adventure by signing in with Twitter or Facebook.</p>
+						</li>
+						<li>
+							<div class="badge envoy big">Envoy</div>
+							<h3>Envoy</h3>
+							<p>Spread the word ! Tweet with #GoT to your followers.</p>
+						</li>
+						<li>
+							<div class="badge dovecot big"></div>
+							<h3>Dovecot</h3>
+							<p>The whole Kingdom has heard about your tweets.</p>
+						</li>
+						<li>
+							<div class="badge lannister big"></div>
+							<h3>Lannister</h3>
+							<p>A Lannister always listen to the Lannister song.</p>
+						</li>
+						<li>
+							<div class="badge couch-potatoe big"></div>
+							<h3>Couch Potatoe</h3>
+							<p>Make yourself confortable, open the mobile website.</p>
+						</li>
+						<li>
+							<div class="badge please-not-the-wolf big"></div>
+							<h3>Please Not The Wolf</h3>
+							<p>You’re a true animal advocate, people love you for that.</p>
+						</li>
+						<li>
+							<div class="badge savant big"></div>
+							<h3>Savant</h3>
+							<p>You know approximately as much as encyclopaedia.</p>
+						</li>
+						<li>
+							<div class="badge walder-frey big"></div>
+							<h3>Walder Frey</h3>
+							<p>The night is dark and full of terrors. You’re one of those.</p>
+						</li>
+						
+					</ul>
 				</div>
 			</section>
 			<footer>
@@ -63,7 +122,8 @@
 				<p>Game of Thrones is a registered trademark property of HBO.</p> 
 				<p class="produced">Produced with passion by Laure Boutmy, Dorian Camilleri, Thomas Iturralde, Julien Perrière and Anthony Roux.</p>
 			</footer>
-		</div><!-- /sieste.rain -->
+		</div>
+		<!-- </div> /sieste.rain -->
 	</div><!-- /div.content -->
 </section><!-- /section#homepage -->
 <section id="wrapper">
@@ -221,14 +281,18 @@
 		</section><!-- /section#browser -->
 	</section><!-- /section#wrapper-rel -->
 </section><!-- /section#wrapper -->
+<div id="fb-root"></div>
+
 <!-- SCRIPTS -->
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="assets/scripts/libs/video.js"></script>
 <script src="assets/data/cards.jsonp"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script src="assets/scripts/fbconnect.js"></script>
 <script src="assets/scripts/scripts.js"></script>
 <!-- /SCRIPTS -->
 </body>

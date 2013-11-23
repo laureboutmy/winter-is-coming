@@ -7,9 +7,9 @@ a, a:link, a:active, a:visited { color: #fff; text-decoration: none; }
 i { text-align: left; text-indent: -9999px; overflow: hidden; display: inline-block; }
 i.facebook { background: url(../images/template/i-fb.png) no-repeat; width: 11px; height: 21px; }
 i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px; height: 14px; }
+i.play { background: url(../images/template/i-hp-play.png) no-repeat; width: 16px; height: 18px; }
 
-
-#homepage { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%;}
+#homepage { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%; background: #000; }
 #homepage.hidden { opacity: 0; }
 #homepage > div.content { width: 100%; }
 #homepage header { height: 22px; width: 100%; background: rgba(0, 0, 0, 1); padding: 14px 0; }
@@ -37,7 +37,7 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 	background: linear-gradient(to bottom, rgba(255,255,255,0.28) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.08) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffffff', endColorstr='#14ffffff',GradientType=0 ); /* IE6-9 */ }
 #homepage section#episode a.launch-player:hover { opacity: 0.8; }
-#homepage section#episode i.play { float: left; margin-top: 5px; background: url(../images/template/i-hp-play.png) no-repeat; width: 16px; height: 18px; margin-right: 15px;}
+#homepage section#episode i.play { float: left; margin-top: 5px; margin-right: 15px; }
 #homepage div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
 #homepage section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
 #homepage section#unlock-badges div.sign-in.hidden { display: none; visibility: hidden; opacity: 0; }
@@ -66,7 +66,7 @@ i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px;
 #homepage section#unlock-badges div.signed-in ul#all-badges { margin: 40px 0; overflow: hidden; }
 #homepage section#unlock-badges div.signed-in ul#all-badges li { opacity: 0.4; text-align: center; float: left; width: 200px; padding: 20px; }
 #homepage section#unlock-badges div.signed-in ul#all-badges li.claimed { opacity: 1; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li h3 { margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
+#homepage section#unlock-badges div.signed-in ul#all-badges li h3 { letter-spacing: 0.1em; margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
 #homepage section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; font-weight: 300; }
 
 
@@ -189,7 +189,6 @@ video.hidden { opacity: 0; }
 #sidebar nav ul li i.timeline { background-position: 0 0; }
 #sidebar nav ul li i.feed { background-position: 0px -30px; }
 #sidebar nav ul li i.badges { background-position: 0px -60px; }
-
 #sidebar nav ul li i.current.timeline { background-position: -30px 0; }
 #sidebar nav ul li i.current.feed { background-position: -30px -30px; }
 #sidebar nav ul li i.current.badges { background-position: -30px -60px; }
@@ -197,6 +196,8 @@ video.hidden { opacity: 0; }
 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#40ffffff',GradientType=0 ); /* IE6-9 */ }
+
+#timeline.visible, #feed.visible, #badges.visible { right: 0; }
 
 #feed { right: -100%; position: absolute; top: 40px; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
 #feed #tweet-box { z-index: 20; background: rgba(0,0,0,1) url(../images/template/bg-tweet.png) no-repeat top; width: 230px; margin: 0 15px; height: 75px; position: absolute; bottom: 0; /*height: 75px;*/ padding: 25px 0px; box-shadow: 0px -3px 10px 6px rgba(0, 0, 0, 1); }
@@ -236,7 +237,7 @@ video.hidden { opacity: 0; }
 #timeline { color: #666666; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
 #timeline article.card { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; position: relative; z-index: 30; margin-top: 100px; width: 230px; margin: 0 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 1); }
 #timeline article.card.hidden { opacity: 0; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; }
-#timeline article.card > div.time { z-index: 20; font-size: 0.923em; position: relative; width: 20px; height: 20px; padding: 40px; margin: 0 auto; background: url(../images/template/bg-timecode.png) no-repeat center center; text-align: center; }
+#timeline article.card > div.time { z-index: 20; font-size: 0.923em; position: relative; width: 20px; height: 20px; padding: 42px 40px 40px; margin: 0 auto; background: url(../images/template/bg-timecode.png) no-repeat center center; text-align: center; }
 #timeline article.card > div.time span { font-size: 7px; line-height: 6px; letter-spacing: 1px; display: block; text-transform: uppercase; }
 #timeline article.card > div.time:before,
 #timeline article.card > div.time:after { z-index: 10; content: ''; display: block; height: 30px; width: 8px;  left: 50%; margin-left: -4px; background: url(../images/template/bg-hr-cards.png) repeat-y bottom; position: absolute; }
@@ -262,12 +263,6 @@ video.hidden { opacity: 0; }
 #badges ul li.claimed h3,
 #badges ul li.claimed p { opacity: 1; }
 
-
-
-
-
-
-#timeline.visible, #feed.visible, #badges.visible { right: 0; }
 
 #browser { width: 50%; position: relative; left: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); display: inline-block; border-left: 1px solid rgba(255, 255, 255, .08); -moz-box-sizing: border-box; box-sizing: border-box; }
 div.close-browser { display: none; position: absolute; width: 25%; height: 100%; visibility: hidden; z-index: 0; }
@@ -316,7 +311,5 @@ div.close-browser.visible { display: block; visibility: visible; z-index: 100; }
 .badge.small.please-not-the-wolf { background-position: -505px 0; }
 .badge.small.savant { background-position: -606px 0; }
 .badge.small.walder-frey { background-position: -707px 0; }
-
-
 
 /* @end of Global */

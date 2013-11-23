@@ -15,14 +15,17 @@ var player = {
 		onTimeUpdate: function(){},
 		onVolumeChange: function(){},
 		muted: function(){},
-
 	},
 
 	init: function(options){
 		// this -> l'objet player
 		this.prop = $.extend(this.params, options);
 		this.media = $(this.prop.video)[0];
-		
+		if(localStorage.getItem('currentTime') == null){
+			localStorage.setItem('currentTime', JSON.stringify(0));
+		} else {
+			CURRENTTIME = JSON.parse(localStorage.getItem("currentTime"))
+		}
 		$(this.prop.video).bind('timeupdate', this.updateProgress);
 		$(this.prop.video).bind('volumechange', this.updateVolume);
 		
@@ -62,7 +65,7 @@ var player = {
 	},
 
 	setTime: function(e, time){
-		e.stopPropagation(); 
+		if(e != 'undefined') { e.stopPropagation(); }
 
 		if(time){
 			player.media.currentTime = time;

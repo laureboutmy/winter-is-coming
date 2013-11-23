@@ -1,6 +1,7 @@
 // SETUP
 var badgeSavant = 0;
-// $(".nano").nanoScroller();
+var CURRENTTIME;
+$(".nano").nanoScroller();
 if(signedInTwitter){
 	$('#homepage #unlock-badges .sign-in').addClass('hidden');
 	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
@@ -16,12 +17,13 @@ player.init({
 	file: 'random.json',
 	loaded: function(){
 		console.log('loaded');
-		
+		if(CURRENTTIME != 0){
+			launchPlayer('undefined');
+		}
+		player.setTime('undefined', CURRENTTIME);
 		player.getDuration();
 		$(player.prop.video).removeClass('hidden');
-		if(localStorage.getItem("currentTime") == null){
-			localStorage.setItem('currentTime', JSON.stringify(0));
-		} 
+		
 	},
 	playing: function(){
 		console.log('playing');
@@ -235,7 +237,7 @@ function countChar(){
 }
 
 function launchPlayer(e){
-	e.stopPropagation();
+	if(e != 'undefined') { e.preventDefault(); }
 	$('#homepage div').stop().animate({
 		scrollTop: 0 + 'px'
 	}, {

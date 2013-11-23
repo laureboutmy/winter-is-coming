@@ -5,7 +5,8 @@
 	$signed_in_twitter = isset($_SESSION['profile_image_url']) && !empty($_SESSION['profile_image_url'])
 					    		&& isset($_SESSION['name']) && !empty($_SESSION['name']) 
 					    		&& isset($_SESSION['screen_name']) && !empty($_SESSION['screen_name']);
-	if($signed_in_twitter) { echo '<script>var signedInTwitter = true;</script>'; }
+	if($signed_in_twitter) { echo '<script>var signedInTwitter = true;</script>'; } 
+	else { echo '<script>var signedInTwitter = false;</script>'; }
 ?>
 <!DOCTYPE html>
 <html lang="en"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# gotplayer: http://ogp.me/ns/fb/gotplayer#">

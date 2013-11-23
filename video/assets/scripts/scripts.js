@@ -277,4 +277,4 @@ $(document).on('keydown', function(e){
 })
 /* Initialisation des badges. */
 badges.init();
-/* END Initialisation des badges. *//
+/* END Initialisation des badges. */

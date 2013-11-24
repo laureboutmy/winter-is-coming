@@ -213,8 +213,6 @@
 						<div id="twitter-connect">
 					    	<a class="sign-in-twitter">Se connecter avec Twitter</a> 
 					    </div>
-						
-						
 					
 					</section>
 					<div id="tweet-feed" class="nano">

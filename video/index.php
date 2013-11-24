@@ -315,6 +315,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
+<script src="assets/scripts/libs/jquery.oauthpopup.js"></script>
 <script src="assets/scripts/libs/video.js"></script>
 <script src="assets/data/cards.jsonp"></script>
 <script src="assets/scripts/libs/badges.js"></script>
@@ -323,7 +324,6 @@
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
 <script src="assets/scripts/scripts.js"></script>
 <script src="assets/scripts/fbconnect.js"></script>
-<script src="assets/scripts/jquery.oauthpopup.js"></script>
 <!-- /SCRIPTS -->
 </body>
 </html>

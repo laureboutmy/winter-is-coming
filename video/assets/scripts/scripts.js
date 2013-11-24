@@ -1,6 +1,5 @@
 // SETUP
 var badgeSavant = 0;
-<<<<<<< HEAD
 if(localStorage.getItem('badgeDovecot') == null){
 	localStorage.setItem('badgeDovecot', JSON.stringify(0));
 	var badgeDovecot = 0;
@@ -10,17 +9,8 @@ if(localStorage.getItem('badgeDovecot') == null){
 
 var CURRENTTIME = 0;
 // $(".nano").nanoScroller();
-=======
-var CURRENTTIME;
-$(".nano").nanoScroller();
 
->>>>>>> b884e5bc31f6d096f4422bcdf474b3bfa29d5731
-if(signedInTwitter){
-	$('#homepage #unlock-badges .sign-in').addClass('hidden');
-	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
-	badges.claim('acolyte');
-}
+
 
 player.init({
 	video: '#video',
@@ -31,10 +21,6 @@ player.init({
 	file: 'random.json',
 	loaded: function(){
 		console.log('loaded');
-		console.log(CURRENTTIME)
-		if(CURRENTTIME != 0){
-			launchPlayer('undefined');
-		}
 		player.setTime('undefined', CURRENTTIME);
 		player.getDuration();
 		$(player.prop.video).removeClass('hidden');
@@ -204,7 +190,47 @@ function goToMarker(e){
 		easing: 'swing'
 	});
 }
+if(signedInTwitter){
+	$('#homepage #unlock-badges .sign-in').addClass('hidden');
+	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
+	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
+	badges.claim('acolyte');
+	$("#twitter-connect").hide();
+	$("#user").show();
+	$("#tweet-box form").show();
+	$("#tweet-feed .content").show();
+	$('.tweets').tweetMachine('#GoT');
+	$("#tweet-feed .content").show();
+} else {
+	$("#user").hide();
+	$("#tweet-box form").hide();
+	$("#tweet-feed .content").hide();
+}
 
+function twitterSignIn(){
+	$.oauthpopup({
+		path: 'assets/twitter/twitterConnect.php',
+		callback: function(){
+			$.ajax({
+				url: 'assets/twitter/responseConnect.php', 
+				success: function(response) { 
+					$('#user img').attr('src', response.profile_image_url);
+					$('#user .name').html(response.name);
+					$('#user .screen_name a').attr('href', 'http://twitter.com/'+response.screen_name);
+					$('#user .screen_name a').html('@'+response.screen_name);
+
+					$('#twitter-connect').fadeOut(500, function(){
+						$('#user').fadeIn(500);
+						$('#tweet-box form').fadeIn(500);
+					});
+
+					$('.tweets').tweetMachine('#GoT');
+					$('#tweet-feed .content').fadeIn(500);
+	     	  }
+	  		});
+		}
+	});
+}
 tweet.init({
 	textarea: '#tweet-box textarea[name=tweet]',
 	replying: function(){
@@ -274,7 +300,7 @@ badges.init({
 	}
 });
 
-
+$('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
@@ -300,55 +326,9 @@ $(document).on('keydown', function(e){
 			player.playPause();
 		}
 	}
-<<<<<<< HEAD
-})
-=======
 });
 
-/* RAJOUT DORIAN */
-if(signedInTwitter){
-	$("#twitter-connect").hide();
-	$("#user").show();
-	$("#tweet-box form").show();
-	$("#tweet-feed .content").show();
-	$('.tweets').tweetMachine('#GoT');
-	$("#tweet-feed .content").show();
 
-}
-else{
-	$("#user").hide();
-	$("#tweet-box form").hide();
-	$("#tweet-feed .content").hide();
-}
 
-function twitterSignIn(){
-	$.oauthpopup({
-		path: 'assets/twitter/twitterConnect.php',
-		callback: function(){
-			$.ajax({
-				url: 'assets/twitter/responseConnect.php', 
-				success: function(response) { 
-
-		          $("#user img").attr("src", response.profile_image_url);
-		          $("#user .name").html(response.name);
-		          $("#user .screen_name a").attr("href", "http://twitter.com/"+response.screen_name);
-		          $("#user .screen_name a").html("@"+response.screen_name);
-		          
-		          $("#twitter-connect").fadeOut(500, function(){
-		          	$("#user").fadeIn(500);
-		          	$("#tweet-box form").fadeIn(500);
-		          });
-
-		          $('.tweets').tweetMachine('#GoT');
-		          $("#tweet-feed .content").fadeIn(500);
-	     	  }
-	  		});
-		}
-	});
-}
-$('#feed .sign-in-twitter').on('click', twitterSignIn);
-
-/* /RAJOUT DORIAN */
->>>>>>> b884e5bc31f6d096f4422bcdf474b3bfa29d5731
 
 

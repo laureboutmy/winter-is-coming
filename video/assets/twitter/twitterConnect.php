@@ -22,7 +22,7 @@
         $_SESSION['CONSUMER_KEY'] = 'lzljK0zCWnUlzqvERrtdiw';
         $_SESSION['CONSUMER_SECRET'] = 'vZJMQXCzPZ42aa3F8ve6D7lqgoBm72froHDFJMuFpOQ';
 
-        $callback = 'http://localhost:8888/player3/video/assets/twitter/twitterConnect.php';
+        $callback = 'http://winter-is-coming.dev:8888/video/assets/twitter/twitterConnect.php';
         // $callback = 'http://doriancamilleri.fr/player/video/assets/twitter/twitterConnect.php';
 
         $twitteroauth = new TwitterOAuth($_SESSION['CONSUMER_KEY'], $_SESSION['CONSUMER_SECRET']);  

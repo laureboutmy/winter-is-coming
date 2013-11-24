@@ -231,7 +231,8 @@ video.hidden { opacity: 0; }
 #feed #tweet-feed ul.actions li button i { width: 65px; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; background: url(../images/template/i-tweet-actions.png) no-repeat; width: 16px; height: 10px;  }
 #feed #tweet-feed ul.actions li button.reply i { background-position: 0 0; }
 #feed #tweet-feed ul.actions li button.retweet i { background-position: -16px 0; }
-#feed #tweet-feed ul.actions li button.retweeted,#feed #tweet-feed ul.actions li button.favorited { opacity: 0.8; }
+#feed #tweet-feed ul.actions li button.retweeted,
+#feed #tweet-feed ul.actions li button.favorited i { opacity: 1; }
 #feed #tweet-feed ul.actions li button.favorite i { background-position: -32px 0; }
 
 

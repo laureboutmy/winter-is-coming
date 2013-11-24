@@ -245,6 +245,22 @@ tweet.init({
         $('#tweet-box textarea').val('');
         $('#tweet-box').removeClass('focused');
 		$('#feed #tweet-feed').height($(window).height() - 75);
+	},
+
+	retweeted: function(){
+		$("button.retweet[data-tweetid='"+idTweet+"']").addClass('retweeted');
+	},
+
+	favorited: function(){
+		$("button.favorite[data-tweetid='"+idTweet+"']").addClass('favorited');
+	},
+
+	unretweeted: function(){
+		$("button.retweet[data-tweetid='"+idTweet+"']").removeClass('retweeted');
+	},
+
+	unfavorited: function(){
+		$("button.favorite[data-tweetid='"+idTweet+"']").removeClass('favorited');
 	}
 })
 

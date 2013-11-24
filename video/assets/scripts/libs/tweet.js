@@ -31,11 +31,7 @@ var tweet = {
 		        	id: idTweet
 		        },
 		        success: function() { 
-		        	//tweet.prop.retweeted.call(this, _this);
-		        	/* RAJOUT DORIAN */
-		        		// removing class retweeted 
-		        		$("button.retweet[data-tweetid='"+idTweet+"']").removeClass('retweeted');
-		        	/* /RAJOUT DORIAN */
+		        	tweet.prop.unretweeted.call(this, _this);
 		        }
 		    });
 		}
@@ -49,10 +45,6 @@ var tweet = {
 		        },
 		        success: function() { 
 		        	tweet.prop.retweeted.call(this, _this);
-		        	/* RAJOUT DORIAN */
-		        		// Adding class retweeted 
-		        		$("button.retweet[data-tweetid='"+idTweet+"']").addClass('retweeted');
-		        	/* /RAJOUT DORIAN */
 		        }
 		    });
 		}
@@ -72,12 +64,7 @@ var tweet = {
 		        	id: idTweet
 		        },
 		        success: function() { 
-		        	//tweet.prop.favorited.call(this, _this);
-
-		        	/* RAJOUT DORIAN */
-		        		// Removing class favorited 
-		        		$("button.favorite[data-tweetid='"+idTweet+"']").removeClass('favorited');
-		        	/* /RAJOUT DORIAN */
+		        	tweet.prop.unfavorited.call(this, _this);
 		        }
 		    });
 		}
@@ -90,11 +77,6 @@ var tweet = {
 		        },
 		        success: function() { 
 		        	tweet.prop.favorited.call(this, _this);
-
-		        	/* RAJOUT DORIAN */
-		        		// Adding class favorited 
-		        		$("button.favorite[data-tweetid='"+idTweet+"']").addClass('favorited');
-		        	/* /RAJOUT DORIAN */
 		        }
 		    });
 		}

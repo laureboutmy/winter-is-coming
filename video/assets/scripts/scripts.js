@@ -1,11 +1,19 @@
 // SETUP
 var badgeSavant = 0;
-var CURRENTTIME;
-$(".nano").nanoScroller();
+if(localStorage.getItem('badgeDovecot') == null){
+	localStorage.setItem('badgeDovecot', JSON.stringify(0));
+	var badgeDovecot = 0;
+} else {
+	var badgeDovecot = JSON.parse(localStorage.getItem('badgeDovecot'))
+}
+
+var CURRENTTIME = 0;
+// $(".nano").nanoScroller();
 if(signedInTwitter){
 	$('#homepage #unlock-badges .sign-in').addClass('hidden');
 	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome');
+	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
+	badges.claim('acolyte');
 }
 $('.tweets').tweetMachine('#GoT');
 player.init({
@@ -17,6 +25,7 @@ player.init({
 	file: 'random.json',
 	loaded: function(){
 		console.log('loaded');
+		console.log(CURRENTTIME)
 		if(CURRENTTIME != 0){
 			launchPlayer('undefined');
 		}
@@ -110,21 +119,6 @@ function changeSidebar(e){
 		$('#badges').addClass('visible');
 		$('#sidebar nav i.badges').addClass('current');
 	} 
-	// if(futureSidebar == 'timeline'){
-	// 	if(currentSidebar == 'feed'){ $('#feed').addClass('hidden'); } 
-	// 	else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); } 
-	// 	$('#timeline').removeClass('hidden');
-	// } else if(futureSidebar == 'feed'){
-	// 	if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
-	// 	else if (currentSidebar == 'badges'){ $('#badges').addClass('hidden'); }
-	// 	$('#feed').removeClass('hidden');
-	// 	$('#sidebar nav i.feed').addClass('current');
-		
-	// } else if(futureSidebar == 'badges'){
-	// 	if(currentSidebar == 'timeline'){ $('#timeline').addClass('hidden'); } 
-	// 	else if (currentSidebar == 'feed'){ $('#feed').addClass('hidden'); }
-	// 	$('#badges').removeClass('hidden');
-	// }
 
 	if($('#tweet-box').hasClass('focused') && $('#tweet-box textarea').val().length == 0){ $('#tweet-box').removeClass('focused'); }
 	currentSidebar = futureSidebar;
@@ -212,6 +206,9 @@ tweet.init({
 	},
 	submitted: function(){
 		badges.claim('envoy');
+		badgeDovecot++;
+		localStorage.setItem('badgeDovecot', JSON.stringify(badgeDovecot));
+		if(badgeDovecot == 5){ badges.claim('dovecot'); }
 		$('.nb-chars').html('Tweet envoyé');
         $('#tweet-box textarea').val('');
         $('#tweet-box').removeClass('focused');
@@ -271,6 +268,7 @@ badges.init({
 	}
 });
 
+
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);
 $('#progress-bar').on('click', player.setTime);
@@ -291,15 +289,11 @@ $('#tweet-box textarea').on({
 	'change': countChar
 });
 $(document).on('keydown', function(e){ 
-	console.log(e);
 	if(!$('#tweet-box').hasClass('focused')){
 		if(e.keyCode == 32){
 			player.playPause();
-		
 		}
 	}
-	
-	
 })
 
 

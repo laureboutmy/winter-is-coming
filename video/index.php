@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include("assets/twitter/inc/twitterOAuth.php");
-	include("assets/twitter/getUser.php");
+
 	$signed_in_twitter = isset($_SESSION['profile_image_url']) && !empty($_SESSION['profile_image_url'])
 					    		&& isset($_SESSION['name']) && !empty($_SESSION['name']) 
 					    		&& isset($_SESSION['screen_name']) && !empty($_SESSION['screen_name']);
@@ -196,12 +196,12 @@
 					
 					<section id="tweet-box">						
 						
-					    <?php if($signed_in_twitter): ?>
-					    	<div id="user">
-					    		<img src="<?php echo $_SESSION['profile_image_url']; ?>" alt="profile_image" />
+					   
+					    <!-- 	<div id="user">
+					    		<img src="" alt="profile_image" />
 					    		<ul>
-					    			<li class="name"><?php echo $_SESSION['name'] ?></li>
-					    			<li class="screen_name"><a href="http://twitter.com/<?php echo $_SESSION['screen_name'] ?>" target="_blank">@<?php echo $_SESSION['screen_name'] ?></a></li>
+					    			<li class="name"></li>
+					    			<li class="screen_name"><a href="" target="_blank"></a></li>
 					       		</ul>
 					       		<div class="clear"></div>
 					    	</div>
@@ -210,19 +210,36 @@
 								<span class="nb-chars"></span>
 								<button type="submit">Post to Twitter</button>
 							</form>  
-						<?php else: ?>
+						
 							<div id="twitter-connect">
-						    	<a href="assets/twitter/twitterConnect.php" class="sign-in-twitter">Se connecter avec Twitter</a> 
-						    </div>
-						<?php endif; ?>
+						    	<a class="sign-in-twitter">Sign in with Twitter</a> 
+						    </div> -->
+
+						     
+						    	<div id="user">
+						    		<img src="<?php echo $_SESSION['profile_image_url']; ?>" alt="profile_image" />
+						    		<ul>
+						    			<li class="name"><?php echo $_SESSION['name'] ?></li>
+						    			<li class="screen_name"><a href="http://twitter.com/<?php echo $_SESSION['screen_name'] ?>" target="_blank">@<?php echo $_SESSION['screen_name'] ?></a></li>
+						       		</ul>
+						       		<div class="clear"></div>
+						    	</div>
+								<form>
+									<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
+									<span class="nb-chars"></span>
+									<button type="submit">Post to Twitter</button>
+								</form>  
+							
+								<div id="twitter-connect">
+							    	<button class="sign-in-twitter">Se connecter avec Twitter</button> 
+							    </div>
+						
+						
 					
 					</section>
 					<div id="tweet-feed" class="nano">
 						<div class="content">
-							<?php if(isset($_SESSION['access_token']['oauth_token'])
-									&& isset($_SESSION['access_token']['oauth_token_secret'])): ?>
 								<ul class="tweets"></ul>
-							<?php endif; ?>
 						</div>
 					</div>
 				</section><!-- /section#feed -->
@@ -306,6 +323,7 @@
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
 <script src="assets/scripts/scripts.js"></script>
 <script src="assets/scripts/fbconnect.js"></script>
+<script src="assets/scripts/jquery.oauthpopup.js"></script>
 <!-- /SCRIPTS -->
 </body>
 </html>

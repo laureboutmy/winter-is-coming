@@ -6,6 +6,13 @@
 
 		$id = intval($_POST['id']);
 		$tweet = new TwitterOAuth($_SESSION['CONSUMER_KEY'], $_SESSION['CONSUMER_SECRET'], $_SESSION['access_token']['oauth_token'] , $_SESSION['access_token']['oauth_token_secret']);
-		$tweet->post('statuses/retweet/'.$id);
+		$retweet = $tweet->post('statuses/retweet/'.$id);
+
+		// Get the id of the retweeted tweet to be able to unretweet it
+		$_SESSION["retweet".$id] = $retweet->id_str;
+
+		// echo $_SESSION[$id];
+		// var_dump($_SESSION);
+
 	}
 ?>

@@ -1,5 +1,6 @@
 // SETUP
 var badgeSavant = 0;
+<<<<<<< HEAD
 if(localStorage.getItem('badgeDovecot') == null){
 	localStorage.setItem('badgeDovecot', JSON.stringify(0));
 	var badgeDovecot = 0;
@@ -9,13 +10,18 @@ if(localStorage.getItem('badgeDovecot') == null){
 
 var CURRENTTIME = 0;
 // $(".nano").nanoScroller();
+=======
+var CURRENTTIME;
+$(".nano").nanoScroller();
+
+>>>>>>> b884e5bc31f6d096f4422bcdf474b3bfa29d5731
 if(signedInTwitter){
 	$('#homepage #unlock-badges .sign-in').addClass('hidden');
 	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
 	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
 	badges.claim('acolyte');
 }
-$('.tweets').tweetMachine('#GoT');
+
 player.init({
 	video: '#video',
 	progress: '.progress',
@@ -294,6 +300,55 @@ $(document).on('keydown', function(e){
 			player.playPause();
 		}
 	}
+<<<<<<< HEAD
 })
+=======
+});
+
+/* RAJOUT DORIAN */
+if(signedInTwitter){
+	$("#twitter-connect").hide();
+	$("#user").show();
+	$("#tweet-box form").show();
+	$("#tweet-feed .content").show();
+	$('.tweets').tweetMachine('#GoT');
+	$("#tweet-feed .content").show();
+
+}
+else{
+	$("#user").hide();
+	$("#tweet-box form").hide();
+	$("#tweet-feed .content").hide();
+}
+
+function twitterSignIn(){
+	$.oauthpopup({
+		path: 'assets/twitter/twitterConnect.php',
+		callback: function(){
+			$.ajax({
+				url: 'assets/twitter/responseConnect.php', 
+				success: function(response) { 
+
+		          $("#user img").attr("src", response.profile_image_url);
+		          $("#user .name").html(response.name);
+		          $("#user .screen_name a").attr("href", "http://twitter.com/"+response.screen_name);
+		          $("#user .screen_name a").html("@"+response.screen_name);
+		          
+		          $("#twitter-connect").fadeOut(500, function(){
+		          	$("#user").fadeIn(500);
+		          	$("#tweet-box form").fadeIn(500);
+		          });
+
+		          $('.tweets').tweetMachine('#GoT');
+		          $("#tweet-feed .content").fadeIn(500);
+	     	  }
+	  		});
+		}
+	});
+}
+$('#feed .sign-in-twitter').on('click', twitterSignIn);
+
+/* /RAJOUT DORIAN */
+>>>>>>> b884e5bc31f6d096f4422bcdf474b3bfa29d5731
 
 

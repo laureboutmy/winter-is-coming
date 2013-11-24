@@ -70,7 +70,7 @@
 				<div class="sign-in">
 					<h2>Sign in to improve your experience, <span>start collecting badges!</span></h2>
 					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
-					<a href="assets/twitter/twitterConnect.php" class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
+					<a class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
 				</div>
 				<div class="signed-in hidden">
 					<h2><span>Welcome.</span>
@@ -78,7 +78,7 @@
 
 					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
 					<?php if(!$signed_in_twitter): ?>
-					<a href="#" class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
+						<a href="#" class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
 					<?php endif; ?>
 					<hr />
 					<ul id="all-badges">
@@ -195,44 +195,24 @@
 				<section id="feed">
 					
 					<section id="tweet-box">						
-						
-					   
-					    <!-- 	<div id="user">
-					    		<img src="" alt="profile_image" />
-					    		<ul>
-					    			<li class="name"></li>
-					    			<li class="screen_name"><a href="" target="_blank"></a></li>
-					       		</ul>
-					       		<div class="clear"></div>
-					    	</div>
-							<form>
-								<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
-								<span class="nb-chars"></span>
-								<button type="submit">Post to Twitter</button>
-							</form>  
-						
-							<div id="twitter-connect">
-						    	<a class="sign-in-twitter">Sign in with Twitter</a> 
-						    </div> -->
-
-						     
-						    	<div id="user">
-						    		<img src="<?php echo $_SESSION['profile_image_url']; ?>" alt="profile_image" />
-						    		<ul>
-						    			<li class="name"><?php echo $_SESSION['name'] ?></li>
-						    			<li class="screen_name"><a href="http://twitter.com/<?php echo $_SESSION['screen_name'] ?>" target="_blank">@<?php echo $_SESSION['screen_name'] ?></a></li>
-						       		</ul>
-						       		<div class="clear"></div>
-						    	</div>
-								<form>
-									<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
-									<span class="nb-chars"></span>
-									<button type="submit">Post to Twitter</button>
-								</form>  
-							
-								<div id="twitter-connect">
-							    	<button class="sign-in-twitter">Se connecter avec Twitter</button> 
-							    </div>
+												     
+				    	<div id="user">
+				    		<img src="<?php echo $_SESSION['profile_image_url']; ?>" alt="profile_image" />
+				    		<ul>
+				    			<li class="name"><?php echo $_SESSION['name'] ?></li>
+				    			<li class="screen_name"><a href="http://twitter.com/<?php echo $_SESSION['screen_name'] ?>" target="_blank">@<?php echo $_SESSION['screen_name'] ?></a></li>
+				       		</ul>
+				       		<div class="clear"></div>
+				    	</div>
+						<form>
+							<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
+							<span class="nb-chars"></span>
+							<button type="submit">Post to Twitter</button>
+						</form>  
+					
+						<div id="twitter-connect">
+					    	<a class="sign-in-twitter">Se connecter avec Twitter</a> 
+					    </div>
 						
 						
 					

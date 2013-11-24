@@ -194,6 +194,8 @@ if(signedInTwitter){
 	$('#homepage #unlock-badges .sign-in').addClass('hidden');
 	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
 	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
+	$("#homepage #unlock-badges .signed-in .sign-in-twitter").hide();
+
 	badges.claim('acolyte');
 	$("#twitter-connect").hide();
 	$("#user").show();
@@ -207,13 +209,20 @@ if(signedInTwitter){
 	$("#tweet-feed .content").hide();
 }
 
-function twitterSignIn(){
+function twitterSignIn(e){
+	e.preventDefault();
 	$.oauthpopup({
 		path: 'assets/twitter/twitterConnect.php',
 		callback: function(){
 			$.ajax({
 				url: 'assets/twitter/responseConnect.php', 
 				success: function(response) { 
+					$('#homepage #unlock-badges .sign-in').addClass('hidden');
+					$('#homepage #unlock-badges .signed-in').removeClass('hidden');
+					$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
+					$("#homepage #unlock-badges .signed-in .sign-in-twitter").hide();
+					badges.claim('acolyte');
+
 					$('#user img').attr('src', response.profile_image_url);
 					$('#user .name').html(response.name);
 					$('#user .screen_name a').attr('href', 'http://twitter.com/'+response.screen_name);

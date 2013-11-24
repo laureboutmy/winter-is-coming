@@ -102,7 +102,7 @@ var tweet = {
 
 	submit: function(e){
 		e.preventDefault();
-		if($(tweet.prop.textarea).val() = ''){
+		if($(tweet.prop.textarea).val() == ''){
 			return;
 		}
 		$.ajax({

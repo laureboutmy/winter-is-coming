@@ -69,7 +69,9 @@
 	<ul id="tweets"></ul>
 </section>
 <!-- SCRIPTS -->
+<script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/scripts/mobile.js"></script>
 
 <!-- /SCRIPTS -->
 </body>

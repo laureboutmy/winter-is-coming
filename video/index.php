@@ -290,6 +290,7 @@
 <div id="fb-root"></div>
 
 <!-- SCRIPTS -->
+<script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>

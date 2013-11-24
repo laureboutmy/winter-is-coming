@@ -325,6 +325,33 @@ badges.init({
 	}
 });
 
+
+/* PUSHER - TO BE IMPROVED. */
+function createGuid()
+{
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
+
+function pusher_init(){
+var pusher_guid = createGuid();
+var pusher = new Pusher('d6d5c184ca85e911a2df');
+var channelname = pusher_guid;
+console.log(channelname);
+var channel = pusher.subscribe(channelname);
+  channel.bind('play', function(data) {
+  player.playPause();
+});
+  channel.bind('mute', function(data) {
+  player.mute();
+});
+}
+/* END PUSHER - TO BE IMPROVED. */
+
+
+
 $('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);

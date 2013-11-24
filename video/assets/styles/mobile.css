@@ -1,5 +1,5 @@
 /* @group Global */
-body { background: #000; color: #fff; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; }
+body { letter-spacing: 0.1em; background: #000; color: #fff; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; }
 a, a:link, a:active, a:visited { color: #fff; text-decoration: none; }
 .clear { clear: both; }
 .wrapper { width: 960px; margin: 0 auto; }
@@ -16,7 +16,7 @@ header { width: 100%; height: 59px; box-sizing: border-box; padding: 10px; posit
 	background: -ms-linear-gradient(top, rgba(36,36,36,1) 0%,rgba(0,0,0,1) 75%,rgba(15,15,15,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(36,36,36,1) 0%,rgba(0,0,0,1) 75%,rgba(15,15,15,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#0f0f0f',GradientType=0 ); /* IE6-9 */ }
-header h1 { float: left; margin: 10px;  background: url(../images/mobile/mob-got-header.png) no-repeat; background-size: 100%; width: 140px; height: 18px; text-align: left; text-indent: -9999px; overflow: hidden; display: inline-block; }
+header h1 { margin: 10px;  background: url(../images/mobile/mob-got-header.png) no-repeat; background-size: 100%; width: 140px; height: 18px; text-align: left; text-indent: -9999px; overflow: hidden; display: inline-block; }
 
 header nav { float: right; display: inline-block; }
 header nav a.hidden { display: none; }
@@ -32,4 +32,12 @@ header nav a span { text-align: center; display: block;  width: 40px; height: 20
 	background: -ms-linear-gradient(top, rgba(66,66,66,1) 17%,rgba(15,15,15,1) 66%,rgba(31,31,31,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(66,66,66,1) 17%,rgba(15,15,15,1) 66%,rgba(31,31,31,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#1f1f1f',GradientType=0 ); /* IE6-9 */}
-section#remote { width: 100%; height: 100%; background: url(../images/mobile/mob-bg-remote.jpg) no-repeat; background-size: cover; }
+
+section#remote { position: relative; width: 100%; height: 100%; background: url(../images/mobile/mob-bg-remote.jpg) no-repeat; background-size: cover; }
+section#remote #play-btn { position: absolute; left: 50%; top: 50%; margin-left: -54px; margin-top: -72px; height: 144px; width: 108px; text-align: center; }
+section#remote #play-btn img { width: auto; height: 100%;}
+section#remote div.episode { box-sizing: border-box; padding: 25px 10px; position: absolute; bottom: 0; width: 100%; height: 88px; box-shadow: inset 0 1px 0px rgba(255, 255, 255, .10); }
+section#remote div.episode h2 { display: inline-block; font-size: 1.313em; font-weight: 100; }
+section#remote div.episode h2 span { display: block; font-weight: 300; font-size: 0.667em; }
+section#remote div.episode #volume { float: right; width: 33px; height: 33px;  border-radius: 100%; border: 2px solid rgba(255, 255, 255, 0.2); text-align: center; }
+section#remote div.episode #volume img { margin-top: 8px; width: 50%; height: 50%; }

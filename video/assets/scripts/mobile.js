@@ -18,6 +18,43 @@ function changeWindow(e){
     }
     current = future;
 }
+
+tweet.init({
+
+    textarea: '#tweet-box textarea[name=tweet]',
+    
+    submitted: function(){
+        // badges.claim('envoy');
+        // badgeDovecot++;
+        // localStorage.setItem('badgeDovecot', JSON.stringify(badgeDovecot));
+        // if(badgeDovecot == 5){ badges.claim('dovecot'); }
+        $('#tweet-box textarea').blur();
+        $('.nb-chars').html('Tweet envoyé');
+        $('#tweet-box textarea').val('');
+        // $('#tweet-box').removeClass('focused');
+        $('#feed #tweet-feed').height($(window).height() - 75);
+        
+    },
+
+    retweeted: function(){
+        idTweet = this.data.replace('id=','');
+        $("button.retweet[data-tweetid='"+idTweet+"']").addClass('retweeted');
+    },
+
+    favorited: function(){
+        idTweet = this.data.replace('id=','');
+        $("button.favorite[data-tweetid='"+idTweet+"']").addClass('favorited');
+    },
+
+    unretweeted: function(){
+        $("button.retweet[data-tweetid='"+idTweet+"']").removeClass('retweeted');
+    },
+
+    unfavorited: function(){
+        $("button.favorite[data-tweetid='"+idTweet+"']").removeClass('favorited');
+    }
+})
+
 $('header nav').on('click', 'a', changeWindow);
 $('ul#tweets li.tweet').swipe({
     //Generic swipe handler for all directions
@@ -28,5 +65,13 @@ $('ul#tweets li.tweet').swipe({
             $(this).find('div.actions').removeClass('visible');
 
         }
+    }
+});
+$('#tweet-feed').on('click', 'button.reply', tweet.reply);
+$('#tweet-feed').on('click', 'button.retweet', tweet.retweet);
+$('#tweet-feed').on('click', 'button.favorite', tweet.favorite);
+$(document).on('keydown', function(e){ 
+    if(e.keyCode == 13){
+       tweet.submit();
     }
 });

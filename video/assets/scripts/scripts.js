@@ -257,10 +257,12 @@ tweet.init({
 	},
 
 	retweeted: function(){
+		idTweet = this.data.replace('id=','');
 		$("button.retweet[data-tweetid='"+idTweet+"']").addClass('retweeted');
 	},
 
 	favorited: function(){
+		idTweet = this.data.replace('id=','');
 		$("button.favorite[data-tweetid='"+idTweet+"']").addClass('favorited');
 	},
 

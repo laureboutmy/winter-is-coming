@@ -58,9 +58,25 @@
 				<h1><img src="assets/images/template/got-hp.png" alt="Game of thrones" /><span>Season 3 - Episode 9</span></h1>
 				<h2>The Rains<br />of Castamere</h2>
 				<h3>Live the real adventure. Discover the thrill.</h3>
-				<a href="#" class="launch-player"><i class="play"></i>Play &quot;The Rains Of Castamere&quot;</a>
 				<div id="countdown">
+					<span class="days1"></span>
+					<span class="days2"></span>
+					<span class="unity unity_days">Days</span>
+
+					<span class="hours1" ></span>
+					<span class="hours2" ></span>
+					<span class="unity unity_hours">Hours</span>
+
+					<span class="minutes1" ></span>
+					<span class="minutes2" ></span>
+					<span class="unity unity_minutes">Minutes</span>
+
+					<span class="seconds1" ></span>
+					<span class="seconds2" ></span>
+					<span class="unity unity_seconds">Seconds</span>
 				</div>
+				<!-- <a href="#" class="launch-player"><i class="play"></i>Play &quot;The Rains Of Castamere&quot;</a> -->
+
 			</div>
 		</section>
 		<!-- <div class="rain"> -->
@@ -296,6 +312,7 @@
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="assets/scripts/libs/jquery.oauthpopup.js"></script>
 <script src="assets/scripts/libs/video.js"></script>
+<script src="assets/scripts/libs/countdown.js"></script>
 <script src="assets/data/cards.jsonp"></script>
 <script src="assets/scripts/libs/badges.js"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
@@ -303,6 +320,7 @@
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
 <script src="assets/scripts/libs/pusher.js"></script>
 <script src="assets/scripts/scripts.js"></script>
+<script src="assets/scripts/myCountdown.js"></script>
 <script src="assets/scripts/fbconnect.js"></script>
 <!-- /SCRIPTS -->
 </body>

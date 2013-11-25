@@ -3,10 +3,10 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.wic.app"
         version   = "1.0.0">
-    <name>Winter is Coming</name>
+    <name>GoT Player</name>
 
     <description>
-        Scans barcodes.
+        GoT Player app.
     </description>
 
     <author href="http://github.com/loupyestu/winter-is-coming" email="winter-is-coming@github.com">

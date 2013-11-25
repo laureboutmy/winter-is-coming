@@ -46,8 +46,8 @@
 <header>
 	<h1>Game of Thrones</h1>
 	<nav>
-		<a href="#feed"><span><i class="feed">Feed</i></span></a>
-		<a class="hidden" href="#remote"><span><i class="remote">Remote</i></span></a>
+		<a href="feed" class="feed"><span><i class="feed">Feed</i></span></a>
+		<a class="remote hidden" href="remote"><span><i class="remote">Remote</i></span></a>
 	</nav>
 </header>
 <section id="remote">
@@ -62,11 +62,34 @@
 		</div>
 	</div>
 </section>
-<section id="feed">
+<section id="feed" class="hidden">
 	<div id="tweet-box">
-
+		<div id="user">
+    		<img src="http://pbs.twimg.com/profile_images/3703698859/06322cdabeb5587e5438aa7e0be5cb63_normal.jpeg" alt="profile_image">
+    		<ul>
+    			<li class="name">Laure</li>
+    			<li class="screen_name"><a href="http://twitter.com/loupyestu" target="_blank">@loupyestu</a></li>
+       		</ul>
+       		<div class="clear"></div>
+    	</div>
+    	<form>
+			<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
+			<span class="nb-chars"></span>
+		</form>
 	</div>
-	<ul id="tweets"></ul>
+	<div id="tweet-feed">
+		<ul id="tweets">
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
+
+		</ul>
+	</div>
 </section>
 <!-- SCRIPTS -->
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>

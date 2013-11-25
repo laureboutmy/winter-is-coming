@@ -9,7 +9,7 @@
 	else { echo '<script>var signedInTwitter = false;</script>'; }
 ?>
 <!DOCTYPE html>
-<html lang="en"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# gotplayer: http://ogp.me/ns/fb/gotplayer#">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# gotplayer: http://ogp.me/ns/fb/gotplayer#">
 <head>
 
 	<meta charset="utf-8" />

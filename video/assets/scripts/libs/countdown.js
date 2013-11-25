@@ -51,76 +51,46 @@ var countdown = {
 		this.tab[7] = (seconds%10).toString();
 		
 		if(this.days != days){
-			this.params.showDays.call(this);
 			if(parseInt(this.days/10) != parseInt(days/10))
 			{
 				this.params.fadeNewDate.call(this,'days1',this.tab[0]);
 			}
 			this.params.fadeNewDate.call(this,'days2',this.tab[1]);
 		}
-		else{
-			if(days != 0){
-				this.params.showDays.call(this);
-			}
-			else{
-				this.params.hideDays.call(this);
-			}	
-		}
 
 		if(this.hours != hours){
-			this.params.showHours.call(this);
+			
 			if(parseInt(this.hours/10) != parseInt(hours/10))
 			{
 				this.params.fadeNewDate.call(this,'hours1',this.tab[2]);
 			}
 			this.params.fadeNewDate.call(this,'hours2',this.tab[3]);
 		}
-		else{
-			if(hours != 0){
-				this.params.showHours.call(this);
-			}	
-			else{
-				this.params.hideHours.call(this);
-			}
-		}
 
 		if(this.minutes != minutes){
-			this.params.showMinutes.call(this);
+			
 			if(parseInt(this.minutes/10) != parseInt(minutes/10))
 			{
 				this.params.fadeNewDate.call(this,'minutes1',this.tab[4]);
 			}
 			this.params.fadeNewDate.call(this,'minutes2',this.tab[5]);
 		}
-		else{
-			if(minutes != 0){
-				this.params.showMinutes.call(this);
-				
-			}	
-			else{
-				this.params.hideMinutes.call(this);
-			}	
-		}
 
 		if(this.seconds != seconds){
-			this.params.showSeconds.call(this);
+			
 			if(parseInt(this.seconds/10) != parseInt(seconds/10))
 			{
 				this.params.fadeNewDate.call(this,'seconds1',this.tab[6]);
 			}
 			this.params.fadeNewDate.call(this,'seconds2',this.tab[7]);
 		}
-		else{
-			if(seconds != 0){
-				this.params.showSeconds.call(this);
-			}	
-			else{
-				this.params.hideSeconds.call(this);
-			}	
-		}
+
+		this.params.showDays.call(this);
+		this.params.showHours.call(this);
+		this.params.showMinutes.call(this);
+		this.params.showSeconds.call(this);
 
 		this.update(countSeconds,days,hours,minutes,seconds);
-
 	},
 
 	update : function(countSeconds,days,hours,minutes,seconds){

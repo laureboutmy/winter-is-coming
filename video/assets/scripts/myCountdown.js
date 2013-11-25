@@ -1,9 +1,9 @@
 $("#countdown").hide();
-$(".unity").hide();
+// $(".unity").hide();
 
 countdown.init({
 
-	// Enter countdown duration :
+	// Enter countdown duration here :
 	days : 0,
 	hours : 0,
 	minutes : 0,
@@ -15,73 +15,38 @@ countdown.init({
 	}, 
 
 	showDays : function(){
-		$('.days1').show();
-		$('.days2').show();
-		$('.unity_days').show();
+		$(".unity").addClass('visible');
 		$('.days1').html(this.tab[0]);
 		$('.days2').html(this.tab[1]);
 	},
 
-	hideDays : function(){
-		$('.days1').fadeOut();
-		$('.days2').hide();
-		$('.unity_days').hide();
-	},
-
 	showHours : function(){
-		$('.hours1').show();
-		$('.hours2').show();
-		$('.unity_hours').show();
 		$('.hours1').html(this.tab[2]);
 		$('.hours2').html(this.tab[3]);
 	},
 
-	hideHours : function(){
-		$('.hours1').hide();
-		$('.hours2').hide();
-		$('.unity_hours').hide();
-	},
-
 	showMinutes : function(){
-		$('.minutes1').show();
-		$('.minutes2').show();
-		$('.unity_minutes').show();
 		$('.minutes1').html(this.tab[4]);
 		$('.minutes2').html(this.tab[5]);
 	},
 
-	hideMinutes : function(){
-		$('.minutes1').hide();
-		$('.minutes2').hide();
-		$('.unity_minutes').hide();
-	},
-
 	showSeconds : function(){
-		$('.seconds1').show();
-		$('.seconds2').show();
-		$('.unity_seconds').show();
 		$('.seconds1').html(this.tab[6]);
 		$('.seconds2').html(this.tab[7]);
-	},
-
-	hideSeconds : function(){
-		$('.seconds1').hide();
-		$('.seconds2').hide();
-		$('.unity_seconds').hide();
 	},
 
 	fadeNewDate : function(target,figure){
 		$("."+target).animate(
 		{
-			"top" : "+=100",
+			"top" : "+=40",
 			"opacity" : 0
 		}, 100,
 		function()
 		{
 			$("."+target).html(figure);
-			$("."+target).css('top', "-=200");
+			$("."+target).css('top', "-=80");
 			$("."+target).animate({
-				"top" : "+=100",
+				"top" : "+=40",
 				"opacity" : 1
 			}, 100);
 		});
@@ -89,8 +54,10 @@ countdown.init({
 
 	stop : function(){
 		anim.stop();
-		$("#countdown").fadeOut(200);
-		$('a.launch-player').fadeIn(200);
+		$("#countdown").fadeOut(1000).queue(function(){
+			$('a.launch-player').addClass('visible');
+		});
+		
 	}
 });
 

@@ -335,6 +335,8 @@ function createGuid()
     });
 }
 
+
+/*
 function pusher_init(){
 var pusher_guid = createGuid();
 var pusher = new Pusher('d6d5c184ca85e911a2df');
@@ -347,9 +349,9 @@ var channel = pusher.subscribe(channelname);
   channel.bind('mute', function(data) {
   player.mute();
 });
-}
+}*/
 /* END PUSHER - TO BE IMPROVED. */
-
+pusher.subscribe("desktop");
 
 
 $('.sign-in-twitter').on('click', twitterSignIn);

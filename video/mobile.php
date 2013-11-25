@@ -75,6 +75,7 @@
 <!-- SCRIPTS -->
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/scripts/libs/jquery.touchSwipe-1.6.5.min.js"></script>
 <script src="assets/scripts/libs/pusher.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>

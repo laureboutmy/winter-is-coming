@@ -8,6 +8,7 @@ i { text-align: left; text-indent: -9999px; overflow: hidden; display: inline-bl
 i.remote { background: url(../images/mobile/mob-i-remote.png) no-repeat; background-size: 100%; width: 22px; height: 22px;}
 i.feed { background: url(../images/mobile/mob-i-feed.png) no-repeat; background-size: 100%; width: 23px; height: 20px;}
 
+
 header { width: 100%; height: 59px; box-sizing: border-box; padding: 10px; position: fixed; z-index: 100;
 	box-shadow: 0 -2px 5px 5px rgba(0, 0, 0, 1),
 				inset 0 -1px 0px rgba(255, 255, 255, .08);
@@ -55,11 +56,22 @@ section#feed #tweet-box form span.nb-chars { -webkit-transition: opacity 0.3s ea
 section#feed #tweet-box form span.nb-chars.visible { opacity: 1;}
 section#feed #tweet-box form span.nb-chars.error { color: #fff; }
 section#feed #tweet-feed { width: 100%; }
-section#feed #tweet-feed ul li.tweet { color: #808080; background: url(../images/mobile/mob-hr.png) repeat-x; background-size: auto 1px; width: 100%; box-sizing: border-box; padding: 20px 8px; }
+section#feed #tweet-feed ul li.tweet { position: relative; color: #808080; background: url(../images/mobile/mob-hr.png) repeat-x; background-size: auto 1px; width: 100%; box-sizing: border-box; padding: 20px 8px; }
 section#feed #tweet-feed ul li.tweet a { color: #4c4c4c; }
 section#feed #tweet-feed ul li.tweet .meta { margin-bottom: 15px; }
 section#feed #tweet-feed ul li.tweet .meta img { width: 37px; height: 37px; float: left; border-radius: 3px; margin-right: 10px;}
 section#feed #tweet-feed ul li.tweet .meta a.name { padding-top: 2px; display: block; font-size: 1.188em; font-weight: 400; color: #fff; margin-bottom: 4px; }
 section#feed #tweet-feed ul li.tweet .meta a.username { color: #fff; font-size: 0.938em; }
 section#feed #tweet-feed ul li.tweet p { font-size: 1.063em; line-height: 1.176em; font-weight: 200; } 
+section#feed #tweet-feed ul li.tweet div.actions { -webkit-transition: left 0.3s ease-out; transition: left 0.3s ease-out; position: absolute; text-align: center; left: -100%; top: 1px; width: 100%; height: 100%; background: #000; display: block; }
+section#feed #tweet-feed ul li.tweet div.actions.visible { left: 0; }
+section#feed #tweet-feed ul li.tweet div.actions ul { position: absolute; height: 44px; top: 50%; margin-top: -22px; width: 250px; left: 50%; margin-left: -125px; }
+section#feed #tweet-feed ul li.tweet div.actions ul li { display: inline-block; height: 44px; margin: 0 10px; } 
+section#feed #tweet-feed ul li.tweet div.actions ul li button { font-weight: 200; border: 0; padding: 0; cursor: pointer; background: transparent; color: #4c4c4c; text-align: center; font-size: 1em;} 
+section#feed #tweet-feed ul li.tweet div.actions ul li button i { display: block; margin: 0 auto 8px; }
+section#feed #tweet-feed ul li.tweet div.actions ul button.reply i { background: url(../images/mobile/mob-i-reply.png) no-repeat; background-size: 100%; width: 21px; height: 16px; }
+section#feed #tweet-feed ul li.tweet div.actions ul button.retweet i { background: url(../images/mobile/mob-i-retweet.png) no-repeat; background-size: 100%; width: 23px; height: 16px; }
+section#feed #tweet-feed ul li.tweet div.actions ul button.favorite i { background: url(../images/mobile/mob-i-fav.png) no-repeat; background-size: 100%; width: 18px; height: 16px; }
+
+
 ::-webkit-textarea-placeholder { font-style: italic; }

@@ -75,7 +75,7 @@
 					<span class="seconds2" ></span>
 					<span class="unity unity_seconds">Seconds</span>
 				</div>
-				<!-- <a href="#" class="launch-player"><i class="play"></i>Play &quot;The Rains Of Castamere&quot;</a> -->
+				<a href="#" class="launch-player"><i class="play"></i>Play &quot;The Rains Of Castamere&quot;</a>
 
 			</div>
 		</section>

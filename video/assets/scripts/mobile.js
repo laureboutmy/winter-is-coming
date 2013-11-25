@@ -19,3 +19,14 @@ function changeWindow(e){
     current = future;
 }
 $('header nav').on('click', 'a', changeWindow);
+$('ul#tweets li.tweet').swipe({
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount) {
+        if(direction == 'right'){
+            $(this).find('div.actions').addClass('visible');
+        } else {
+            $(this).find('div.actions').removeClass('visible');
+
+        }
+    }
+});

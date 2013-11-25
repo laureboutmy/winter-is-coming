@@ -325,7 +325,7 @@ badges.init({
 	}
 });
 
-pusher.subscribe("desktop");
+pusher.subscribe('desktop');
 
 $('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);

@@ -29,10 +29,10 @@ var pusher = {
         });
     },
     subscribe: function(platform) {
-        if (platform == "mobile") {
+        if (platform == 'mobile') {
             this.params.instance.subscribe(this.params.channel);
             console.log(this.params.channel);
-        } else if (platform == "desktop") {
+        } else if (platform == 'desktop') {
             this.params.channel = this.createGuid();
             this.params.instance.subscribe(this.params.channel);
             this.listen();

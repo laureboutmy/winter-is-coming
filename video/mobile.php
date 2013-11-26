@@ -1,7 +1,6 @@
 <?php
+	session_id($_GET['PHPSESSID']);
 	session_start();
-	include("assets/twitter/inc/twitterOAuth.php");
-
 	$signed_in_twitter = isset($_SESSION['profile_image_url']) && !empty($_SESSION['profile_image_url'])
 					    		&& isset($_SESSION['name']) && !empty($_SESSION['name']) 
 					    		&& isset($_SESSION['screen_name']) && !empty($_SESSION['screen_name']);
@@ -9,7 +8,7 @@
 	else { echo '<script>var signedInTwitter = false;</script>'; }
 ?>
 <!DOCTYPE html>
-<html lang="en"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# gotplayer: http://ogp.me/ns/fb/gotplayer#">
+<html lang="en">
 <head>
 
 	<meta charset="utf-8" />
@@ -18,14 +17,6 @@
 	
 	<meta name="description" content="">
 	<meta name="robots" content="index, follow" />
-
-	<!-- OPEN GRAPH -->
-	<meta property="fb:app_id" content="452234728214767" /> 
-    <meta property="og:type"   content="gotplayer:got_episode" /> 
-    <meta property="og:url"    content="http://winter-is-coming.dev:8888/video/" /> 
-    <meta property="og:title"  content="The Rains of Castamere" /> 
-    <meta property="og:image"  content="http://doriancamilleri.fr/player/customActionsHome/img/hodor.png" /> 
-	<!-- /OPEN GRAPH -->
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -65,10 +56,10 @@
 <section id="feed" class="hidden">
 	<div id="tweet-box">
 		<div id="user">
-    		<img src="http://pbs.twimg.com/profile_images/3703698859/06322cdabeb5587e5438aa7e0be5cb63_normal.jpeg" alt="profile_image">
+    		<img src="<?php echo $_SESSION['profile_image_url']; ?>" alt="profile_image">
     		<ul>
-    			<li class="name">Laure</li>
-    			<li class="screen_name"><a href="http://twitter.com/loupyestu" target="_blank">@loupyestu</a></li>
+    			<li class="name"><?php echo $_SESSION['name'] ?></li>
+    			<li class="screen_name"><a href="http://twitter.com/<?php echo $_SESSION['screen_name'] ?>" target="_blank">@<?php echo $_SESSION['screen_name'] ?></a></li>
        		</ul>
        		<div class="clear"></div>
     	</div>
@@ -78,21 +69,7 @@
 		</form>
 	</div>
 	<div id="tweet-feed">
-		<ul id="tweets">
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p>
-				<div class="actions"><ul><li><button class="reply" data-username="Eden_Says"><i>Reply</i>Reply</button></li><li><button class="retweet" data-tweetid="405011046609743872"><i>Retweet</i> Retweet</button></li><li><button class="favorite" data-tweetid="405011046609743872"><i>Favorite</i>Favorite</button></li></ul></div>
-			</li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p>
-				<div class="actions"><ul><li><button class="reply" data-username="Eden_Says"><i>Reply</i>Reply</button></li><li><button class="retweet" data-tweetid="405011046609743872"><i>Retweet</i> Retweet</button></li><li><button class="favorite" data-tweetid="405011046609743872"><i>Favorite</i>Favorite</button></li></ul></div>
-			</li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-			<li class="tweet" style="opacity: 1;"><div class="meta"><img class="avatar" src="http://pbs.twimg.com/profile_images/378800000413394991/2cd24fe73a3483490ffcd68b8c28b59b_normal.jpeg"><a href="http://twitter.com/MonicaDema" class="name" target="_blank">Monica D</a><a href="http://twitter.com/MonicaDema" class="username" target="_blank">@MonicaDema</a><div class="clear"></div></div><p class="tweet-content">Fun fact - <a href="http://twitter.com/#!/search?q=%23tyrion" target="_blank">#tyrion</a> <a href="http://twitter.com/#!/search?q=%23lannister" target="_blank">#lannister</a>'s mom was my choir teacher <a href="http://twitter.com/#!/search?q=%23GoT" target="_blank">#GoT</a> <a href="http://t.co/vuAHInHE1Y" target="_blank">http://t.co/vuAHInHE1Y</a></p></li>
-
-		</ul>
+		<ul id="tweets"></ul>
 	</div>
 </section>
 <!-- SCRIPTS -->
@@ -100,8 +77,10 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.touchSwipe-1.6.5.min.js"></script>
 <script src="assets/scripts/libs/pusher.js"></script>
+<script src="assets/scripts/libs/tweet.js"></script>
+<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script>$('#tweet-feed #tweets').tweetMachine('#GoT');</script>
 <script src="assets/scripts/mobile.js"></script>
-
 <!-- /SCRIPTS -->
 </body>
 </html>

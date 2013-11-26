@@ -23,7 +23,6 @@ var tweet = {
 		var idTweet = $(e.target).attr('data-tweetid');
 		// If the element has class retweeted, we unretweet it 
 		if($("button.retweet[data-tweetid='"+idTweet+"']").hasClass('retweeted')){
-			console.log("DEJA RETWEET");
 			$.ajax({
 		        url: 'assets/twitter/actions/unretweet.php', 
 		        type: 'post', 

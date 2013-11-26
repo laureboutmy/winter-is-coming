@@ -12,13 +12,29 @@ var timeline = {
 
 	render: function(card){
 
-		if(card.browser){
+		if(card.browser  && card.category == 'GIF'){
 			var evtA = $('<a>').attr('data-url', card.url).attr('href', '#').addClass('browser').attr('data-key', card.displayTime);
 			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
 					$('<div>').addClass('img').append(
 						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
-						$('<span>')
+						$('<span>').addClass('inset'),
+						$('<span>').addClass('sticker').text('GIF')
+					),
+					$('<div>').addClass('text').append(
+						$('<h2>').text(card.title),
+						$('<p>').text(card.description),
+						$('<span>').text(card.cta).append($('<i>'))
+					)
+				);
+			evtDiv = evtA.append(evtDiv);
+		} else if(card.browser) {
+			var evtA = $('<a>').attr('data-url', card.url).attr('href', '#').addClass('browser').attr('data-key', card.displayTime);
+			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('img').append(
+						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+						$('<span>').addClass('inset')
 					),
 					$('<div>').addClass('text').append(
 						$('<h2>').text(card.title),
@@ -28,22 +44,36 @@ var timeline = {
 				);
 			evtDiv = evtA.append(evtDiv);
 		} else {
-			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
-					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
-					$('<div>').addClass('img').append(
-						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
-						$('<span>')
-					),
-					$('<div>').addClass('text').append(
-						$('<h2>').text(card.title),
-						$('<p>').text(card.description),
-						$('<span>').text(card.cta).append($('<i>'))
-					)
-				);
+			if(card.cta){
+				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
+						$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+						$('<div>').addClass('img').append(
+							$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+							$('<span>').addClass('inset')
+						),
+						$('<div>').addClass('text').append(
+							$('<h2>').text(card.title),
+							$('<p>').text(card.description),
+							$('<span>').text(card.cta).append($('<i>'))
+						)
+					);
+			} else {
+				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
+						$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+						$('<div>').addClass('img').append(
+							$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+							$('<span>').addClass('inset')
+						),
+						$('<div>').addClass('text').append(
+							$('<h2>').text(card.title),
+							$('<p>').text(card.description)
+						)
+					);
+			}
+			
 		}
 
 		if(card.category == 'GIF'){ evtDiv.addClass('gif'); }
-
 		card.displayed = true;
 
 		$(timeline.prop.timeline).prepend(evtDiv);

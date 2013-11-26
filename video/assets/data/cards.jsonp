@@ -573,7 +573,7 @@ cards = [
 	{
 		"displayed": false,
 		"displayTime": 42*60+19,
-		"category": "Producer comment",
+		"category": "Quote",
 		"title": "David Benioff",
 		"description": "« In the book, when the band starts playing “Rains of Castamere,” you know something bad is going to happen. It’s the strongest physical reaction I’ve ever had to reading anything. »",
 		"browser": false,

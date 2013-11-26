@@ -215,7 +215,7 @@
                              */
                             if (tweetMachine.settings.endpoint === "search/tweets") {
                                 queryParams = {
-                                    q: tweetMachine.query,
+                                    q: tweetMachine.query+" #"+player.getTime()+"min",
                                     count: (this.settings.requestLimit) ? this.settings.requestLimit: this.settings.limit,
                                     since_id: tweetMachine.lastTweetID
                                 };

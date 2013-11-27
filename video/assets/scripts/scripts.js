@@ -337,6 +337,7 @@ $('#volume .level').on('click', player.setVolume);
 $('#volume .mute').on('click', player.mute);
 $('#sidebar nav').find('a').on('click', changeSidebar);
 $('#main').on('click', 'a.browser', showBrowser);
+$('#main').on('click', 'a.pause-video', player.pause);
 $('#progress-bar').on('click', 'a.marker', goToMarker);
 $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);

@@ -56,17 +56,13 @@ tweet.init({
 })
 
 $('header nav').on('click', 'a', changeWindow);
-$('ul#tweets li.tweet').swipe({
-    //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount) {
-        if(direction == 'right'){
-            $(this).find('div.actions').addClass('visible');
-        } else {
-            $(this).find('div.actions').removeClass('visible');
 
-        }
-    }
-});
+$('ul#tweets').on('swipeleft', 'li.tweet', function(){
+        $(this).find('div.actions').removeClass('visible');
+    });
+$('ul#tweets').on('swiperight', 'li.tweet', function(){
+        $(this).find('div.actions').addClass('visible');
+    });
 $('#tweet-feed').on('click', 'button.reply', tweet.reply);
 $('#tweet-feed').on('click', 'button.retweet', tweet.retweet);
 $('#tweet-feed').on('click', 'button.favorite', tweet.favorite);

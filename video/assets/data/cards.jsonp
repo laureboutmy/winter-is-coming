@@ -1,6 +1,39 @@
 cards = [
 	{
 		"displayed": false,
+		"displayTime": 2,
+		"facebook": true,
+		"category": "Feelings",
+		"title": "How are you feeling?",
+		"mood1": "Appalled",
+		"id1": 181943998676638,
+		"mood2": "Speechless",
+		"id2": 520522351378496,
+		"mood3": "In mourning",
+		"id3": 182941238573934,
+		"time": 14,
+		"imgMarker": "assets/images/content/1-pbar.jpg",
+		"imgTimeline": "assets/images/content/1-timeline.jpg"
+	},
+	{
+		"displayed": false,
+		"displayTime": 2,
+		"facebook": true,
+		"category": "Feelings",
+		"title": "How are you feeling?",
+		"mood1": "Sad",
+		"id1": 1390104704568460,
+		"mood2": "Angry",
+		"id2": 231470587014089,
+		"mood3": "Revanchist",
+		"id3": 682410861793187,
+		"time": 14,
+		"imgMarker": "assets/images/content/1-pbar.jpg",
+		"imgTimeline": "assets/images/content/1-timeline.jpg"
+	},
+
+	{
+		"displayed": false,
 		"displayTime": 71,
 		"category": "Soundtrack",
 		"title": "Main Title",

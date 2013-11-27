@@ -122,7 +122,7 @@ timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
 		console.log('displayed');
-		$('#timeline article.card.hidden').removeClass('hidden');
+		$('#timeline article.card.hidden, #timeline article.card.facebook.hidden').removeClass('hidden');
 	}
 });
 

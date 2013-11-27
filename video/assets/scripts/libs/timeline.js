@@ -11,6 +11,7 @@ var timeline = {
 	},
 
 	render: function(card){
+
 		if(card.url){
 			var evtA = $('<a>').attr('data-key', card.displayTime);
 			if(card.browser){
@@ -50,6 +51,23 @@ var timeline = {
 			
 			evtDiv = evtA.append(evtDiv);
 
+		} else if(card.facebook){
+			var evtDiv = $('<article>').addClass('card hidden facebook').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('img').append(
+						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+						$('<span>').addClass('inset')
+					),
+					$('<div>').addClass('text').append(
+						$('<h2>').text(card.title),
+						$('<ul>').addClass('mood').append(
+							$('<li>').attr('data-mood', card.id1).text(card.mood1),
+							$('<li>').attr('data-mood', card.id2).text(card.mood2),
+							$('<li>').attr('data-mood', card.id3).text(card.mood3)
+						)
+					)
+				);
+			console.log(evtDiv);
 		} else {
 			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),

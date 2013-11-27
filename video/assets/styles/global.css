@@ -240,18 +240,18 @@ video.hidden { opacity: 0; }
 #feed #tweet-feed ul li.tweet .meta { margin-bottom: 15px; }
 #feed #tweet-feed ul li.tweet .meta img { width: 34px; height: 34px; float: left; border-radius: 3px; margin-right: 6px;}
 #feed #tweet-feed ul li.tweet .meta a.name { padding-top: 2px; display: block; font-size: 1.538em; color: #fff; font-weight: 200; }
-#feed #tweet-feed ul.actions { margin-top: 5px; }
-#feed #tweet-feed ul.actions li { display: inline-block; } 
-#feed #tweet-feed ul.actions li button { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; border: 0; padding: 0; cursor: pointer; background: transparent; color: rgba(255, 255, 255, 1); text-align: left; margin-right: 10px; opacity: 0.2; } 
-#feed #tweet-feed ul.actions li button.active i { opacity: 1; }
-#feed #tweet-feed ul.actions li button:hover { opacity: 0.5; }
-#feed #tweet-feed ul.actions li button:focus { outline: none; }
-#feed #tweet-feed ul.actions li button i { width: 65px; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; background: url(../images/template/i-tweet-actions.png) no-repeat; width: 16px; height: 10px;  }
-#feed #tweet-feed ul.actions li button.reply i { background-position: 0 0; }
-#feed #tweet-feed ul.actions li button.retweet i { background-position: -16px 0; }
-#feed #tweet-feed ul.actions li button.retweeted,
-#feed #tweet-feed ul.actions li button.favorited { opacity: 1; }
-#feed #tweet-feed ul.actions li button.favorite i { background-position: -32px 0; }
+#feed #tweet-feed div.actions { margin-top: 5px; }
+#feed #tweet-feed div.actions ul li { display: inline-block; } 
+#feed #tweet-feed div.actions ul li button { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; border: 0; padding: 0; cursor: pointer; background: transparent; color: rgba(255, 255, 255, 1); text-align: left; margin-right: 10px; opacity: 0.2; } 
+#feed #tweet-feed div.actions ul li button.active i { opacity: 1; }
+#feed #tweet-feed div.actions ul li button:hover { opacity: 0.5; }
+#feed #tweet-feed div.actions ul li button:focus { outline: none; }
+#feed #tweet-feed div.actions ul li button i { width: 65px; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; background: url(../images/template/i-tweet-actions.png) no-repeat; width: 16px; height: 10px;  }
+#feed #tweet-feed div.actions ul li button.reply i { background-position: 0 0; }
+#feed #tweet-feed div.actions ul li button.retweet i { background-position: -16px 0; }
+#feed #tweet-feed div.actions ul li button.retweeted,
+#feed #tweet-feed div.actions ul li button.favorited { opacity: 1; }
+#feed #tweet-feed div.actions ul li button.favorite i { background-position: -32px 0; }
 
 
 #timeline { color: #666666; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }

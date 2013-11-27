@@ -8,8 +8,8 @@ cards = [
 		"browser": false,
 		"url": "https://itunes.apple.com/us/album/main-title/id441573161?i=441573162",
 		"time": "1",
-		"imgMarker": "assets/images/content/0-pbar.jpg",
-		"imgTimeline": "assets/images/content/0-timeline.jpg"
+		"imgMarker": "assets/images/content/41-pbar.jpg",
+		"imgTimeline": "assets/images/content/41-timeline.jpg"
 	},
 
 	{

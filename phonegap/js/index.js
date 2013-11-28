@@ -59,7 +59,7 @@ var app = {
             document.getElementById("info").innerHTML = result.text;
             console.log(result);*/
             
-            window.open("http://laureboutmy.com/winter-is-coming/mobile.php?PHPSESSID="+result.text, '_self', 'location=yes');
+            window.open("http://laureboutmy.com/winter-is-coming/video/mobile.php?PHPSESSID="+result.text, '_self', 'location=yes');
             
             /*if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });

@@ -356,7 +356,7 @@ pusher.subscribe('desktop');
 
 function getSessionId(){
 	$.ajax({
-		url: "../qrcode/getSessionId.php",
+		url: "../video/assets/qrcode/getSessionId.php",
 		success: function(data){
 			return data;
 		}

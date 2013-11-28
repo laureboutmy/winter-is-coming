@@ -41,6 +41,7 @@ var app = {
 
     scan: function() {
         console.log('scanning');
+        document.getElementById('phonegap').style.display='none';
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
@@ -57,7 +58,7 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);*/
-            document.getElementById('phonegap').style.display='none';
+            
             window.open("http://laureboutmy.com/winter-is-coming/mobile.php?PHPSESSID="+result.text, '_self', 'location=yes');
             
             /*if (args.format == "QR_CODE") {
@@ -67,6 +68,7 @@ var app = {
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
+            document.getElementById('phonegap').style.display='block';
         } );
     }
 };

@@ -7,7 +7,7 @@ cards = [
 		"cta": "Buy it on iTunes",
 		"browser": false,
 		"url": "https://itunes.apple.com/us/album/main-title/id441573161?i=441573162",
-		"time": "1",
+		"time": "2",
 		"imgMarker": "assets/images/content/41-pbar.jpg",
 		"imgTimeline": "assets/images/content/41-timeline.jpg"
 	},
@@ -152,9 +152,10 @@ cards = [
 		"displayed": false,
 		"displayTime": 12*60+33,
 		"category": "Statistics",
-		"title": "The Wall's height",
-		"description": "244 meters",
+		"title": "The Wall's height (meters)",
+		"description": "244",
 		"browser": false,
+		"stats": true,
 		"time": "12",
 		"imgMarker": "assets/images/content/11-pbar.jpg",
 		"imgTimeline": "assets/images/content/11-timeline.jpg"
@@ -257,11 +258,12 @@ cards = [
 
 	{
 		"displayed": false,
-		"displayTime": 17*60+6,
+		"displayTime": 17*60+5,
 		"category": "Statistics",
-		"title": "Wildling style",
-		"description": "17 vs. 1",
+		"title": "Wildling style (vs. 1)",
+		"description": "17",
 		"browser": false,
+		"stats": true,
 		"time": "17",
 		"imgMarker": "assets/images/content/19-pbar.jpg",
 		"imgTimeline": "assets/images/content/19-timeline.jpg"
@@ -341,6 +343,7 @@ cards = [
 		"title": "Hodor Counter",
 		"description": "10",
 		"browser": false,
+		"stats": true,
 		"time": "20",
 		"imgMarker": "assets/images/content/25-pbar.jpg",
 		"imgTimeline": "assets/images/content/25-timeline.jpg"
@@ -446,6 +449,7 @@ cards = [
 		"title": "A few gards",
 		"description": "50",
 		"browser": false,
+		"stats": true,
 		"time": "28",
 		"imgMarker": "assets/images/content/33-pbar.jpg",
 		"imgTimeline": "assets/images/content/33-timeline.jpg"
@@ -622,7 +626,7 @@ cards = [
 		"id2": 520522351378496,
 		"mood3": "Amused",
 		"id3": 182941238573934,
-		"time": 14,
+		"time": "44",
 		"imgMarker": "assets/images/content/1-pbar.jpg",
 		"imgTimeline": "assets/images/content/1-timeline.jpg"
 	},
@@ -653,7 +657,7 @@ cards = [
 		"id2": 231470587014089,
 		"mood3": "Revanchist",
 		"id3": 682410861793187,
-		"time": 14,
+		"time": "45",
 		"imgMarker": "assets/images/content/1-pbar.jpg",
 		"imgTimeline": "assets/images/content/1-timeline.jpg"
 	},
@@ -672,12 +676,12 @@ cards = [
 
 	{
 		"displayed": false,
-		"displayTime": 48*60+43,
+		"displayTime": 49*60+10,
 		"category": "Quote",
 		"title": "Michelle Fairley's shock",
 		"description": "Daniel Brett Weiss : « We tried to call Michelle [Catelyn Stark] afterwards. She wasn’t answering. A week later she wrote an email saying, \'Sorry I haven’t been able to talk to anybody about the show for the past week because I’ve been so shattered.\'»",
 		"browser": false,
-		"time": "48",
+		"time": "49",
 		"imgMarker": "assets/images/content/48-pbar.jpg",
 		"imgTimeline": "assets/images/content/48-timeline.jpg"
 	}

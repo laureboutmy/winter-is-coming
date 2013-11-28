@@ -295,6 +295,8 @@ video.hidden { opacity: 0; }
 #timeline article.card.facebook > div.text ul.mood li { -webkit-transition: color 0.3s ease-out; transition: color 0.3s ease-out; cursor: pointer; padding: 15px 0 10px; background: url(../images/template/bg-hr.png) repeat-x top; color: #666666; font-size: 1em; line-height: 1.385em; display: block; text-align: center; }
 #timeline article.card.facebook > div.text ul.mood li:hover { color: #fff; }
 #timeline article.card.facebook > div.text ul.mood li.current { color: #fff; }
+#timeline article.card.facebook > div.text ul.mood li.disabled { opacity: 0.5; cursor: auto; }
+#timeline article.card.facebook > div.text ul.mood li.disabled:hover { color: #666666; }
 
 #badges { position: absolute; top: 40px; right: -100%; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
 #badges ul li { background: url(../images/template/bg-hr.png) repeat-x; width: 230px; padding: 25px 15px 20px; width: 230px; }

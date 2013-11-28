@@ -336,6 +336,7 @@
 <script src="assets/scripts/libs/tweet.js"></script>
 <script src="assets/scripts/mCurrentTime-desktop.js"></script> 
 <script src="assets/scripts/libs/pusher.js"></script>
+<script src="assets/scripts/libs/mood.js"></script>
 <script src="assets/scripts/scripts.js"></script>
 <script src="assets/scripts/myCountdown.js"></script>
 <script src="assets/scripts/fbconnect.js"></script>

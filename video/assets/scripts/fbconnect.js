@@ -29,21 +29,3 @@ function handleSessionReponse(session){
 		return false;
 	});
 }
-
-// function shareHome(){
-	// var url = "http://doriancamilleri.fr/player/customActionsHome/";
-	// FB.api("/me/gotplayer:Play",
-		// "POST",
-		// {got_episode : url},
-		// function(response){
-			// console.log("Réponse ");
-			// console.log(response);
-		// }
-	// );
-// }
-// 
-// 
-// 
-// Event Listeners 
-// $(".shareHome").on("click", shareHome);
-// 

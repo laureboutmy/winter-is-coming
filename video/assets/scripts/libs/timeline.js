@@ -64,7 +64,7 @@ var timeline = {
 							$('<li>').attr('data-mood', card.id1).text(card.mood1),
 							$('<li>').attr('data-mood', card.id2).text(card.mood2),
 							$('<li>').attr('data-mood', card.id3).text(card.mood3)
-						)
+						).attr('data-moodId', card.moodId)
 					)
 				);
 			console.log(evtDiv);

@@ -345,6 +345,13 @@ badges.init({
 	}
 });
 
+mood.init({
+	shared : function(){
+		// Shared the mood on Facebook
+		console.log("Mood shared");
+	}
+});
+
 pusher.subscribe('desktop');
 
 $('.sign-in-twitter').on('click', twitterSignIn);
@@ -377,4 +384,20 @@ $(document).on('keydown', function(e){
 			player.playPause();
 		}
 	}
+});
+
+$('#timeline').on('click', 'ul.mood li', function(e){
+	var moodId = $(e.target).parent().attr("data-moodId");
+	console.log(moodId);
+	FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+	  	mood.shareMood($(e.target).attr('data-mood'));
+	  	$("#timeline ul.mood[data-moodId='"+moodId+"']").children().addClass('disabled');
+	  	$("#timeline ul.mood li.disabled").on('click',function(){
+	  		return false;
+	  	});
+	  } else {
+	    FB.login(handleSessionReponse, {scope: scope});
+	  }
+	});
 });

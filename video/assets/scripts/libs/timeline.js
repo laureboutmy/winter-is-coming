@@ -3,7 +3,8 @@ var timeline = {
 		main: '#main',
 		timeline: '#timeline',
 		rendered: function(){},
-		moved: function(){}
+		moved: function(){},
+		statsRendered: function(){}
 	},
 
 	init: function(options){
@@ -67,7 +68,19 @@ var timeline = {
 						).attr('data-moodId', card.moodId)
 					)
 				);
-			console.log(evtDiv);
+		} else if(card.stats){
+			var evtDiv = $('<article>').addClass('card hidden stats').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('img').append(
+						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+						$('<span>').addClass('inset')
+					),
+					$('<div>').addClass('text').append(
+						$('<h2>').addClass('stats').text(card.description),
+						$('<p>').text(card.title)
+					)
+				);
+			// timeline.prop.statsRendered.call(this, card.inc, evtDiv);
 		} else {
 			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
@@ -103,6 +116,12 @@ var timeline = {
 	// },
 
 	addMarker: function(card){
+		var shortTitle = card.title.length;
+		if(shortTitle > 22){
+			shortTitle = card.title.substring(0,22) + '...';
+		} else {
+			shortTitle = card.title;
+		}
 		var evtMarker = $('<a>').addClass('marker').attr('href', '#').attr('data-key', card.displayTime).append($('<span>').addClass('gradient').text(''));
 		if(card.title && card.imgMarker && card.category && card.time){
 			var tooltip = $('<div>').addClass('tooltip').append(
@@ -110,7 +129,7 @@ var timeline = {
 				$('<h3>').append(
 					$('<span>').addClass('time').text(card.time + 'min').append($('<i>')), 
 					$('<span>').addClass('category').text(card.category),
-					$('<span>').addClass('title').text(card.title)
+					$('<span>').addClass('title').text(shortTitle)
 				)
 			);
 			evtMarker = evtMarker.append(tooltip);

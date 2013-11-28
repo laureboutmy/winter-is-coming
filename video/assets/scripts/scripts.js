@@ -353,7 +353,17 @@ mood.init({
 });
 
 pusher.subscribe('desktop');
-$("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl=45d328563908923796b3bfa2355a028b%23"+pusher.params.channel);
+
+function getSessionId(){
+	$.ajax({
+		url: "../qrcode/getSessionId.php",
+		success: function(data){
+			return data;
+		}
+	});
+}
+
+$("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl="+getSessionId()+"%23"+pusher.params.channel);
 
 $('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);

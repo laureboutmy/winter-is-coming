@@ -8,12 +8,12 @@ i { text-align: left; text-indent: -9999px; overflow: hidden; display: inline-bl
 i.facebook { background: url(../images/template/i-fb.png) no-repeat; width: 11px; height: 21px; }
 i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px; height: 14px; }
 i.tt-small { background: url(../images/template/i-tt-small.png) no-repeat; width: 11px; height: 9px; }
-
 i.play { background: url(../images/template/i-hp-play.png) no-repeat; width: 16px; height: 18px; }
 i.info { background: url(../images/template/i-info.png) no-repeat; width: 20px; height: 20px; }
 i.mobile { background: url(../images/template/i-mobile.png) no-repeat; width: 11px; height: 20px; }
 i.ellipsis { background: url(../images/template/i-ellipsis.png) no-repeat; width: 25px; height: 5px; }
 i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-repeat; width: 10px; height: 9px; }
+
 #landing-page { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%; background: #000; }
 #landing-page.hidden { opacity: 0; }
 #landing-page > div.content { width: 100%; }
@@ -59,13 +59,13 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 	background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.19) 40%,rgba(255,255,255,0.05) 78%,rgba(255,255,255,0.18) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#2effffff',GradientType=0 ); /* IE6-9 */ }
 
-#landing-page section#epis#twwode div#countdown .unity.visible { opacity : 1; }
+#landing-page section#episode div#countdown .unity.visible { opacity : 1; }
 
 #landing-page div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
 #landing-page section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
 #landing-page section#unlock-badges div.sign-in.hidden { display: none; visibility: hidden; opacity: 0; }
 #landing-page section#unlock-badges h2 { display: inline-block; letter-spacing: 0.05em; font-size: 1.750em; font-weight: 100; line-height: 1.143em; margin-bottom: 30px; }
-#landing-page section#unlock-badges h2 span { display: block; font-weight: 400;  }
+#landing-page section#unlock-badges h2 span:first-child { display: block; font-weight: 400;  }
 #landing-page section#unlock-badges a { letter-spacing: 0.05em; border: 1px solid #000000; padding: 20px 20px 15px; color: #fff; font-weight: 400; font-size: 0.875em; line-height: 1.571em; display: inline-block; border-radius: 3px; }
 #landing-page section#unlock-badges a.sign-in-facebook { margin-right: 5px;
 	box-shadow: 0 0px 40px rgba(40, 68, 126, 0.8),
@@ -114,15 +114,24 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 
 video {  -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; display: block; margin: 0 auto; width: 100%; height: 100%; }
 video.hidden { opacity: 0; }
-#player > div { width: 100%; z-index: 10; position: absolute; height: 90px; bottom: 0; }
+#player div.notification { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 0; top: 0; padding: 8px 12px; border-radius: 3px; left: 50%; margin-left: -215px; width: 414px; height: 28px; position: absolute; z-index: 20; 
+	box-shadow: inset 0 1px 0px rgba(255, 255, 255, .06);
+	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(8,8,8,1) 70%,rgba(20,20,20,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%,rgba(8,8,8,1) 70%,rgba(20,20,20,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#141414',GradientType=0 ); /* IE6-9 */ }
+#player div.notification.visible { opacity: 1; top: 10px;}
+#player div.notification h3 { color: #fff; font-size: 1em; font-weight: 200; }
+#player div.notification p { color: #595959; font-size: 0.750em; }
+#player div.notification .badge { float: left; margin-right: 10px; }
+#player > div.nav { width: 100%; z-index: 10; position: absolute; height: 90px; bottom: 0; }
 #player nav { -webkit-transition: all 0.3s ease-out, opacity 0.2s ease-out; transition: all 0.3s ease-out, opacity 0.2s ease-out; opacity: 0; font-size: 0.813em; height: 44px; width: 970px; left: 50%; margin-left: -485px; border-radius: 3px; position: absolute; bottom: 10px; z-index: 10; 
 	box-shadow: 0 1px 3px rgba(1, 1, 1, 1),
 				inset 0 1px 0px rgba(255, 255, 255, .1);
 	background: -ms-linear-gradient(top, rgba(42,42,42,1) 0%,rgba(0,0,0,1) 68%,rgba(18,18,18,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(42,42,42,1) 0%,rgba(0,0,0,1) 68%,rgba(18,18,18,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2a2a', endColorstr='#121212',GradientType=0 ); /* IE6-9 */ }
-#player div:hover nav,
-#player div.visible nav { opacity: 1; bottom: 50px; }
+#player > div.nav:hover nav,
+#player > div.nav.visible nav { opacity: 1; bottom: 50px; }
 #player nav h1 { float: left; margin: 15px 19px; display: inline-block; }
 #player nav hr { float: left; height: 100%; border: 0; width: 1px; margin: 0 1px 0 0; display: inline-block;
 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 50%,rgba(255,255,255,0.01) 100%); /* IE10+ */
@@ -241,7 +250,7 @@ video.hidden { opacity: 0; }
 #feed #tweet-box form textarea { font-size: 1em; resize: none; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px; height: 30px; /*line-height: 1.538em;*/ width: 230px; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; border-radius: 3px; border: 1px solid #2f2f2f; background: transparent; color: #595959; -webkit-transition: height 0.3s ease-out; transition: height 0.3s ease-out; }
 #feed #tweet-box.focused form textarea { height: 90px; }
 #feed #tweet-box form textarea:focus { outline: none; }
-#feed #tweet-box form button { float: right; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; margin: 0; padding: 5px; border-radius: 3px; border: 1px solid #2f2f2f; background: transparent; color: #595959; font-size: 1em; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; }
+#feed #tweet-box form button { float: right; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; margin: 5px 0 0; padding: 5px; border-radius: 3px; border: 1px solid #2f2f2f; background: transparent; color: #595959; font-size: 1em; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; }
 #feed #tweet-box.focused form button { visibility: visible; opacity: 1; }
 #feed #tweet-box form span.nb-chars { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 0; color: #333333; letter-spacing: 0.04em; font-style: italic; font-weight: 400; margin-top: 5px; font-size: 0.846em; display: inline-block; }
 #feed #tweet-box form span.nb-chars.visible { opacity: 1;}
@@ -371,5 +380,14 @@ section#mobile img { display: block; margin: 0 auto; }
 .badge.small.please-not-the-wolf { background-position: -505px 0; }
 .badge.small.savant { background-position: -606px 0; }
 .badge.small.walder-frey { background-position: -707px 0; }
+.badge.mini { background: url(../images/template/badges-mini.png) no-repeat; margin: 0 auto; width: 50px; height: 31px; }
+.badge.mini.acolyte { background-position: 0 0; }
+.badge.mini.envoy { background-position: -50px 0; }
+.badge.mini.dovecot { background-position: -100px 0; }
+.badge.mini.lannister { background-position: -150px 0; }
+.badge.mini.couch-potatoe { background-position: -200px 0; }
+.badge.mini.please-not-the-wolf { background-position: -250px 0; }
+.badge.mini.savant { background-position: -300px 0; }
+.badge.mini.walder-frey { background-position: -350px 0; }
 
 /* @end of Global */

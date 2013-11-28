@@ -8,10 +8,10 @@ if(localStorage.getItem('badgeDovecot') == null){
 }
 
 var CURRENTTIME = 0;
-$(".nano").nanoScroller();
+// $(".nano").nanoScroller();
 
 
-
+// Video initialization
 player.init({
 	video: '#video',
 	progress: '.progress',
@@ -29,9 +29,6 @@ player.init({
 	playing: function(){
 		console.log('playing');
 		$(player.prop.button).find('img').attr('src', 'assets/images/template/btn-pause.png');
-	},
-	randomized: function(){
-		// behaviors
 	},
 	paused: function(){
 		$(player.prop.video).removeClass('play');
@@ -55,7 +52,7 @@ player.init({
 
 player.load();
 
-
+// Set video width
 function setWidth(){
 	$('div.close-browser').width(($(window).width() / 2) - 260);
 	$('#player').width($(window).width() - 260);
@@ -68,7 +65,7 @@ function setWidth(){
 }
 setWidth();
 
-
+// Enter fullscreen 
 var isFullscreen = false;
 function enterFullscreen() {
 	var element = document.documentElement;
@@ -84,6 +81,7 @@ function enterFullscreen() {
 	}
 }
 
+// Fullscreen listeners
 $(document).on('fullscreenchange, mozfullscreenchange, webkitfullscreenchange', function(e) {
 	if(!isFullscreen){
 		isFullscreen = true;
@@ -94,6 +92,7 @@ $(document).on('fullscreenchange, mozfullscreenchange, webkitfullscreenchange', 
 	}
 });
 
+// Sidebar, navigation
 var currentSidebar = 'timeline';
 function changeSidebar(e){
 	e.preventDefault();
@@ -110,14 +109,16 @@ function changeSidebar(e){
 	} else if(futureSidebar == 'badges'){
 		$('#badges').addClass('visible');
 		$('#sidebar nav i.badges').addClass('current');
-	} 
+	}
 
 	if($('#tweet-box').hasClass('focused') && $('#tweet-box textarea').val().length == 0){ $('#tweet-box').removeClass('focused'); }
 	currentSidebar = futureSidebar;
 }
 
+// Jsonp
 var cards = cards;
 
+// Timeline initialization
 timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
@@ -125,13 +126,12 @@ timeline.init({
 		$('#timeline div.wait').addClass('hidden');
 		window.setTimeout(function(){
 			$('#timeline article.card.hidden, #timeline article.card.facebook.hidden, #timeline article.card.soundtrack.hidden, #timeline article.card.stats.hidden').removeClass('hidden');
-
 		}, 200);
 	}
 });
 
 
-
+// Link between the video and the cards
 function checkTime(currentTime) {
 	for (key in cards) {
 		var card = cards[key];
@@ -142,7 +142,7 @@ function checkTime(currentTime) {
 	}
 }
 
-
+// Browser
 function showBrowser(e){
 	e.preventDefault();
 	player.pause();
@@ -174,6 +174,7 @@ function showBrowser(e){
 	}
 }
 
+// Close browser
 function hideBrowser(e){
 	e.preventDefault();
 	$('#wrapper-rel').removeClass('display-browser');
@@ -181,6 +182,7 @@ function hideBrowser(e){
 	$('.close-browser').off('click', hideBrowser);
 	player.play();
 }
+
 
 function goToMarker(e){
 	e.preventDefault();
@@ -194,6 +196,7 @@ function goToMarker(e){
 		easing: 'swing'
 	});
 }
+
 if(signedInTwitter){
 	$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
@@ -244,6 +247,8 @@ function twitterSignIn(e){
 		}
 	});
 }
+
+// Tweet actions initialization
 tweet.init({
 	textarea: '#tweet-box textarea[name=tweet]',
 	replying: function(){
@@ -277,8 +282,9 @@ tweet.init({
 	unfavorited: function(){
 		$("button.favorite[data-tweetid='"+idTweet+"']").removeClass('favorited');
 	}
-})
+});
 
+// On focus, the tweet-box extends
 function extendForm(){
 	if(!$('#tweet-box').hasClass('focused')){
 		$('#tweet-box').addClass('focused');
@@ -286,6 +292,7 @@ function extendForm(){
 	} 
 }
 
+// Count characters for twitter
 function countChar(){
 	// If user didn't press enter
 	var length = 140 - $('#tweet-box textarea').val().length;
@@ -296,6 +303,7 @@ function countChar(){
 	}
 }
 
+// On click on "Launch the episode", launch player
 function launchPlayer(e){
 	if(e != 'undefined') { e.preventDefault(); }
 	$('#landing-page div').stop().animate({
@@ -309,9 +317,11 @@ function launchPlayer(e){
 				$('#landing-page').hide();
 				$('#sidebar').addClass('visible');
 				window.setTimeout(function(){
-					$('#player div').addClass('visible');
+					$('#player div.nav').addClass('visible');
+					$('#main nav.menu').addClass('visible');
 					window.setTimeout(function(){
-						$('#player div').removeClass('visible');
+						$('#player div.nav').removeClass('visible');
+						$('#main nav.menu').removeClass('visible');
 						player.play();
 					}, 1000);
 				}, 300);
@@ -330,25 +340,31 @@ function displayMenu(){
 		$('#main nav.menu').off('mouseover');
 	}, 2000)
 }
+
+// Display and hide popin
 function displayPopin(e){
 	e.preventDefault();
 	var pop = $(this).data('pop');
 	player.pause();
 	$('#wrapper-rel').find('#' + pop).addClass('visible').find('.close-browser').on('click', function(){
 		$(this).parent().removeClass('visible');
-	})
+	});
 }
 
+// Badges initialization
 badges.init({
 	rendered: function(name){
 		console.log('badge ' + name + ' rendered');
 		$('.' + name).parent().addClass('claimed');
+		$('span.nb-badges').text(badges.getNumber());
 	},
 	claimed: function(name){
 		console.log('badge ' + name + ' claimed');
+		$('span.nb-badges').text(badges.getNumber());
 	}
 });
 
+// Facebook Custom Actions Initialization
 mood.init({
 	shared : function(){
 		// Shared the mood on Facebook
@@ -356,8 +372,28 @@ mood.init({
 	}
 });
 
+$('#timeline').on('click', 'ul.mood li', function(e){
+	var _this = this;
+	var moodId = $(_this).parent().attr("data-moodId");
+	console.log(moodId);
+	FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+	  	mood.shareMood($(_this).attr('data-mood'));
+	  	$(_this).addClass('current');
+	  	$("#timeline ul.mood[data-moodId='"+moodId+"']").children().addClass('disabled');
+	  	$("#timeline ul.mood li.disabled").on('click',function(){
+	  		return false;
+	  	});
+	  } else {
+	    FB.login(handleSessionReponse, {scope: scope});
+	  }
+	});
+});
+
+// Mobile, pusher
 pusher.subscribe('desktop');
 
+// Get session id and send it to mobile
 function getSessionId(){
     var filePath = "/winter-is-coming/video/assets/qrcode/getSessionId.php";
     xmlhttp = new XMLHttpRequest();
@@ -368,8 +404,10 @@ function getSessionId(){
     return fileContent;
 }
 
-$("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl="+getSessionId()+"%23"+pusher.params.channel);
+// Set QRcode
+$('#qrcode').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl=' + getSessionId() + '%23' + pusher.params.channel);
 
+// LISTENERS
 $('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);
@@ -402,18 +440,3 @@ $(document).on('keydown', function(e){
 	}
 });
 
-$('#timeline').on('click', 'ul.mood li', function(e){
-	var moodId = $(e.target).parent().attr("data-moodId");
-	console.log(moodId);
-	FB.getLoginStatus(function(response) {
-	  if (response.status === 'connected') {
-	  	mood.shareMood($(e.target).attr('data-mood'));
-	  	$("#timeline ul.mood[data-moodId='"+moodId+"']").children().addClass('disabled');
-	  	$("#timeline ul.mood li.disabled").on('click',function(){
-	  		return false;
-	  	});
-	  } else {
-	    FB.login(handleSessionReponse, {scope: scope});
-	  }
-	});
-});

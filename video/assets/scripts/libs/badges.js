@@ -3,6 +3,8 @@ var badges = {
 		rendered: function(){},
 		claimed: function(){}
 	},
+
+	// Badges
 	default: {
 		acolyte: false,
 		envoy: false,
@@ -14,6 +16,7 @@ var badges = {
 		walder_frey: false
 	},
 
+	// Initialization, check if there is already a localStorage called badges
 	init: function(options){
 		this.prop = $.extend(this.params, options);
 		if(localStorage.getItem("badges") == null){
@@ -28,6 +31,7 @@ var badges = {
 		}
 	},
 
+	// To snatch a badge
 	claim: function(name){
 		var tempStorage = JSON.parse(localStorage["badges"]);
 		if(tempStorage[name]){
@@ -41,10 +45,12 @@ var badges = {
 		
 	},
 
+	// To display badge
 	render: function(name){
 		this.prop.rendered.call(this, name);
 	},
 
+	// Check if badge is claimed
 	isClaimed: function(data){
 		if(localStorage.getItem("badges")== null){
 			return false;
@@ -53,12 +59,15 @@ var badges = {
 		}
 	},
 
+	// Get number of snatched badges
 	getNumber: function(){
 		var i = 0;
 		var allBadges = JSON.parse(localStorage["badges"]);
 		for (badge in allBadges){
+			console.log(allBadges[badge]);
 			if(allBadges[badge]){ i ++ }
 		}
-		return i;
+		if(i > 1){ return i + ' badges'; } else { return i + ' badge'; }
+		
 	}
 }

@@ -90,7 +90,7 @@
 				</div>
 				<div class="signed-in hidden">
 					<h2><span>Welcome.</span>
-					You’ve unlocked 1 badge, congrats!</h2>
+					You’ve unlocked <span class="nb-badges">1 badge</span>, congrats!</h2>
 
 					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
 					<?php if(!$signed_in_twitter): ?>
@@ -163,13 +163,18 @@
 				</ul>
 			</nav>
 			<section id="player">
+				<div class="notification visible">
+					<div class="badge savant mini"></div>
+					<h3>Congrats!</h3>
+					<p>You’ve just added the “Couch Potatoe” badge to your collection.</p>
+				</div>
 				<video id="video" class="hidden" preload="none">
 					<source src="assets/videos/video.mp4" type="video/mp4">
 					<source src="assets/videos/video.ogv" type="video/ogg">
 					
 					Plz get Internet
 				</video>
-				<div>
+				<div class="nav">
 					<nav>
 						<h1><img src="assets/images/template/got-player-nav.png" alt="Game of Thrones" /></h1>
 						<hr />

@@ -7,12 +7,13 @@ a, a:link, a:active, a:visited { color: #fff; text-decoration: none; }
 i { text-align: left; text-indent: -9999px; overflow: hidden; display: inline-block; }
 i.facebook { background: url(../images/template/i-fb.png) no-repeat; width: 11px; height: 21px; }
 i.twitter { background: url(../images/template/i-tw.png) no-repeat; width: 18px; height: 14px; }
+i.tt-small { background: url(../images/template/i-tt-small.png) no-repeat; width: 11px; height: 9px; }
+
 i.play { background: url(../images/template/i-hp-play.png) no-repeat; width: 16px; height: 18px; }
 i.info { background: url(../images/template/i-info.png) no-repeat; width: 20px; height: 20px; }
 i.mobile { background: url(../images/template/i-mobile.png) no-repeat; width: 11px; height: 20px; }
 i.ellipsis { background: url(../images/template/i-ellipsis.png) no-repeat; width: 25px; height: 5px; }
 i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-repeat; width: 10px; height: 9px; }
-
 #landing-page { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%; background: #000; }
 #landing-page.hidden { opacity: 0; }
 #landing-page > div.content { width: 100%; }
@@ -58,7 +59,7 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 	background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.19) 40%,rgba(255,255,255,0.05) 78%,rgba(255,255,255,0.18) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#2effffff',GradientType=0 ); /* IE6-9 */ }
 
-#landing-page section#episode div#countdown .unity.visible { opacity : 1; }
+#landing-page section#epis#twwode div#countdown .unity.visible { opacity : 1; }
 
 #landing-page div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
 #landing-page section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
@@ -227,8 +228,10 @@ video.hidden { opacity: 0; }
 
 #timeline.visible, #feed.visible, #badges.visible { right: 0; }
 
-#feed { right: -100%; position: absolute; top: 40px; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#feed { right: -100%; position: absolute; top: 40px; width: 260px; -webkit-transition: right 0.3s ease-out; transition: right 0.3s ease-out; }
+#feed #twitter-connect { position: absolute; height: 100px; top: 50%; margin-top: -50px; width: 230px; padding: 0 15px; text-align: center; }
 #feed #twitter-connect h3 { margin-bottom: 20px; color: #666666; font-size: 1.077em; }
+#feed #twitter-connect a.sign-in-twitter { cursor: pointer; padding: 10px; border: 1px solid #333333;  color: #666666; border-radius: 3px; }
 #feed #tweet-box { z-index: 20; background: rgba(0,0,0,1) url(../images/template/bg-tweet.png) no-repeat top; width: 230px; margin: 0 15px; height: 75px; position: absolute; bottom: 0; /*height: 75px;*/ padding: 25px 0px; box-shadow: 0px -3px 10px 6px rgba(0, 0, 0, 1); }
 #feed #tweet-box.focused { height: 165px; }
 #feed #tweet-box #user img { width: 34px; height: 34px; border-radius: 3px; float: left; margin-right: 6px; }
@@ -271,17 +274,17 @@ video.hidden { opacity: 0; }
 #timeline div.wait i { margin-bottom: 20px; }
 #timeline div.wait h3 { font-size: 1.077em; }
 #timeline a { cursor: pointer; }
-#timeline article.card { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; opacity: 1; position: relative; z-index: 30; margin-top: 100px; width: 230px; margin: 0 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 1); }
-#timeline article.card.hidden { opacity: 0; -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; }
+#timeline article.card { -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; opacity: 1; position: relative; z-index: 30; margin-top: 100px; width: 230px; margin: 0 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 1); }
+#timeline article.card.hidden { opacity: 0; }
 #timeline article.card > div.time { color: #fff; z-index: 20; font-size: 0.923em; position: relative; width: 20px; height: 20px; padding: 42px 40px 40px; margin: 0 auto; background: url(../images/template/bg-timecode.png) no-repeat center center; text-align: center; }
 #timeline article.card > div.time span { font-size: 7px; line-height: 6px; letter-spacing: 1px; display: block; text-transform: uppercase; }
 #timeline article.card > div.time:before,
-#timeline article.card > div.time:after { z-index: 10; content: ''; display: block; height: 30px; width: 8px;  left: 50%; margin-left: -4px; background: url(../images/template/bg-hr-cards.png) repeat-y bottom; position: absolute; }
+#timeline article.card > div.time:after { z-index: 10; content: ''; display: block; height: 30px; width: 8px; left: 50%; margin-left: -4px; background: url(../images/template/bg-hr-cards.png) repeat-y bottom; position: absolute; }
 #timeline article.card > div.time:before { top: 0px; }
-#timeline article.card > div.time:after { bottom: 0; }
-#timeline article.card > div.img { position: relative; box-shadow: inset 0 1px 0px rgba(255, 255, 255, .5); border-top-left-radius: 3px; border-top-right-radius: 3px; }
-#timeline article.card > div.img img { border-top-left-radius: 3px; border-top-right-radius: 3px; }
-#timeline article.card > div.img span.inset { position: absolute; z-index: 10; width: 100%; display: block; top: 0; height: 1px; 
+#timeline article.card > div.time:after { bottom: 5px; }
+#timeline article.card div.img { position: relative; box-shadow: inset 0 1px 0px rgba(255, 255, 255, .5); border-top-left-radius: 3px; border-top-right-radius: 3px; }
+#timeline article.card div.img img { border-top-left-radius: 3px; border-top-right-radius: 3px; }
+#timeline article.card div.img span.inset { position: absolute; z-index: 10; width: 100%; display: block; top: 0; height: 1px; 
 	background: -ms-linear-gradient(left, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0.01) 100%); /* IE10+ */
 	background: linear-gradient(to right, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0.01) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#03ffffff',GradientType=1 ); /* IE6-9 */ }
@@ -294,7 +297,9 @@ video.hidden { opacity: 0; }
 #timeline article.card > div.text h2 { line-height: 1.200em; padding: 20px 10px 0; font-size: 1.538em; color: #fff; font-weight: 200; }
 #timeline article.card.facebook > div.text h2 {  line-height: 1.200em; padding: 20px 10px 10px; font-size: 1.538em; text-align: center; color: #fff; font-weight: 200; }
 #timeline article.card.stats > div.text h2.stats { margin-top: 25px; line-height: 0.667em; font-size: 6.923em; text-align: left; color: #fff; font-weight: 100; }
-
+#timeline article.card.soundtrack div.img { margin-top: 20px; margin-left: 10px; width: 120px; height: 120px; }
+#timeline article.card.soundtrack div.img img { border-radius: 3px; }
+#timeline article.card.soundtrack > div.text { background: #000; margin-top: -6px; border-radius: 3px; border: 1px solid #1a1a1a;  }
 #timeline article.card > div.text p { margin-bottom: 10px; font-weight: 300; padding: 10px; color: #666; line-height: 1.385em;  }
 #timeline article.card > div.text span { display: block; padding: 10px 0 5px; font-weight: 300; text-align: center; color: #666; line-height: 1.385em; background: url(../images/template/bg-hr.png) repeat-x top; }
 #timeline article.card > div.text span i { background-position: 0 1px; margin-left: 4px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAYAAACXDi8zAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3QjI4RDVGOTRBNUIxMUUzQjg2NkZBRkYwMDg4NTA4QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3QjI4RDVGQTRBNUIxMUUzQjg2NkZBRkYwMDg4NTA4QyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdCMjhENUY3NEE1QjExRTNCODY2RkFGRjAwODg1MDhDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdCMjhENUY4NEE1QjExRTNCODY2RkFGRjAwODg1MDhDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rA2GiwAAAF9JREFUeNpi9PX1ZQACOSB+xIAEmIBYEYjPArEdusR9IA4B4rXIkkxQ+iCSpD2yBLLkGiA2QJYAgf/oRjFAzQcZFQrEF5iwCB4ACbAAsQJUMARqDwNM4gEQG6N7ECDAAKlFEiF1wxBzAAAAAElFTkSuQmCC); width: 6px; height: 10px;}

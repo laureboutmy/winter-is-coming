@@ -8,7 +8,7 @@ if(localStorage.getItem('badgeDovecot') == null){
 }
 
 var CURRENTTIME = 0;
-// $(".nano").nanoScroller();
+$(".nano").nanoScroller();
 
 
 
@@ -123,7 +123,10 @@ timeline.init({
 	rendered: function(){
 		console.log('displayed');
 		$('#timeline div.wait').addClass('hidden');
-		$('#timeline article.card.hidden, #timeline article.card.facebook.hidden').removeClass('hidden');
+		window.setTimeout(function(){
+			$('#timeline article.card.hidden, #timeline article.card.facebook.hidden, #timeline article.card.soundtrack.hidden, #timeline article.card.stats.hidden').removeClass('hidden');
+
+		}, 200);
 	}
 });
 
@@ -200,13 +203,13 @@ if(signedInTwitter){
 	badges.claim('acolyte');
 	$("#twitter-connect").hide();
 	$("#user").show();
-	$("#tweet-box form").show();
+	$("#tweet-box").show();
 	$("#tweet-feed .content").show();
 	$('.tweets').tweetMachine('#GoT');
 	$("#tweet-feed .content").show();
 } else {
 	$("#user").hide();
-	$("#tweet-box form").hide();
+	$("#tweet-box").hide();
 	$("#tweet-feed .content").hide();
 }
 

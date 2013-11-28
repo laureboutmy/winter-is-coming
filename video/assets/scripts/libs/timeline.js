@@ -35,6 +35,19 @@ var timeline = {
 						$('<span>').text(card.cta).append($('<i>'))
 					)
 				);
+			} else if(card.category == "Soundtrack"){
+				var evtDiv = $('<article>').addClass('card soundtrack hidden').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('text').append(
+						$('<div>').addClass('img').append(
+							$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+							$('<span>').addClass('inset')
+						),
+						$('<h2>').text(card.title),
+						$('<p>').text(card.description),
+						$('<span>').text(card.cta).append($('<i>'))
+					)
+				);
 			} else {
 				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 						$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),

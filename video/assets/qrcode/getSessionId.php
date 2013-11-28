@@ -1,1 +1,1 @@
-<?php session_start(); echo session_id(); ?>
+<?php session_start(); echo session_id(); /* Return id session id in order tu push to the mobile app */ ?>

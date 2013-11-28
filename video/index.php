@@ -210,10 +210,7 @@
 
 				<section id="timeline" class="nano visible">
 					<div class="content">
-						<div class="wait">
-							<i class="ellipsis">...</i>
-							<h3>Brace yourself!<br />Content is coming.</h3>
-						</div>
+						
 					</div>
 				</section><!-- /section#timeline -->
 
@@ -329,7 +326,7 @@
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
-<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script src="assets/scripts/libs/jquery.tweetMachine-desktop.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="assets/scripts/libs/jquery.oauthpopup.js"></script>
 <script src="assets/scripts/libs/video.js"></script>

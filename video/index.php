@@ -325,6 +325,7 @@
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
+<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="assets/scripts/libs/jquery.oauthpopup.js"></script>
 <script src="assets/scripts/libs/video.js"></script>
@@ -333,7 +334,7 @@
 <script src="assets/scripts/libs/badges.js"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
-<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script src="assets/scripts/mCurrentTime-desktop.js"></script> 
 <script src="assets/scripts/libs/pusher.js"></script>
 <script src="assets/scripts/scripts.js"></script>
 <script src="assets/scripts/myCountdown.js"></script>

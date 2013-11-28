@@ -6,11 +6,13 @@ $pusher = new Pusher(APP_KEY, APP_SECRET, APP_ID);
 
 $action = sanitize( $_GET['action'] );
 
-$channel1 = sanitize( $_GET['channel'] );
+$channel = sanitize( $_GET['channel'] );
+
+$message = sanitize( $_GET['message'] );
 $data = array('action' => $action);
 
 
-$pusher->trigger($channel1, $action, $data);
+$pusher->trigger($channel, $action, $message);
 
 function sanitize($data) {
   return htmlspecialchars($data);

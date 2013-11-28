@@ -59,6 +59,8 @@ var app = {
             console.log(result);*/
             
             window.open(result.text, '_self', 'location=yes');
+            document.getElementById('scan').style='display:none';
+            document.getElementById('pscan').style='display:none';
             
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });

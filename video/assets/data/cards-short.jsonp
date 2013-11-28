@@ -21,7 +21,7 @@ cards = [
 		"cta": "Buy it",
 		"browser": false,
 		"url": "http://store.hbouk.com/detail.php?p=303619&SESSID=51271711433e967e59f926a75bd43c82&v=hbo-uk",
-		"time": "3",
+		"time": "1",
 		"imgMarker": "assets/images/content/3-pbar.jpg",
 		"imgTimeline": "assets/images/content/3-timeline.jpg"
 	},
@@ -49,7 +49,7 @@ cards = [
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/4.html",
-		"time": "4",
+		"time": "2",
 		"imgMarker": "assets/images/content/4-pbar.jpg",
 		"imgTimeline": "assets/images/content/4-timeline.jpg"
 	},
@@ -61,7 +61,7 @@ cards = [
 		"title": "Walder Frey respects that",
 		"description": "« Your king says he betrayed me for love. I say he betrayed me for firm tits and a tight fit ... and I can respect that. »",
 		"browser": false,
-		"time": "8",
+		"time": "2",
 		"imgMarker": "assets/images/content/7-pbar.jpg",
 		"imgTimeline": "assets/images/content/7-timeline.jpg"
 	},
@@ -70,11 +70,11 @@ cards = [
 		"displayed": false,
 		"displayTime": 2*60,
 		"category": "Statistics",
-		"title": "The Wall's height",
-		"description": "244 meters",
+		"title": "The Wall's height (meters)",
+		"description": "244",
 		"browser": false,
 		"stats": true,
-		"time": "12",
+		"time": "2",
 		"imgMarker": "assets/images/content/11-pbar.jpg",
 		"imgTimeline": "assets/images/content/11-timeline.jpg"
 	},
@@ -88,7 +88,7 @@ cards = [
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/12.html",
-		"time": "13",
+		"time": "2",
 		"imgMarker": "assets/images/content/12-pbar.jpg",
 		"imgTimeline": "assets/images/content/12-timeline.jpg"
 	},
@@ -101,7 +101,7 @@ cards = [
 		"cta": "Watch",
 		"url": "assets/data/13.html",
 		"browser": true,
-		"time": "13",
+		"time": "2",
 		"imgMarker": "assets/images/content/13-pbar.jpg",
 		"imgTimeline": "assets/images/content/13-timeline.jpg"
 	},
@@ -115,7 +115,7 @@ cards = [
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/14.html",
-		"time": "13",
+		"time": "2",
 		"imgMarker": "assets/images/content/14-pbar.jpg",
 		"imgTimeline": "assets/images/content/14-timeline.jpg"
 	},
@@ -129,7 +129,7 @@ cards = [
 		"cta": "Watch",
 		"browser": true,
 		"url": "assets/data/21.html",
-		"time": "17",
+		"time": "2",
 		"imgMarker": "assets/images/content/21-pbar.jpg",
 		"imgTimeline": "assets/images/content/21-timeline.jpg"
 	},
@@ -141,7 +141,7 @@ cards = [
 		"title": "Arya Stark's projects",
 		"description": "« Some day I'm going to put a sword through your eye and out the back of your skull. »",
 		"browser": false,
-		"time": "19",
+		"time": "3",
 		"imgMarker": "assets/images/content/24-pbar.jpg",
 		"imgTimeline": "assets/images/content/24-timeline.jpg"
 	},
@@ -154,7 +154,7 @@ cards = [
 		"description": "10",
 		"browser": false,
 		"stats": true,
-		"time": "20",
+		"time": "3",
 		"imgMarker": "assets/images/content/25-pbar.jpg",
 		"imgTimeline": "assets/images/content/25-timeline.jpg"
 	},
@@ -168,7 +168,7 @@ cards = [
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/15.html",
-		"time": "15",
+		"time": "3",
 		"imgMarker": "assets/images/content/15-pbar.jpg",
 		"imgTimeline": "assets/images/content/15-timeline.jpg"
 	},
@@ -180,7 +180,7 @@ cards = [
 		"title": "No more Hodoring!",
 		"description": "« Hush Hodor, no more Hodoring! »",
 		"browser": false,
-		"time": "21",
+		"time": "3",
 		"imgMarker": "assets/images/content/26-pbar.jpg",
 		"imgTimeline": "assets/images/content/26-timeline.jpg"
 	},
@@ -194,7 +194,7 @@ cards = [
 		"cta": "Buy it",
 		"browser": false,
 		"url": "http://store.hbouk.com/detail.php?p=303722&SESSID=bdc79c904ab0603f2527b872789c6a57&v=hbo-uk",
-		"time": "21",
+		"time": "3",
 		"imgMarker": "assets/images/content/27-pbar.jpg",
 		"imgTimeline": "assets/images/content/27-timeline.jpg"
 	},
@@ -208,7 +208,7 @@ cards = [
 		"cta": "Read more",
 		"browser": true,
 		"url": "assets/data/17.html",
-		"time": "16",
+		"time": "4",
 		"imgMarker": "assets/images/content/17-pbar.jpg",
 		"imgTimeline": "assets/images/content/17-timeline.jpg"
 	},
@@ -222,7 +222,7 @@ cards = [
 		"cta": "Buy it",
 		"browser": false,
 		"url": "http://store.hbouk.com/game-of-thrones-john-snow-figure/detail.php?p=464140&v=hbo-uk_shows_game-of-thrones",
-		"time": "25",
+		"time": "4",
 		"imgMarker": "assets/images/content/31-pbar.jpg",
 		"imgTimeline": "assets/images/content/31-timeline.jpg"
 	},
@@ -235,7 +235,7 @@ cards = [
 		"description": "8",
 		"browser": false,
 		"stats": true,
-		"time": "28",
+		"time": "4",
 		"imgMarker": "assets/images/content/33-pbar.jpg",
 		"imgTimeline": "assets/images/content/33-timeline.jpg"
 	},
@@ -249,7 +249,7 @@ cards = [
 		"cta": "Buy it",
 		"browser": false,
 		"url": "http://store.hbouk.com/detail.php?p=464139&SESSID=bdc79c904ab0603f2527b872789c6a57&v=hbo-uk",
-		"time": "36",
+		"time": "5",
 		"imgMarker": "assets/images/content/38-pbar.jpg",
 		"imgTimeline": "assets/images/content/38-timeline.jpg"
 	},
@@ -261,7 +261,7 @@ cards = [
 		"title": "Walder Frey's poetry",
 		"description": "« A sword needs a sheath. And a wedding needs a bedding. »",
 		"browser": false,
-		"time": "39",
+		"time": "5",
 		"imgMarker": "assets/images/content/40-pbar.jpg",
 		"imgTimeline": "assets/images/content/40-timeline.jpg"
 	},
@@ -274,7 +274,7 @@ cards = [
 		"cta": "Buy it on iTunes",
 		"browser": false,
 		"url": "https://itunes.apple.com/fr/album/the-rains-of-castamere/id532529865?i=532530187",
-		"time": "42",
+		"time": "6",
 		"imgMarker": "assets/images/content/41-pbar.jpg",
 		"imgTimeline": "assets/images/content/41-timeline.jpg"
 	},
@@ -286,7 +286,7 @@ cards = [
 		"title": "The Rains of Castamere",
 		"description": "The \"Rains of Castamere\" is a song written about Lord Tywin Lannister's crushing victory over rebellious House Reyne of Castamere and the destruction of the House at the end of their rebellion. The song is typically sung as a reminder of the fate that awaits those who the Lannisters.",
 		"browser": false,
-		"time": "42",
+		"time": "6",
 		"imgMarker": "assets/images/content/42-pbar.jpg",
 		"imgTimeline": "assets/images/content/42-timeline.jpg"
 	},
@@ -299,7 +299,7 @@ cards = [
 		"cta": "Watch",
 		"browser": true,
 		"url": "assets/data/45.html",
-		"time": "44",
+		"time": "7",
 		"imgMarker": "assets/images/content/45-pbar.jpg",
 		"imgTimeline": "assets/images/content/45-timeline.jpg"
 	},
@@ -317,7 +317,7 @@ cards = [
 		"id2": 520522351378496,
 		"mood3": "Amused",
 		"id3": 182941238573934,
-		"time": 14,
+		"time": "7",
 		"imgMarker": "assets/images/content/1-pbar.jpg",
 		"imgTimeline": "assets/images/content/1-timeline.jpg"
 	},
@@ -335,7 +335,7 @@ cards = [
 		"id2": 231470587014089,
 		"mood3": "Revanchist",
 		"id3": 682410861793187,
-		"time": 14,
+		"time": "8",
 		"imgMarker": "assets/images/content/1-pbar.jpg",
 		"imgTimeline": "assets/images/content/1-timeline.jpg"
 	},
@@ -347,7 +347,7 @@ cards = [
 		"title": "A message to the Stark family",
 		"description": "« The Lannisters send their regards. »",
 		"browser": false,
-		"time": "48",
+		"time": "8",
 		"imgMarker": "assets/images/content/47-pbar.jpg",
 		"imgTimeline": "assets/images/content/47-timeline.jpg"
 	},
@@ -359,7 +359,7 @@ cards = [
 		"title": "Michelle Fairley's shock",
 		"description": "Daniel Brett Weiss : « We tried to call Michelle [Catelyn Stark] afterwards. She wasn’t answering. A week later she wrote an email saying, \'Sorry I haven’t been able to talk to anybody about the show for the past week because I’ve been so shattered.\'»",
 		"browser": false,
-		"time": "48",
+		"time": "9",
 		"imgMarker": "assets/images/content/48-pbar.jpg",
 		"imgTimeline": "assets/images/content/48-timeline.jpg"
 	}

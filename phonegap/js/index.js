@@ -57,14 +57,12 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);*/
+            document.getElementById('phonegap').style.display='none';
+            window.open("http://laureboutmy.com/winter-is-coming/mobile.php?PHPSESSID="+result.text, '_self', 'location=yes');
             
-            window.open(result.text, '_self', 'location=yes');
-            document.getElementById('scan').style='display:none';
-            document.getElementById('pscan').style='display:none';
-            
-            if (args.format == "QR_CODE") {
+            /*if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-            }
+            }*/
             
 
         }, function (error) { 

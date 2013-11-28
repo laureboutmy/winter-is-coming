@@ -218,7 +218,11 @@
 				</section><!-- /section#timeline -->
 
 				<section id="feed">
-					
+					<div id="twitter-connect">
+						<h3>Sign in with your Twitter account and join the conversation!</h3>
+				    	<a class="sign-in-twitter">Se connecter avec Twitter</a> 
+				   	</div>
+
 					<section id="tweet-box">						
 												     
 				    	<div id="user">
@@ -234,10 +238,6 @@
 							<span class="nb-chars"></span>
 							<button type="submit">Post to Twitter</button>
 						</form>  
-					
-						<div id="twitter-connect">
-					    	<a class="sign-in-twitter">Se connecter avec Twitter</a> 
-					    </div>
 					
 					</section>
 					<div id="tweet-feed" class="nano">

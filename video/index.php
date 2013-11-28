@@ -217,7 +217,7 @@
 				<section id="feed">
 					<div id="twitter-connect">
 						<h3>Sign in with your Twitter account and join the conversation!</h3>
-				    	<a class="sign-in-twitter">Se connecter avec Twitter</a> 
+				    	<a class="sign-in-twitter"><i class="tt-small">Twitter</i> Se connecter avec Twitter</a> 
 				   	</div>
 
 					<section id="tweet-box">						
@@ -233,7 +233,7 @@
 						<form>
 							<textarea name="tweet" placeholder="Post a tweet..." maxlength="140"></textarea>
 							<span class="nb-chars"></span>
-							<button type="submit">Post to Twitter</button>
+							<button type="submit"><i class="tt-small">Twitter</i> Post to Twitter</button>
 						</form>  
 					
 					</section>

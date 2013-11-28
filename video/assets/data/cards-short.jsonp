@@ -73,6 +73,7 @@ cards = [
 		"title": "The Wall's height",
 		"description": "244 meters",
 		"browser": false,
+		"stats": true,
 		"time": "12",
 		"imgMarker": "assets/images/content/11-pbar.jpg",
 		"imgTimeline": "assets/images/content/11-timeline.jpg"
@@ -152,6 +153,7 @@ cards = [
 		"title": "Hodor Counter",
 		"description": "10",
 		"browser": false,
+		"stats": true,
 		"time": "20",
 		"imgMarker": "assets/images/content/25-pbar.jpg",
 		"imgTimeline": "assets/images/content/25-timeline.jpg"
@@ -232,6 +234,7 @@ cards = [
 		"title": "Death counter",
 		"description": "8",
 		"browser": false,
+		"stats": true,
 		"time": "28",
 		"imgMarker": "assets/images/content/33-pbar.jpg",
 		"imgTimeline": "assets/images/content/33-timeline.jpg"

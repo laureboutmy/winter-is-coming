@@ -24,7 +24,7 @@ var tweet = {
 		// If the element has class retweeted, we unretweet it 
 		if($("button.retweet[data-tweetid='"+idTweet+"']").hasClass('retweeted')){
 			$.ajax({
-		        url: 'assets/twitter/actions/unretweet.php', 
+		        url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/actions/unretweet.php', 
 		        type: 'post', 
 		        data: {
 		        	id: idTweet
@@ -37,7 +37,7 @@ var tweet = {
 		// If the element doesn't have class retweeted, we retweet it
 		else{
 			$.ajax({
-		        url: 'assets/twitter/actions/retweet.php', 
+		        url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/actions/retweet.php', 
 		        type: 'post', 
 		        data: {
 		        	id: idTweet
@@ -57,7 +57,7 @@ var tweet = {
 		if($("button.favorite[data-tweetid='"+idTweet+"']").hasClass('favorited')){
 
 			$.ajax({
-		        url: 'assets/twitter/actions/unfavorite.php', 
+		        url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/actions/unfavorite.php', 
 		        type: 'post', 
 		        data: {
 		        	id: idTweet
@@ -69,7 +69,7 @@ var tweet = {
 		}
 		else{
 			$.ajax({
-		        url: 'assets/twitter/actions/favorite.php', 
+		        url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/actions/favorite.php', 
 		        type: 'post', 
 		        data: {
 		        	id: idTweet
@@ -87,7 +87,7 @@ var tweet = {
 			return;
 		}
 		$.ajax({
-	        url: 'assets/twitter/sendTweet.php', 
+	        url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/sendTweet.php', 
 	        type: 'post', 
 	        data: {
 	        	tweet: $(tweet.prop.textarea).val(),

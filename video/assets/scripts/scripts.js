@@ -216,7 +216,7 @@ function twitterSignIn(e){
 		path: 'assets/twitter/twitterConnect.php',
 		callback: function(){
 			$.ajax({
-				url: 'assets/twitter/responseConnect.php', 
+				url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/responseConnect.php', 
 				success: function(response) { 
 					$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 					$('#landing-page #unlock-badges .signed-in').removeClass('hidden');

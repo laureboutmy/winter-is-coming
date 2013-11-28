@@ -1,4 +1,5 @@
 <?php
+	ini_set('session.use_trans_sid', false);
 	session_id($_GET['PHPSESSID']);
 	session_start();
 	$signed_in_twitter = isset($_SESSION['profile_image_url']) && !empty($_SESSION['profile_image_url'])

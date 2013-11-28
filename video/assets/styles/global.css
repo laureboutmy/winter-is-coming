@@ -12,90 +12,88 @@ i.info { background: url(../images/template/i-info.png) no-repeat; width: 20px; 
 i.mobile { background: url(../images/template/i-mobile.png) no-repeat; width: 11px; height: 20px; }
 
 
-#homepage { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%; background: #000; }
-#homepage.hidden { opacity: 0; }
-#homepage > div.content { width: 100%; }
-#homepage header { height: 22px; width: 100%; background: rgba(0, 0, 0, 1); padding: 14px 0; }
-#homepage header h1 { float: left; display: inline-block; }
-#homepage header a { display: block; float: right; color: #666666; font-size: 0.625em; text-transform: uppercase; font-weight: 400; padding: 6px 0;}
-#homepage header i { background: url(../images/template/i-arrow-left.png) no-repeat; width: 10px; height: 8px; }
-#homepage section#episode { width: 100%; height: 410px; background: url(../images/template/bg-episode.jpg) no-repeat center center; padding: 130px 0 120px; position: relative; z-index: 10;
+#landing-page { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; font-weight: 100; position: absolute; z-index: 200; top: 0; width: 100%; background: #000; }
+#landing-page.hidden { opacity: 0; }
+#landing-page > div.content { width: 100%; }
+#landing-page header { height: 22px; width: 100%; background: rgba(0, 0, 0, 1); padding: 14px 0; }
+#landing-page header h1 { float: left; display: inline-block; }
+#landing-page header a { display: block; float: right; color: #666666; font-size: 0.625em; text-transform: uppercase; font-weight: 400; padding: 6px 0;}
+#landing-page header i { background: url(../images/template/i-arrow-left.png) no-repeat; width: 10px; height: 8px; }
+#landing-page section#episode { width: 100%; height: 410px; background: url(../images/template/bg-episode.jpg) no-repeat center center; padding: 130px 0 120px; position: relative; z-index: 10;
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 1),
 				inset 0 1px 0px rgba(255, 255, 255, 0.2),
 				inset 0 -1px 0px rgba(255, 255, 255, 0.2); }
-#homepage section#episode h1 img { float: left; }
-#homepage section#episode h1 span { display: inline-block; margin-top: 4px; margin-left: 20px; font-size: 0.625em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; height: 10px; padding: 10px 15px 6px; border-radius: 14px; 
+#landing-page section#episode h1 img { float: left; }
+#landing-page section#episode h1 span { display: inline-block; margin-top: 4px; margin-left: 20px; font-size: 0.625em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; height: 10px; padding: 10px 15px 6px; border-radius: 14px; 
 	box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1),
 				inset 0 1px 0px rgba(255, 255, 255, .05);
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 25%,rgba(255,255,255,0.02) 77%,rgba(255,255,255,0.02) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 25%,rgba(255,255,255,0.02) 77%,rgba(255,255,255,0.02) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#05ffffff',GradientType=0 ); /* IE6-9 */ }
-#homepage section#episode h2 { margin: 50px 0 40px; font-size: 6.563em; line-height: 0.952em; text-shadow: 0 0px 20px rgba(0, 0, 0, 1); }
-#homepage section#episode h3 { color: rgba(255, 255, 255, 0.4); font-size: 1.500em; letter-spacing: 0.1em; font-weight: 200; }
-#homepage section#episode a.launch-player { opacity: 0; margin-top: 20px; border-radius: 25px; font-weight: 400; font-size: 1.125em; line-height: 1.778em; display: inline-block; padding: 10px 20px 5px; 
+#landing-page section#episode h2 { margin: 50px 0 40px; font-size: 6.563em; line-height: 0.952em; text-shadow: 0 0px 20px rgba(0, 0, 0, 1); }
+#landing-page section#episode h3 { color: rgba(255, 255, 255, 0.4); font-size: 1.500em; letter-spacing: 0.1em; font-weight: 200; }
+#landing-page section#episode a.launch-player { opacity: 0; margin-top: 20px; border-radius: 25px; font-weight: 400; font-size: 1.125em; line-height: 1.778em; display: inline-block; padding: 10px 20px 5px; 
 	-webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out;
 	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.15),
 				inset 0 1px 0px rgba(255, 255, 255, .2);
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.28) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.08) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0.28) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.08) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffffff', endColorstr='#14ffffff',GradientType=0 ); /* IE6-9 */ }
-#homepage section#episode a.launch-player.visible { opacity: 1; transition: opacity 2s linear; -webkit-transition: opacity 2s linear;}
-#homepage section#episode a.launch-player:hover { opacity: 0.8; }
-#homepage section#episode i.play { float: left; margin-top: 5px; margin-right: 15px; }
+#landing-page section#episode a.launch-player.visible { opacity: 1; transition: opacity 2s linear; -webkit-transition: opacity 2s linear;}
+#landing-page section#episode a.launch-player:hover { opacity: 0.8; }
+#landing-page section#episode i.play { float: left; margin-top: 5px; margin-right: 15px; }
 
-#homepage section#episode div#countdown { margin-top: 20px; }
-#homepage section#episode div#countdown .days1,
-#homepage section#episode div#countdown .days2,
-#homepage section#episode div#countdown .hours1,
-#homepage section#episode div#countdown .hours2,
-#homepage section#episode div#countdown .minutes1,
-#homepage section#episode div#countdown .minutes2,
-#homepage section#episode div#countdown .seconds1,
-#homepage section#episode div#countdown .seconds2 { position : relative; font-size: 3.750em; color: #fff; font-weight: 100; float: left; }
-#homepage section#episode div#countdown .unity { opacity : 0; letter-spacing: 1px; float: left; margin: 12px 24px 0 12px; padding: 5px 8px 2px 8px; border-radius: 8px; display: inline-block; font-size: 0.500em; font-weight: 400; text-transform: uppercase;
+#landing-page section#episode div#countdown { margin-top: 20px; }
+#landing-page section#episode div#countdown .days1,
+#landing-page section#episode div#countdown .days2,
+#landing-page section#episode div#countdown .hours1,
+#landing-page section#episode div#countdown .hours2,
+#landing-page section#episode div#countdown .minutes1,
+#landing-page section#episode div#countdown .minutes2,
+#landing-page section#episode div#countdown .seconds1,
+#landing-page section#episode div#countdown .seconds2 { position : relative; font-size: 3.750em; color: #fff; font-weight: 100; float: left; }
+#landing-page section#episode div#countdown .unity { opacity : 0; letter-spacing: 1px; float: left; margin: 12px 24px 0 12px; padding: 5px 8px 2px 8px; border-radius: 8px; display: inline-block; font-size: 0.500em; font-weight: 400; text-transform: uppercase;
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.19) 40%,rgba(255,255,255,0.05) 78%,rgba(255,255,255,0.18) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.19) 40%,rgba(255,255,255,0.05) 78%,rgba(255,255,255,0.18) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#2effffff',GradientType=0 ); /* IE6-9 */ }
 
-#homepage section#episode div#countdown .unity.visible { opacity : 1; }
+#landing-page section#episode div#countdown .unity.visible { opacity : 1; }
 
-#homepage div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
-#homepage section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
-#homepage section#unlock-badges div.sign-in.hidden { display: none; visibility: hidden; opacity: 0; }
-#homepage section#unlock-badges h2 { display: inline-block; letter-spacing: 0.05em; font-size: 1.750em; font-weight: 100; line-height: 1.143em; margin-bottom: 30px; }
-#homepage section#unlock-badges h2 span { display: block; font-weight: 400;  }
-#homepage section#unlock-badges a { letter-spacing: 0.05em; border: 1px solid #000000; padding: 20px 20px 15px; color: #fff; font-weight: 400; font-size: 0.875em; line-height: 1.571em; display: inline-block; border-radius: 3px; }
-#homepage section#unlock-badges a.sign-in-facebook { margin-right: 5px;
+#landing-page div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
+#landing-page section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
+#landing-page section#unlock-badges div.sign-in.hidden { display: none; visibility: hidden; opacity: 0; }
+#landing-page section#unlock-badges h2 { display: inline-block; letter-spacing: 0.05em; font-size: 1.750em; font-weight: 100; line-height: 1.143em; margin-bottom: 30px; }
+#landing-page section#unlock-badges h2 span { display: block; font-weight: 400;  }
+#landing-page section#unlock-badges a { letter-spacing: 0.05em; border: 1px solid #000000; padding: 20px 20px 15px; color: #fff; font-weight: 400; font-size: 0.875em; line-height: 1.571em; display: inline-block; border-radius: 3px; }
+#landing-page section#unlock-badges a.sign-in-facebook { margin-right: 5px;
 	box-shadow: 0 0px 40px rgba(40, 68, 126, 0.8),
 				inset 0 1px 0px rgba(255, 255, 255, .2);
 	background: -ms-linear-gradient(top, rgba(64,93,156,1) 0%,rgba(38,66,123,1) 69%,rgba(50,77,135,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(64,93,156,1) 0%,rgba(38,66,123,1) 69%,rgba(50,77,135,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405d9c', endColorstr='#324d87',GradientType=0 ); /* IE6-9 */ }
-#homepage section#unlock-badges a.sign-in-twitter {
+#landing-page section#unlock-badges a.sign-in-twitter {
 	cursor: pointer;
 	box-shadow: 0 0px 40px rgba(15, 101, 148, 0.7),
 				inset 0 1px 0px rgba(255, 255, 255, .2);
 	background: -ms-linear-gradient(top, rgba(61,137,178,1) 0%,rgba(15,101,148,1) 69%,rgba(42,121,163,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(61,137,178,1) 0%,rgba(15,101,148,1) 69%,rgba(42,121,163,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d89b2', endColorstr='#2a79a3',GradientType=0 ); /* IE6-9 */ }
-#homepage section#unlock-badges i { float: left; margin-right: 5px;}
-#homepage section#unlock-badges i.facebook { margin-top: -4px; } 
-#homepage section#unlock-badges div.signed-in { margin: 70px 0; opacity: 1; }
-#homepage section#unlock-badges div.signed-in.hidden { opacity: 0; display: none; }
-#homepage section#unlock-badges div.signed-in hr { background: url(../images/template/bg-hr.png) repeat-x; border: 0; height: 1px; width: 100%; }
-#homepage section#unlock-badges div.signed-in a.sign-in-facebook,
-#homepage section#unlock-badges div.signed-in a.sign-in-twitter { float: right; }
-#homepage section#unlock-badges div.signed-in ul#all-badges { margin: 40px 0; overflow: hidden; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li { opacity: 0.4; text-align: center; float: left; width: 200px; padding: 20px; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li.claimed { opacity: 1; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li h3 { letter-spacing: 0.1em; margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
-#homepage section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; font-weight: 300; }
+#landing-page section#unlock-badges i { float: left; margin-right: 5px;}
+#landing-page section#unlock-badges i.facebook { margin-top: -4px; } 
+#landing-page section#unlock-badges div.signed-in { margin: 70px 0; opacity: 1; }
+#landing-page section#unlock-badges div.signed-in.hidden { opacity: 0; display: none; }
+#landing-page section#unlock-badges div.signed-in hr { background: url(../images/template/bg-hr.png) repeat-x; border: 0; height: 1px; width: 100%; }
+#landing-page section#unlock-badges div.signed-in a.sign-in-facebook,
+#landing-page section#unlock-badges div.signed-in a.sign-in-twitter { float: right; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges { margin: 40px 0; overflow: hidden; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li { opacity: 0.4; text-align: center; float: left; width: 200px; padding: 20px; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li.claimed { opacity: 1; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li h3 { letter-spacing: 0.1em; margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; font-weight: 300; }
 
-
-#homepage footer { text-align: center; }
-#homepage footer p { font-size: 0.750em; color: #333333; font-weight: 300; }
-#homepage footer p.produced { color: #4c4c4c; margin: 10px 0 30px; }
-
+#landing-page footer { text-align: center; }
+#landing-page footer p { font-size: 0.750em; color: #333333; font-weight: 300; }
+#landing-page footer p.produced { color: #4c4c4c; margin: 10px 0 30px; }
 
 #wrapper { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }
 #wrapper.hidden { opacity: 0; }
@@ -338,6 +336,7 @@ section#about, section#mobile { z-index: -1; top: 0; left: 0; -webkit-transition
 section#about.visible, section#mobile.visible { opacity: 1; z-index: 500; }
 section#mobile > div { width: 450px; position: absolute; top: 60px; left: 50%; margin-left: -225px; }
 section#mobile h2 { color: #666666; font-size: 1.500em; text-align: center; margin-bottom: 70px; }
+section#mobile img { display: block; margin: 0 auto; }
 
 /* Badges */
 .badge { text-align: left; text-indent: -9999px; overflow: hidden; }

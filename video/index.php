@@ -44,7 +44,7 @@
 
 </head>
 <body>
-<section id="homepage" class="nano">
+<section id="landing-page" class="nano">
 	<div class="content">
 		<header>
 			<div class="wrapper">

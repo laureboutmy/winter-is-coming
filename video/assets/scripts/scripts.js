@@ -191,10 +191,10 @@ function goToMarker(e){
 	});
 }
 if(signedInTwitter){
-	$('#homepage #unlock-badges .sign-in').addClass('hidden');
-	$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-	$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
-	$("#homepage #unlock-badges .signed-in .sign-in-twitter").hide();
+	$('#landing-page #unlock-badges .sign-in').addClass('hidden');
+	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
+	$("#landing-page #unlock-badges .signed-in h2 span").html('Welcome!');
+	$("#landing-page #unlock-badges .signed-in .sign-in-twitter").hide();
 
 	badges.claim('acolyte');
 	$("#twitter-connect").hide();
@@ -217,10 +217,10 @@ function twitterSignIn(e){
 			$.ajax({
 				url: 'assets/twitter/responseConnect.php', 
 				success: function(response) { 
-					$('#homepage #unlock-badges .sign-in').addClass('hidden');
-					$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-					$("#homepage #unlock-badges .signed-in h2 span").html('Welcome!');
-					$("#homepage #unlock-badges .signed-in .sign-in-twitter").hide();
+					$('#landing-page #unlock-badges .sign-in').addClass('hidden');
+					$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
+					$("#landing-page #unlock-badges .signed-in h2 span").html('Welcome!');
+					$("#landing-page #unlock-badges .signed-in .sign-in-twitter").hide();
 					badges.claim('acolyte');
 
 					$('#user img').attr('src', response.profile_image_url);
@@ -294,15 +294,15 @@ function countChar(){
 
 function launchPlayer(e){
 	if(e != 'undefined') { e.preventDefault(); }
-	$('#homepage div').stop().animate({
+	$('#landing-page div').stop().animate({
 		scrollTop: 0 + 'px'
 	}, {
 		duration: '300',
 		easing: 'swing',
 		complete: function(){
-			$('#homepage').addClass('hidden');
+			$('#landing-page').addClass('hidden');
 			window.setTimeout(function(){
-				$('#homepage').hide();
+				$('#landing-page').hide();
 				$('#sidebar').addClass('visible');
 				window.setTimeout(function(){
 					$('#player div').addClass('visible');

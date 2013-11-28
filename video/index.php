@@ -316,7 +316,6 @@
 			<div>
 				<h2>Scan this QR Code with the app <br />&quot;GoT Player&quot; to connect your mobile !</h2>
 				<img id="qrcode" src=""/>
-				<?php echo session_id();?>
 			</div>
 		</section>
 	</section><!-- /section#wrapper-rel -->

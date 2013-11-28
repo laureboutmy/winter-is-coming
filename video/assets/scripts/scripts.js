@@ -355,25 +355,14 @@ mood.init({
 pusher.subscribe('desktop');
 
 function getSessionId(){
-	
-	// $.ajax({
-	// 	url: "p",
-	// 	success: function(data){
-	// 		id = data;
-	// 	}
-	// });
-	
-	// var id;
-	$.get( "../video/assets/qrcode/getSessionId.php", function( data ) {
-	 	return data;
-	});
-	// return id;
-
+    var filePath = "/winter-is-coming/video/assets/qrcode/getSessionId.php";
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.overrideMimeType('text/plain');
+    xmlhttp.open("GET",filePath,false);
+    xmlhttp.send(null); 
+    var fileContent = xmlhttp.responseText;
+    return fileContent;
 }
-
-
-
-console.log("sdfljdfglkj"+getSessionId());
 
 $("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl="+getSessionId()+"%23"+pusher.params.channel);
 

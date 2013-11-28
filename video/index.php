@@ -156,6 +156,12 @@
 	<div class="close-browser"></div>
 	<section id="wrapper-rel">
 		<section id="main">
+			<nav class="menu">
+				<ul>
+					<li><a href="#" data-pop="about" class="about"><i class="info">Info</i>About the project</a></li>
+					<li><a href="#" data-pop="mobile" class="mobile"><i class="mobile">Mobile</i>Connect to the player with your phone!</a></li>
+				</ul>
+			</nav>
 			<section id="player">
 				<video id="video" class="hidden" preload="none">
 					<source src="assets/videos/video.mp4" type="video/mp4">
@@ -295,12 +301,22 @@
 				</section><!-- /section#badges -->
 			</section><!-- /section#sidebar -->
 		</section><!-- /section#main -->
-
+		
 		<section id="browser" class="nano">
 			<i class="close-browser" aria-hidden="true">Close</i>
 			<div class="content">
 			</div>
 		</section><!-- /section#browser -->
+		<section id="about">
+			<i class="close-browser" aria-hidden="true">Close</i>
+			hui
+		</section>
+		<section id="mobile">
+			<i class="close-browser" aria-hidden="true">Close</i>
+			<div>
+				<h2>Scan this QR Code with the app <br />&quot;GoT Player&quot; to connect your mobile !</h2>
+			</div>
+		</section>
 	</section><!-- /section#wrapper-rel -->
 </section><!-- /section#wrapper -->
 <div id="fb-root"></div>

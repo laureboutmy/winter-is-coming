@@ -316,6 +316,24 @@ function launchPlayer(e){
 	});
 }
 
+function displayMenu(){
+	$('#main nav.menu').addClass('visible');
+	$('#main nav.menu').on('mouseover', function(){
+		window.clearTimeout(timeout);
+	});
+	var timeout = window.setTimeout(function(){
+		$('#main nav.menu').removeClass('visible');
+		$('#main nav.menu').off('mouseover');
+	}, 2000)
+}
+function displayPopin(e){
+	e.preventDefault();
+	var pop = $(this).data('pop');
+	player.pause();
+	$('#wrapper-rel').find('#' + pop).addClass('visible').find('.close-browser').on('click', function(){
+		$(this).parent().removeClass('visible');
+	})
+}
 
 badges.init({
 	rendered: function(name){
@@ -350,6 +368,9 @@ $('#tweet-box textarea').on({
 	'keydown': countChar, 
 	'change': countChar
 });
+$('#player > div').on('mouseover', displayMenu);
+$('a.about, a.mobile').on('click', displayPopin);
+
 $(document).on('keydown', function(e){ 
 	if(!$('#tweet-box').hasClass('focused')){
 		if(e.keyCode == 32){

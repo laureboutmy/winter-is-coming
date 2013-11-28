@@ -355,13 +355,25 @@ mood.init({
 pusher.subscribe('desktop');
 
 function getSessionId(){
-	$.ajax({
-		url: "../video/assets/qrcode/getSessionId.php",
-		success: function(data){
-			return data;
-		}
+	
+	// $.ajax({
+	// 	url: "p",
+	// 	success: function(data){
+	// 		id = data;
+	// 	}
+	// });
+	
+	// var id;
+	$.get( "../video/assets/qrcode/getSessionId.php", function( data ) {
+	 	return data;
 	});
+	// return id;
+
 }
+
+
+
+console.log("sdfljdfglkj"+getSessionId());
 
 $("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl="+getSessionId()+"%23"+pusher.params.channel);
 

@@ -12,9 +12,16 @@ var timeline = {
 
 	render: function(card){
 
-		if(card.browser  && card.category == 'GIF'){
-			var evtA = $('<a>').attr('data-url', card.url).attr('href', '#').addClass('browser').attr('data-key', card.displayTime);
-			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
+		if(card.url){
+			var evtA = $('<a>').attr('data-key', card.displayTime);
+			if(card.browser){
+				evtA.addClass('browser').attr('data-url', card.url);
+			} else {
+				evtA.attr('href', card.url).addClass('pause-video').attr('target', '_blank');
+			}
+
+			if(card.category == 'GIF'){
+				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
 					$('<div>').addClass('img').append(
 						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
@@ -27,24 +34,7 @@ var timeline = {
 						$('<span>').text(card.cta).append($('<i>'))
 					)
 				);
-			evtDiv = evtA.append(evtDiv);
-		} else if(card.browser) {
-			var evtA = $('<a>').attr('data-url', card.url).attr('href', '#').addClass('browser').attr('data-key', card.displayTime);
-			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
-					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
-					$('<div>').addClass('img').append(
-						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
-						$('<span>').addClass('inset')
-					),
-					$('<div>').addClass('text').append(
-						$('<h2>').text(card.title),
-						$('<p>').text(card.description),
-						$('<span>').text(card.cta).append($('<i>'))
-					)
-				);
-			evtDiv = evtA.append(evtDiv);
-		} else {
-			if(card.cta){
+			} else {
 				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
 						$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
 						$('<div>').addClass('img').append(
@@ -57,22 +47,41 @@ var timeline = {
 							$('<span>').text(card.cta).append($('<i>'))
 						)
 					);
-			} else {
-				var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
-						$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
-						$('<div>').addClass('img').append(
-							$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
-							$('<span>').addClass('inset')
-						),
-						$('<div>').addClass('text').append(
-							$('<h2>').text(card.title),
-							$('<p>').text(card.description)
-						)
-					);
 			}
 			
-		}
+			evtDiv = evtA.append(evtDiv);
 
+		} else if(card.facebook){
+			var evtDiv = $('<article>').addClass('card hidden facebook').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('img').append(
+						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+						$('<span>').addClass('inset')
+					),
+					$('<div>').addClass('text').append(
+						$('<h2>').text(card.title),
+						$('<ul>').addClass('mood').append(
+							$('<li>').attr('data-mood', card.id1).text(card.mood1),
+							$('<li>').attr('data-mood', card.id2).text(card.mood2),
+							$('<li>').attr('data-mood', card.id3).text(card.mood3)
+						)
+					)
+				);
+			console.log(evtDiv);
+		} else {
+			var evtDiv = $('<article>').addClass('card hidden').attr('data-key', card.displayTime).append(
+					$('<div>').addClass('time').text(card.time).append($('<span>').text('min')),
+					$('<div>').addClass('img').append(
+						$('<img>').attr('src', card.imgTimeline).attr('alt', card.title),
+						$('<span>').addClass('inset')
+					),
+					$('<div>').addClass('text').append(
+						$('<h2>').text(card.title),
+						$('<p>').text(card.description)
+					)
+				);
+		}
+		
 		if(card.category == 'GIF'){ evtDiv.addClass('gif'); }
 		card.displayed = true;
 

@@ -63,8 +63,8 @@ section#feed #tweet-feed ul li.tweet .meta img { width: 37px; height: 37px; floa
 section#feed #tweet-feed ul li.tweet .meta a.name { padding-top: 2px; display: block; font-size: 1.188em; font-weight: 400; color: #fff; margin-bottom: 4px; }
 section#feed #tweet-feed ul li.tweet .meta a.username { color: #fff; font-size: 0.938em; }
 section#feed #tweet-feed ul li.tweet p { font-size: 1.063em; line-height: 1.176em; font-weight: 200; } 
-section#feed #tweet-feed ul li.tweet div.actions { -webkit-transition: left 0.3s ease-out; transition: left 0.3s ease-out; position: absolute; text-align: center; left: -100%; top: 1px; width: 100%; height: 100%; background: #000; display: block; }
-section#feed #tweet-feed ul li.tweet div.actions.visible { left: 0; }
+section#feed #tweet-feed ul li.tweet div.actions { -webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; z-index: -1; opacity: 0; position: absolute; text-align: center; left: 0; top: 1px; width: 100%; height: 99%; background: #000; display: block; }
+section#feed #tweet-feed ul li.tweet div.actions.visible { opacity: 1; z-index: 100; }
 section#feed #tweet-feed ul li.tweet div.actions ul { position: absolute; height: 44px; top: 50%; margin-top: -22px; width: 250px; left: 50%; margin-left: -125px; }
 section#feed #tweet-feed ul li.tweet div.actions ul li { display: inline-block; height: 44px; margin: 0 10px; } 
 section#feed #tweet-feed ul li.tweet div.actions ul li button { font-weight: 200; border: 0; padding: 0; cursor: pointer; background: transparent; color: #4c4c4c; text-align: center; font-size: 1em;} 

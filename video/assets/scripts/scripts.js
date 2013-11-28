@@ -122,7 +122,7 @@ timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
 		console.log('displayed');
-		$('#timeline article.card.hidden').removeClass('hidden');
+		$('#timeline article.card.hidden, #timeline article.card.facebook.hidden').removeClass('hidden');
 	}
 });
 
@@ -337,6 +337,7 @@ $('#volume .level').on('click', player.setVolume);
 $('#volume .mute').on('click', player.mute);
 $('#sidebar nav').find('a').on('click', changeSidebar);
 $('#main').on('click', 'a.browser', showBrowser);
+$('#main').on('click', 'a.pause-video', player.pause);
 $('#progress-bar').on('click', 'a.marker', goToMarker);
 $(window).on('resize', setWidth);
 $('#fullscreen-btn').on('click', enterFullscreen);

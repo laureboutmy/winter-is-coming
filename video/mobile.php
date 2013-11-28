@@ -69,17 +69,20 @@
 		</form>
 	</div>
 	<div id="tweet-feed">
-		<ul id="tweets"></ul>
+		<ul id="tweets">
+			
+		</ul>
 	</div>
 </section>
 <!-- SCRIPTS -->
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="assets/scripts/libs/jquery.touchSwipe-1.6.5.min.js"></script>
-<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script src="assets/scripts/libs/jquery.event.move.js"></script>
+<script src="assets/scripts/libs/jquery.event.swipe.js"></script>
+
 <script src="assets/scripts/libs/pusher.js"></script>
-<script src="assets/scripts/mCurrentTime-mobile.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
+<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
 <script>$('#tweet-feed #tweets').tweetMachine('#GoT');</script>
 <script src="assets/scripts/mobile.js"></script>
 <!-- /SCRIPTS -->

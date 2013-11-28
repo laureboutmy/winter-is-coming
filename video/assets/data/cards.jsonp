@@ -338,13 +338,13 @@ cards = [
 
 	{
 		"displayed": false,
-		"displayTime": 20*60+51,
+		"displayTime": 21*60+19,
 		"category": "Statistics",
 		"title": "Hodor Counter",
 		"description": "10",
 		"browser": false,
 		"stats": true,
-		"time": "20",
+		"time": "21",
 		"imgMarker": "assets/images/content/25-pbar.jpg",
 		"imgTimeline": "assets/images/content/25-timeline.jpg"
 	},

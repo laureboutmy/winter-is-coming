@@ -82,7 +82,7 @@
 <script src="assets/scripts/mCurrentTime-mobile.js"></script>
 <script src="assets/scripts/libs/pusher.js"></script>
 <script src="assets/scripts/libs/tweet.js"></script>
-<script src="assets/scripts/libs/jquery.tweetMachine-0.2.1.js"></script>
+<script src="assets/scripts/libs/jquery.tweetMachine-mobile.js"></script>
 <script>$('#tweet-feed #tweets').tweetMachine('#GoT');</script>
 <script src="assets/scripts/mobile.js"></script>
 <!-- /SCRIPTS -->

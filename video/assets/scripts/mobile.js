@@ -1,5 +1,16 @@
 pusher.subscribe("mobile");
 
+        pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
+            mCurrentTime.time=data;
+            //console.log(data);
+            //console.log(data.message);
+            //console.log(mCurrentTime.time);
+            //mCurrentTime.sendTime();
+            //pusher.action('sendTime')
+            //console.log(JSON.stringify(data));
+        });
+
+
 var current = 'remote';
 function changeWindow(e){
     e.preventDefault();

@@ -11,6 +11,12 @@ var pusher = {
         this.params.instance.subscribe(this.params.channel).bind('mute', function(data) {
             player.mute();
         });
+        this.params.instance.subscribe(this.params.channel).bind('getTime', function(data) {
+            mCurrentTime.sendTime();
+            //pusher.action('sendTime')
+            //console.log(JSON.stringify(data));
+        })
+       
     },
     createGuid: function() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -19,14 +25,16 @@ var pusher = {
             return v.toString(16);
         });
     },
-    action: function(action) {
+    action: function(action, message) {
         $.ajax({
             url: this.params.path,
             data: {
                 "action": action,
-                "channel": this.params.channel
+                "channel": this.params.channel,
+                "message": message.message
             }
         });
+        //console.log(message.message);
     },
     subscribe: function(platform) {
         if (platform == 'mobile') {

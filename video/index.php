@@ -254,7 +254,7 @@
 					</section>
 					<div id="tweet-feed" class="nano">
 						<div class="content">
-								<ul class="tweets"></ul>
+							<ul class="tweets"></ul>
 						</div>
 					</div>
 				</section><!-- /section#feed -->
@@ -310,7 +310,6 @@
 								<p>The night is dark and full of terrors. You’re one of those.</p>
 								<div class="clear"></div>
 							</li>
-							
 						</ul>
 					</div>
 				</section><!-- /section#badges -->
@@ -324,7 +323,7 @@
 		</section><!-- /section#browser -->
 		<section id="about">
 			<i class="close-browser" aria-hidden="true">Close</i>
-			hui
+			<p>Yo.</p>
 		</section>
 		<section id="mobile">
 			<i class="close-browser" aria-hidden="true">Close</i>

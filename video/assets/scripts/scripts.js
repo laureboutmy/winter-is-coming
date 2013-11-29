@@ -250,7 +250,7 @@ function goToMarker(e){
 if(signedInTwitter){
 	$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
-	$("#landing-page #unlock-badges .signed-in h2 span").html('Welcome!');
+	$("#landing-page #unlock-badges .signed-in h2 span.welcome").html('Welcome!');
 	$("#landing-page #unlock-badges .signed-in .sign-in-twitter").hide();
 
 	badges.claim('acolyte');

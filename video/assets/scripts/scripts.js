@@ -222,6 +222,7 @@ function hideBrowser(e){
 	e.preventDefault();
 	$('#wrapper-rel').removeClass('display-browser');
 	$('div.close-browser').removeClass('visible');
+	$('#browser div.content').html('');
 	$('.close-browser').off('click', hideBrowser);
 	player.play();
 }

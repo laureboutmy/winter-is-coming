@@ -24,7 +24,10 @@ var pusher = {
             mCurrentTime.sendTime();
             //pusher.action('sendTime')
             //console.log(JSON.stringify(data));
-        })
+        });
+                this.params.instance.subscribe(this.params.channel).bind('closePopin', function(data) {
+            $('#mobile').removeClass('visible');
+        });
        
     },
     createGuid: function() {

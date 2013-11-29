@@ -30,7 +30,7 @@
 	<link rel="icon" href="assets/images/favicon.ico" />
 	<!-- /Favicon -->
 
-	<!-- STYLESHEETS -->      
+	<!-- STYLESHEETS -->  
 	<link href="assets/styles/reset.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/nanoscroller.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/fonts.css" rel="stylesheet" type="text/css" />
@@ -337,7 +337,6 @@
 <div id="fb-root"></div>
 
 <!-- SCRIPTS -->
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>

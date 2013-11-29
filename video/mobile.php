@@ -74,8 +74,8 @@
 	</div>
 </section>
 <!-- SCRIPTS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.event.move.js"></script>
 <script src="assets/scripts/libs/jquery.event.swipe.js"></script>
 <script src="assets/scripts/mCurrentTime-mobile.js"></script>

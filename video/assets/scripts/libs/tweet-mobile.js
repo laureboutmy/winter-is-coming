@@ -105,6 +105,15 @@ var tweet = {
 			Calling the retweeting PHP function
 		*/
 
+		if(mCurrentTime.time == 0){
+			currentTime = 0;
+		}else{
+			currentTime = parseInt(mCurrentTime.time/60);
+		}
+
+		console.log("this.time "+mCurrentTime.time);
+		console.log(mCurrentTime);
+
 		if($(tweet.prop.textarea).val() == ''){
 			return;
 		}
@@ -114,7 +123,7 @@ var tweet = {
 	        data: {
 	        	tweet: $(tweet.prop.textarea).val(),
 	        	hashtag: 'GoT',
-	        	minutes: mCurrentTime.time
+	        	minutes: currentTime
 	        },
 	        success: function() { 
 	        	tweet.prop.submitted.call(this);

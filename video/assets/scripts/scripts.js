@@ -266,17 +266,22 @@ if(signedInTwitter){
 	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
 	$("#landing-page #unlock-badges .signed-in h2 span.welcome").html('Welcome!');
 	$("#landing-page #unlock-badges .signed-in .sign-in-twitter").hide();
-
+	showTweetBox();
 	badges.claim('acolyte');
-	$("#twitter-connect").hide();
-	$("#user").show();
-	$("#tweet-box").show();
-	$('.tweets').tweetMachine('#GoT');
-	$("#tweet-feed .content").show();
+	
 } else {
 	$("#user").hide();
 	$("#tweet-box").hide();
 	$("#tweet-feed .content").hide();
+}
+
+function showTweetBox(){
+	$('#twitter-connect').fadeOut(500, function(){
+		$('#user').fadeIn(500);
+		$('#tweet-box').fadeIn(500);
+	});
+	$('.tweets').tweetMachine('#GoT');
+	$("#tweet-feed .content").show();
 }
 
 /*
@@ -300,14 +305,7 @@ function twitterSignIn(e){
 					$('#user .name').html(response.name);
 					$('#user .screen_name a').attr('href', 'http://twitter.com/'+response.screen_name);
 					$('#user .screen_name a').html('@'+response.screen_name);
-
-					$('#twitter-connect').fadeOut(500, function(){
-						$('#user').fadeIn(500);
-						$('#tweet-box form').fadeIn(500);
-					});
-
-					$('.tweets').tweetMachine('#GoT');
-					$('#tweet-feed .content').fadeIn(500);
+					showTweetBox();
 	     	  }
 	  		});
 		}

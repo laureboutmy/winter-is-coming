@@ -349,7 +349,7 @@
 <script src="assets/data/cards.jsonp"></script>
 <script src="assets/scripts/libs/badges.js"></script>
 <script src="assets/scripts/libs/timeline.js"></script>
-<script src="assets/scripts/libs/tweet.js"></script>
+<script src="assets/scripts/libs/tweet-desktop.js"></script>
 <script src="assets/scripts/mCurrentTime-desktop.js"></script> 
 <script src="assets/scripts/libs/pusher.js"></script>
 <script src="assets/scripts/libs/mood.js"></script>

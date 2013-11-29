@@ -105,7 +105,6 @@ var tweet = {
 			Calling the retweeting PHP function
 		*/
 
-		e.preventDefault();
 		if($(tweet.prop.textarea).val() == ''){
 			return;
 		}
@@ -115,7 +114,7 @@ var tweet = {
 	        data: {
 	        	tweet: $(tweet.prop.textarea).val(),
 	        	hashtag: 'GoT',
-	        	minutes: player.getTime()
+	        	minutes: mCurrentTime.time
 	        },
 	        success: function() { 
 	        	tweet.prop.submitted.call(this);

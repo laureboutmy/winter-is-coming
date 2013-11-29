@@ -3,6 +3,14 @@
     session_start(); 
 
     if(!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empty($_SESSION['oauth_token_secret'])){ 
+
+        /*
+            If oAuth session values are set
+            We get the Screen Name
+            Profile Image and Name
+            Of the user
+        */
+
         $_SESSION['oauth_verifier'] = $_GET['oauth_verifier'];  
         $twitteroauth = new TwitterOAuth($_SESSION['CONSUMER_KEY'], $_SESSION['CONSUMER_SECRET'], $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);  
         $access_token = $twitteroauth->getAccessToken($_SESSION['oauth_verifier']);
@@ -19,17 +27,19 @@
 
     else{
 
+        /*
+            Connect to Twitter App
+            Using Consumer Key
+            And Consumer Secret
+        */
+
         $_SESSION['CONSUMER_KEY'] = 'lzljK0zCWnUlzqvERrtdiw';
         $_SESSION['CONSUMER_SECRET'] = 'vZJMQXCzPZ42aa3F8ve6D7lqgoBm72froHDFJMuFpOQ';
-
-        // $callback = 'http://localhost:8888/winter-is-coming/old/video/assets/twitter/twitterConnect.php';
-        // $callback = 'http://winter-is-coming.dev:8888/video/assets/twitter/twitterConnect.php';
 
         $callback = 'http://doriancamilleri.fr/player/video/assets/twitter/twitterConnect.php';
 
         $twitteroauth = new TwitterOAuth($_SESSION['CONSUMER_KEY'], $_SESSION['CONSUMER_SECRET']);  
         $request_token = $twitteroauth->getRequestToken($callback);  
-          
         $_SESSION['oauth_token'] = $request_token['oauth_token'];  
         $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];  
           

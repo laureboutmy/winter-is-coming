@@ -1,5 +1,4 @@
 $("#countdown").hide();
-// $(".unity").hide();
 
 countdown.init({
 
@@ -68,6 +67,9 @@ countdown.init({
   window.requestAnimationFrame = requestAnimationFrame;
 })();
 
+/*
+	Initialize the countdown animation
+*/
 var anim = {
 
 	interval : 0,
@@ -81,4 +83,7 @@ var anim = {
 	}
 }
 
+/*
+	Launch the countdown
+*/
 requestAnimationFrame(anim.play);

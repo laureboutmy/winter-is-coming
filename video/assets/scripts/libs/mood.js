@@ -9,6 +9,10 @@ var mood = {
 	},
 
 	shareMood : function(moodId){
+		/*
+			Share a mood on Facebook
+			Using the moodId 
+		*/
 		console.log("MOOD : "+moodId);
 		FB.api("/me/gotplayer:feel",
 			"POST",

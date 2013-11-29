@@ -230,6 +230,9 @@ if(signedInTwitter){
 	$("#tweet-feed .content").hide();
 }
 
+/*
+	Sign in with Twitter using jQuery Pop-up and Ajax
+*/
 function twitterSignIn(e){
 	e.preventDefault();
 	$.oauthpopup({
@@ -375,6 +378,9 @@ mood.init({
 	}
 });
 
+/*
+	Sharing moods on Facebook
+*/
 $('#timeline').on('click', 'ul.mood li', function(e){
 	var _this = this;
 	var moodId = $(_this).parent().attr("data-moodId");

@@ -1,14 +1,15 @@
+
 pusher.subscribe("mobile");
 
-        pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
-            mCurrentTime.time=data;
-            //console.log(data);
-            //console.log(data.message);
-            //console.log(mCurrentTime.time);
-            //mCurrentTime.sendTime();
-            //pusher.action('sendTime')
-            //console.log(JSON.stringify(data));
-        });
+pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
+    mCurrentTime.time=data;
+    //console.log(data);
+    //console.log(data.message);
+    //console.log(mCurrentTime.time);
+    //mCurrentTime.sendTime();
+    //pusher.action('sendTime')
+    //console.log(JSON.stringify(data));
+});
 
 
 var current = 'remote';
@@ -67,6 +68,7 @@ tweet.init({
     }
 })
 
+// LISTENERS 
 $('header nav').on('click', 'a', changeWindow);
 
 $('ul#tweets').on('swipeleft', 'li.tweet', function(){
@@ -83,3 +85,20 @@ $(document).on('keydown', function(e){
        tweet.submit();
     }
 });
+
+$('div#play-btn').on('click', function(){
+    pusher.action('play');
+    if($(this).find('img').attr('src') == 'assets/images/mobile/mob-i-pause.png'){
+        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-play.png');
+    } else {
+        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-pause.png');
+    }
+});
+$('div#volume').on('click', function(){
+    pusher.action('mute');
+    if($(this).find('img').attr('src') == 'assets/images/mobile/mob-i-volume.png'){
+        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-volume-mute.png');
+    } else {
+        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-volume.png');
+    }
+})

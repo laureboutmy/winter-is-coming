@@ -50,7 +50,7 @@
 		<h2>The Rains Of Castamere 
 			<span>Game Of Thrones - S03E09</span></h2>
 		<div id="volume">
-			<img class="mute" src="assets/images/mobile/mob-i-volume.png" alt="Volume" />
+			<img class="mute" src="assets/images/mobile/mob-i-volume-mute.png" alt="Volume" />
 		</div>
 	</div>
 </section>

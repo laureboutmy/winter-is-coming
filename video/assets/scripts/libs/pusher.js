@@ -25,7 +25,7 @@ var pusher = {
             //pusher.action('sendTime')
             //console.log(JSON.stringify(data));
         });
-                this.params.instance.subscribe(this.params.channel).bind('popinClose', function(data) {
+                this.params.instance.subscribe(this.params.channel).bind('closePopin', function(data) {
             $('#mobile').removeClass('visible');
         });
        

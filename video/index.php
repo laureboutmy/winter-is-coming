@@ -230,7 +230,10 @@
 
 				<section id="timeline" class="nano visible">
 					<div class="content">
-						
+						<div class="wait">
+							<i class="ellipsis">...</i>
+							<h3>Brace yourself!<br />Content is coming.</h3>
+						</div>
 					</div>
 				</section><!-- /section#timeline -->
 

@@ -184,9 +184,9 @@
 					<p>You’ve just added a badge to your collection.</p>
 				</div>
 				<video id="video" class="hidden" preload="none">
-					<source src="assets/videos/video.mp4" type="video/mp4">
-					<source src="assets/videos/video.ogv" type="video/ogg">
-					
+					<source src="http://laureboutmy.com/winter-is-coming/video/assets/videos/video.mp4" type="video/mp4">
+					<source src="http://laureboutmy.com/winter-is-coming/video/assets/videos/video.ogv" type="video/ogg">
+						
 					Plz get Internet
 				</video>
 				<div class="nav">

@@ -24,17 +24,17 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 #landing-page section#episode { width: 100%; height: 410px; background: url(../images/template/bg-episode.jpg) no-repeat center center; padding: 130px 0 120px; position: relative; z-index: 10;
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 1),
 				inset 0 1px 0px rgba(255, 255, 255, 0.2),
-				inset 0 -1px 0px rgba(255, 255, 255, 0.2); }
+				inset 0 -1px 0px rgba(255, 255, 255, 0.1); }
 #landing-page section#episode h1 img { float: left; }
-#landing-page section#episode h1 span { display: inline-block; margin-top: 4px; margin-left: 20px; font-size: 0.625em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; height: 10px; padding: 10px 15px 6px; border-radius: 14px; 
+#landing-page section#episode h1 span { display: inline-block; margin-top: 5px; margin-left: 20px; font-size: 0.625em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; height: 10px; padding: 7px 15px 4px; border-radius: 14px; 
 	box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1),
 				inset 0 1px 0px rgba(255, 255, 255, .05);
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 25%,rgba(255,255,255,0.02) 77%,rgba(255,255,255,0.02) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 25%,rgba(255,255,255,0.02) 77%,rgba(255,255,255,0.02) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#05ffffff',GradientType=0 ); /* IE6-9 */ }
-#landing-page section#episode h2 { margin: 50px 0 40px; font-size: 6.563em; line-height: 0.952em; text-shadow: 0 0px 20px rgba(0, 0, 0, 1); }
-#landing-page section#episode h3 { color: rgba(255, 255, 255, 0.4); font-size: 1.500em; letter-spacing: 0.1em; font-weight: 200; }
-#landing-page section#episode a.launch-player { opacity: 0; margin-top: 20px; border-radius: 25px; font-weight: 400; font-size: 1.125em; line-height: 1.778em; display: inline-block; padding: 10px 20px 5px; 
+#landing-page section#episode h2 { margin: 50px 0 40px; font-size: 7.125em; line-height: 0.952em; letter-spacing: 0.019em; text-shadow: 0 0px 20px rgba(0, 0, 0, 1); }
+#landing-page section#episode h3 { color: rgba(255, 255, 255, 0.4); font-size: 1.500em; letter-spacing: 0.1em; font-weight: 300; }
+#landing-page section#episode a.launch-player { opacity: 0; margin-top: 20px; border-radius: 25px; font-weight: 400; font-size: 1.125em; line-height: 1.778em; letter-spacing: 0.056em; display: inline-block; padding: 10px 25px 5px; 
 	-webkit-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out;
 	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.15),
 				inset 0 1px 0px rgba(255, 255, 255, .2);
@@ -42,8 +42,11 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 	background: linear-gradient(to bottom, rgba(255,255,255,0.28) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.08) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffffff', endColorstr='#14ffffff',GradientType=0 ); /* IE6-9 */ }
 #landing-page section#episode a.launch-player.visible { opacity: 1; transition: opacity 2s linear; -webkit-transition: opacity 2s linear;}
-#landing-page section#episode a.launch-player:hover { opacity: 0.8; }
-#landing-page section#episode i.play { float: left; margin-top: 5px; margin-right: 15px; }
+#landing-page section#episode a.launch-player:hover { 
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.34) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.10) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.34) 0%,rgba(255,255,255,0.02) 70%,rgba(255,255,255,0.10) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47ffffff', endColorstr='#14ffffff',GradientType=0 ); /* IE6-9 */ }
+#landing-page section#episode i.play { float: left; margin-top: 5px; margin-right: 12px; }
 
 #landing-page section#episode div#countdown { margin-top: 20px; }
 #landing-page section#episode div#countdown .days1,
@@ -64,15 +67,19 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 #landing-page div.rain { position: relative; z-index: 0; background: #000 url(../images/template/bg-connect.png) no-repeat center center; overflow: hidden; width: 960px; margin: 0 auto; height: 580px; }
 #landing-page section#unlock-badges div.sign-in { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; text-align: center;  margin: 150px auto 0; width: 480px; padding: 225px 0 130px; background: url(../images/template/bg-badges-showcase.png) no-repeat top center; }
 #landing-page section#unlock-badges div.sign-in.hidden { display: none; visibility: hidden; opacity: 0; }
-#landing-page section#unlock-badges h2 { display: inline-block; letter-spacing: 0.05em; font-size: 1.750em; font-weight: 100; line-height: 1.143em; margin-bottom: 30px; }
-#landing-page section#unlock-badges h2 span:first-child { display: block; font-weight: 400;  }
-#landing-page section#unlock-badges a { letter-spacing: 0.05em; border: 1px solid #000000; padding: 20px 20px 15px; color: #fff; font-weight: 400; font-size: 0.875em; line-height: 1.571em; display: inline-block; border-radius: 3px; }
-#landing-page section#unlock-badges a.sign-in-facebook { margin-right: 5px;
+#landing-page section#unlock-badges h2 { display: inline-block; color: #666666; letter-spacing: 0.036em; font-size: 1.750em; font-weight: 300; line-height: 1.143em; margin-bottom: 30px; }
+#landing-page section#unlock-badges h2 span:first-child { display: block; color: #fff; font-weight: 500; letter-spacing: 0.036em; }
+#landing-page section#unlock-badges a { letter-spacing: 0.05em; border: 1px solid #000000; padding: 20px 20px 13px; color: #fff; font-weight: 500; font-size: 0.875em; line-height: 1.571em; display: inline-block; border-radius: 3px; -webkit-transition: box-shadow 0.2s ease-out; transition: box-shadow 0.2s ease-out; }
+#landing-page section#unlock-badges a.sign-in-facebook { margin-right: 1px;
 	box-shadow: 0 0px 40px rgba(40, 68, 126, 0.8),
 				inset 0 1px 0px rgba(255, 255, 255, .2);
 	background: -ms-linear-gradient(top, rgba(64,93,156,1) 0%,rgba(38,66,123,1) 69%,rgba(50,77,135,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(64,93,156,1) 0%,rgba(38,66,123,1) 69%,rgba(50,77,135,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405d9c', endColorstr='#324d87',GradientType=0 ); /* IE6-9 */ }
+#landing-page section#unlock-badges a.sign-in-facebook:hover {
+	box-shadow: 0 0px 60px rgba(48, 82, 150, 1),
+				inset 0 1px 0px rgba(255, 255, 255, .2);	
+}
 #landing-page section#unlock-badges a.sign-in-twitter {
 	cursor: pointer;
 	box-shadow: 0 0px 40px rgba(15, 101, 148, 0.7),
@@ -80,7 +87,10 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 	background: -ms-linear-gradient(top, rgba(61,137,178,1) 0%,rgba(15,101,148,1) 69%,rgba(42,121,163,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(61,137,178,1) 0%,rgba(15,101,148,1) 69%,rgba(42,121,163,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d89b2', endColorstr='#2a79a3',GradientType=0 ); /* IE6-9 */ }
-#landing-page section#unlock-badges i { float: left; margin-right: 5px;}
+#landing-page section#unlock-badges a.sign-in-twitter:hover {
+	box-shadow: 0 0px 60px rgba(15, 101, 148, 0.95),
+				inset 0 1px 0px rgba(255, 255, 255, .2); }
+#landing-page section#unlock-badges i { float: left; margin-right: 10px;}
 #landing-page section#unlock-badges i.facebook { margin-top: -4px; } 
 #landing-page section#unlock-badges div.signed-in { margin: 70px 0; opacity: 1; }
 #landing-page section#unlock-badges div.signed-in.hidden { opacity: 0; display: none; }
@@ -90,11 +100,11 @@ i.tumblr-sharing { background: url(../images/template/i-tumblr-sharing.png) no-r
 #landing-page section#unlock-badges div.signed-in ul#all-badges { margin: 40px 0; overflow: hidden; }
 #landing-page section#unlock-badges div.signed-in ul#all-badges li { opacity: 0.4; text-align: center; float: left; width: 200px; padding: 20px; }
 #landing-page section#unlock-badges div.signed-in ul#all-badges li.claimed { opacity: 1; }
-#landing-page section#unlock-badges div.signed-in ul#all-badges li h3 { letter-spacing: 0.1em; margin: 20px auto 5px; font-size: 1.375em; font-weight: 200;  color: #fff; }
-#landing-page section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.875em; color: #666666; font-weight: 300; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li h3 { letter-spacing: 0.045em; margin: 20px auto 8px; font-size: 1.375em; font-weight: 300; color: #fff; }
+#landing-page section#unlock-badges div.signed-in ul#all-badges li p { font-size: 0.813em; line-height: 1.154em; color: #666666; font-weight: 400; }
 
 #landing-page footer { text-align: center; }
-#landing-page footer p { font-size: 0.750em; color: #333333; font-weight: 300; }
+#landing-page footer p { font-size: 0.750em; color: #333333; font-weight: 500; }
 #landing-page footer p.produced { color: #4c4c4c; margin: 10px 0 30px; }
 
 #wrapper { -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out; opacity: 1; position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; }

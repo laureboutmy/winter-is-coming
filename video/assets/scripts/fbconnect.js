@@ -25,10 +25,10 @@ function handleSessionReponse(session){
 
 	FB.api("/me", function(user){
 		badges.claim('acolyte');
-		$('#homepage #unlock-badges .sign-in').addClass('hidden');
-		$('#homepage #unlock-badges .signed-in a.sign-in-facebook').hide();
-		$('#homepage #unlock-badges .signed-in').removeClass('hidden');
-		$('#homepage #unlock-badges .signed-in h2 span').html('Welcome, ' + user.name);
+		$('#landing-page #unlock-badges .sign-in').addClass('hidden');
+		$('#landing-page #unlock-badges .signed-in a.sign-in-facebook').hide();
+		$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
+		$('#landing-page #unlock-badges .signed-in h2 span.welcome').html('Welcome, ' + user.name);
 		
 		return false;
 	});

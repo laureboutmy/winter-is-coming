@@ -96,7 +96,7 @@
 					<a class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
 				</div>
 				<div class="signed-in hidden">
-					<h2><span>Welcome.</span>
+					<h2><span class="welcome">Welcome.</span>
 					You’ve unlocked <span class="nb-badges">1 badge</span>, congrats!</h2>
 
 					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>

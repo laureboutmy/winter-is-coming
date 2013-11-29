@@ -330,16 +330,16 @@ function launchPlayer(e){
 	});
 }
 
-function displayMenu(){
-	$('#main nav.menu').addClass('visible');
-	$('#main nav.menu').on('mouseover', function(){
-		window.clearTimeout(timeout);
-	});
-	var timeout = window.setTimeout(function(){
-		$('#main nav.menu').removeClass('visible');
-		$('#main nav.menu').off('mouseover');
-	}, 2000)
-}
+// function displayMenu(){
+// 	$('#main nav.menu').addClass('visible');
+// 	$('#main nav.menu').on('mouseover', function(){
+// 		window.clearTimeout(timeout);
+// 	});
+// 	var timeout = window.setTimeout(function(){
+// 		$('#main nav.menu').removeClass('visible');
+// 		$('#main nav.menu').off('mouseover');
+// 	}, 2000)
+// }
 
 // Display and hide popin
 function displayPopin(e){

@@ -37,8 +37,8 @@
                     user_name:      'jason_alvis', // Set your username
                     include_retweets: true, // Set to true or false if you want to include retweets
                     exclude_replies: false, // Set to true or false if you want to exclude replies
-                    rate:           3000, // Rate in ms to refresh the tweets. Any higher than 5000 for search/tweets will get you rate limited
-                    limit:          10, // Number of tweets to display at a time
+                    rate:           7000, // Rate in ms to refresh the tweets. Any higher than 5000 for search/tweets will get you rate limited
+                    limit:          4, // Number of tweets to display at a time
                     autoRefresh:    true, // CURRENTLY REQUIRED. Auto-refresh the tweets
                     animateOut:     false, // NOT YET SUPPORTED. Animate out old tweets.
                     animateIn:      true, // Fade in new tweets.

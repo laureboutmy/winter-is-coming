@@ -323,7 +323,7 @@
 		</section><!-- /section#browser -->
 		<section id="about">
 			<i class="close-browser" aria-hidden="true">Close</i>
-			<p>Yo.</p>
+			<p>Proudly designed and made by <a href="http://www.laureboutmy.com" target="_blank">Laure Boutmy</a>, <a href="http://www.doriancamilleri.fr" target="_blank">Dorian Camilleri</a>, <a href="http://thomasiturralde.fr" target="_blank">Thomas Iturralde</a>, <a href="http://www.laureboutmy.com" target="_blank">Julien Perrière</a> and <a href="http://www.anthonyroux.com" target="_blank">Anthony Roux</a>. This website is purely fictional and was developped for a school project.</p>
 		</section>
 		<section id="mobile">
 			<i class="close-browser" aria-hidden="true">Close</i>

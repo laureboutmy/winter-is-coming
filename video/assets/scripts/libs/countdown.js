@@ -31,6 +31,10 @@ var countdown = {
 
 	count : function(){
 
+		/*
+			Main countdown data processing
+		*/
+
 		var countSeconds = this.convertDate(this.params.days,this.params.hours,this.params.minutes,this.params.seconds);
 
 		if(countSeconds == 0) this.end();
@@ -95,6 +99,10 @@ var countdown = {
 
 	update : function(countSeconds,days,hours,minutes,seconds){
 
+		/*
+			Update params with new ones
+		*/
+
 		countSeconds--;
 		this.params.days = 	Math.floor(countSeconds / (60 * 60 * 24));
 		this.params.hours = Math.floor((countSeconds - (this.params.days * 60 * 60 * 24)) / (60 * 60));
@@ -108,11 +116,21 @@ var countdown = {
 	},
 
 	convertDate : function(days,hours,minutes,seconds){
+
+		/* 
+			Convert target date into seconds
+		*/
+
 		target = days*24*60*60+hours*60*60+minutes*60+seconds;
 		return target;
 	},
 
 	end : function(){
+
+		/*
+			Stop the countdown
+		*/
+
 		this.params.stop.call(this);
 	}
 }

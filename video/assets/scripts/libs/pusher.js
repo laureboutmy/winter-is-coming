@@ -1,12 +1,21 @@
 var pusher = {
+   
     params: {
         channel: window.location.hash.substring(1),
         path: "assets/pusher/mobile.php",
-        instance: new Pusher('d6d5c184ca85e911a2df')
+        instance: new Pusher('d6d5c184ca85e911a2df'),
+        playing: function(){},
+        muted: function(){}
+
     },
+    init: function(options){
+        this.prop = $.extend(this.params, options);
+    },
+
     listen: function() {
         this.params.instance.subscribe(this.params.channel).bind('play', function(data) {
             player.playPause();
+
         });
         this.params.instance.subscribe(this.params.channel).bind('mute', function(data) {
             player.mute();
@@ -33,7 +42,7 @@ var pusher = {
                 "channel": this.params.channel
             }
         });
-        },
+    },
     timeAction: function(action, message) {
         $.ajax({
             url: this.params.path,
@@ -43,11 +52,10 @@ var pusher = {
                 "message": message.message
             }
         });
-    	},
-    
-    
+    },
     
     subscribe: function(platform) {
+
         if (platform == 'mobile') {
             this.params.instance.subscribe(this.params.channel);
             console.log(this.params.channel);

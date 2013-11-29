@@ -12,12 +12,23 @@ var tweet = {
 	},
 
 	reply: function(e){
+
+		/*
+			Get the username 
+			Of the user we want to reply to
+		*/
 		e.preventDefault();
 		var screenName = $('.reply').attr('data-username');
 		$(tweet.prop.textarea).val("@" + screenName);
 		tweet.prop.replying.call(this);
 	},
 	retweet: function(e){
+
+		/*
+			Retweet or Unretweet a tweet
+			Calling the retweeting or unretweetting PHP function
+		*/
+
 		e.preventDefault();
 		var _this = $(this);
 		var idTweet = $(e.target).attr('data-tweetid');
@@ -50,6 +61,12 @@ var tweet = {
 	},
 
 	favorite: function(e){
+
+		/*
+			Favorite or Unfavorite a tweet
+			Calling the favoriting or unfavoriting PHP function
+		*/
+
 		e.preventDefault();
 		var _this = $(this);
 		var idTweet = $(e.target).attr('data-tweetid');
@@ -82,6 +99,12 @@ var tweet = {
 	},
 
 	submit: function(e){
+
+		/*
+			Submit a tweet
+			Calling the retweeting PHP function
+		*/
+
 		e.preventDefault();
 		if($(tweet.prop.textarea).val() == ''){
 			return;

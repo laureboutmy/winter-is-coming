@@ -1,4 +1,6 @@
-// SETUP
+/*
+    Badge Setup
+*/
 var badgeSavant = 0;
 if(localStorage.getItem('badgeDovecot') == null){
 	localStorage.setItem('badgeDovecot', JSON.stringify(0));
@@ -10,7 +12,9 @@ if(localStorage.getItem('badgeDovecot') == null){
 var CURRENTTIME = 0;
 // $(".nano").nanoScroller();
 
-// Badges initialization
+/*
+    Badge Initialization
+*/
 badges.init({
 	rendered: function(name){
 		$('.' + name).parent().addClass('claimed');
@@ -28,7 +32,10 @@ badges.init({
 		
 	}
 });
-// Video initialization
+
+/*
+    Video Initialization
+*/
 player.init({
 	video: '#video',
 	progress: '.progress',
@@ -69,7 +76,9 @@ player.init({
 
 player.load();
 
-// Set video width
+/*
+    Set Video Width
+*/
 function setWidth(){
 	$('div.close-browser').width(($(window).width() / 2) - 260);
 	$('#player').width($(window).width() - 260);
@@ -82,7 +91,9 @@ function setWidth(){
 }
 setWidth();
 
-// Enter fullscreen
+/*
+    Enter in Fullcreen Mode
+*/
 var isFullscreen = false;
 function enterFullscreen() {
 	var element = document.documentElement;
@@ -98,7 +109,9 @@ function enterFullscreen() {
 	}
 }
 
-// Fullscreen listeners
+/*
+    Fullscreen Listeners
+*/
 $(document).on('fullscreenchange, mozfullscreenchange, webkitfullscreenchange', function(e) {
 	if(!isFullscreen){
 		isFullscreen = true;
@@ -109,7 +122,9 @@ $(document).on('fullscreenchange, mozfullscreenchange, webkitfullscreenchange', 
 	}
 });
 
-// Sidebar, navigation
+/*
+    Manage Sidebar and Navigation
+*/
 var currentSidebar = 'timeline';
 function changeSidebar(e){
 	e.preventDefault();
@@ -132,10 +147,14 @@ function changeSidebar(e){
 	currentSidebar = futureSidebar;
 }
 
-// Jsonp
+/*
+    JSONP
+*/
 var cards = cards;
 
-// Timeline initialisation
+/*
+    Timeline Initialization
+*/
 timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
@@ -147,8 +166,11 @@ timeline.init({
 	}
 });
 
-
-// Link betweet the video and the cards
+/*
+    Link betweet
+    The Video
+    And The Cards
+*/
 function checkTime(currentTime) {
 	for (key in cards) {
 		var card = cards[key];
@@ -159,7 +181,9 @@ function checkTime(currentTime) {
 	}
 }
 
-// Browser
+/*
+    Show Browser
+*/
 function showBrowser(e){
 	e.preventDefault();
 	player.pause();
@@ -191,7 +215,9 @@ function showBrowser(e){
 	}
 }
 
-// Close browser
+/*
+    Close Browser
+*/
 function hideBrowser(e){
 	e.preventDefault();
 	$('#wrapper-rel').removeClass('display-browser');
@@ -200,6 +226,9 @@ function hideBrowser(e){
 	player.play();
 }
 
+/*
+    Go To Marker
+*/
 function goToMarker(e){
 	e.preventDefault();
 	var key = $(this).data('key');
@@ -212,6 +241,11 @@ function goToMarker(e){
 		easing: 'swing'
 	});
 }
+
+/*
+    Events to trigger 
+    If Connected to Twitter
+*/
 if(signedInTwitter){
 	$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
@@ -230,6 +264,9 @@ if(signedInTwitter){
 	$("#tweet-feed .content").hide();
 }
 
+/*
+	Sign in with Twitter using jQuery Pop-up and Ajax
+*/
 function twitterSignIn(e){
 	e.preventDefault();
 	$.oauthpopup({
@@ -262,8 +299,9 @@ function twitterSignIn(e){
 	});
 }
 
-
-// Tweet actions initialization
+/*
+    Initalize Tweet Actions
+*/
 tweet.init({
 	textarea: '#tweet-box textarea[name=tweet]',
 	replying: function(){
@@ -299,7 +337,10 @@ tweet.init({
 	}
 });
 
-// On focus, the tweet-box extends
+/*
+    Exetends tweet-box
+    On Focus
+*/
 function extendForm(){
 	if(!$('#tweet-box').hasClass('focused')){
 		$('#tweet-box').addClass('focused');
@@ -307,7 +348,10 @@ function extendForm(){
 	} 
 }
 
-// Count characters for twitter
+/*
+    Count Characters
+    For the Tweet
+*/
 function countChar(){
 	// If user didn't press enter
 	var length = 140 - $('#tweet-box textarea').val().length;
@@ -318,7 +362,11 @@ function countChar(){
 	}
 }
 
-// On click on "Launch the episode", launch player
+/*
+    Launch Player
+    On click on 
+    "Launch the episode"
+*/
 function launchPlayer(e){
 	if(e != 'undefined') { e.preventDefault(); }
 	$('#landing-page div').stop().animate({
@@ -356,7 +404,9 @@ function launchPlayer(e){
 //	}, 2000)
 //}
 
-// Display and hide popin
+/*
+    Display or Hide Popin
+*/
 function displayPopin(e){
 	e.preventDefault();
 	var pop = $(this).data('pop');
@@ -365,9 +415,10 @@ function displayPopin(e){
 		$(this).parent().removeClass('visible');
 	});
 }
-
-
-// Facebook Custom Actions Initialization
+ 
+/*
+    Facebook Custom Actions Initialization
+*/
 mood.init({
 	shared : function(){
 		// Shared the mood on Facebook
@@ -375,6 +426,9 @@ mood.init({
 	}
 });
 
+/*
+	Sharing moods on Facebook
+*/
 $('#timeline').on('click', 'ul.mood li', function(e){
 	var _this = this;
 	var moodId = $(_this).parent().attr("data-moodId");
@@ -393,10 +447,16 @@ $('#timeline').on('click', 'ul.mood li', function(e){
 	});
 });
 
-// Mobile, pusher
+/*
+	On Mobile, Subscripe to the desktop 
+	With pusher
+*/
 pusher.subscribe('desktop');
 
-// Get session id to send it to mobile
+/*
+	Get Session Id 
+	To Send It To Mobile
+*/
 function getSessionId(){
     var filePath = "assets/qrcode/getSessionId.php";
     xmlhttp = new XMLHttpRequest();
@@ -406,11 +466,15 @@ function getSessionId(){
     var fileContent = xmlhttp.responseText;
     return fileContent;
 }
-
-// Set QRcode
+ 
+/*
+	Set QRcode
+*/
 $('#qrcode').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chs=256x256&choe=UTF-8&chl=' + getSessionId() + '%23' + pusher.params.channel);
 
-// LISTENERS
+/*
+	Listeners
+*/
 $('.sign-in-twitter').on('click', twitterSignIn);
 $('a.launch-player').on('click', launchPlayer);
 $('#video, #play-btn').on('click', player.playPause);

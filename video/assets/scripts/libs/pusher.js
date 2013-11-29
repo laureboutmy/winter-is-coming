@@ -30,12 +30,23 @@ var pusher = {
             url: this.params.path,
             data: {
                 "action": action,
+                "channel": this.params.channel
+            }
+        });
+        },
+    timeAction: function(action, message) {
+        $.ajax({
+            url: this.params.path,
+            data: {
+                "action": action,
                 "channel": this.params.channel,
                 "message": message.message
             }
         });
-        //console.log(message.message);
-    },
+    	},
+    
+    
+    
     subscribe: function(platform) {
         if (platform == 'mobile') {
             this.params.instance.subscribe(this.params.channel);

@@ -1,7 +1,7 @@
 var mCurrentTime = {
 	time:"0",
 	getTime: function(){
-		pusher.action('getTime', {'message':''});
+		pusher.timeAction('getTime', {'message':''});
 		return this.time;
 	}
 }

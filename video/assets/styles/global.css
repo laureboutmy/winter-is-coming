@@ -361,8 +361,11 @@ i.close-browser:hover { opacity: 0.7; }
 #browser > div p { color: #595959; font-weight: 400; line-height: 1.500em; }
 #browser > div div.gif { margin-top: 180px; width: 100%; }
 #browser > div div.gif img { border-radius: 3px; width: 100%; height: auto; }
-#browser > div a.share { -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; font-size: 0.750em; display: inline-block; float: right; color: #333333; font-weight: 400; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 5px 10px 2px; font-size: 0.800em; }
+#browser > div a.share { -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; font-size: 0.750em; display: inline-block; float: right; color: #333333; font-weight: 400; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 5px 10px 2px; font-size: 0.800em; margin-top: 5px;}
+#browser > div a.share i { opacity: 0.4; }
 #browser > div a.share:hover { color: rgba(255, 255, 255, 0.5); border-color: rgba(255, 255, 255, 0.3); }
+#browser > div a.share:hover i { opacity: 0.7; }
+
 #browser > div div.video { margin-top: 100px; width: 100%; }
 #browser > div div.video iframe { width: 100%; }
 :-webkit-full-screen { background: #000; }

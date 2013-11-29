@@ -323,7 +323,7 @@
 		</section><!-- /section#browser -->
 		<section id="about">
 			<i class="close-browser" aria-hidden="true">Close</i>
-			hui
+			<p>Yo.</p>
 		</section>
 		<section id="mobile">
 			<i class="close-browser" aria-hidden="true">Close</i>

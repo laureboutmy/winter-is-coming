@@ -34,6 +34,10 @@
 	  <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
 	<![endif]-->
 
+	<!-- Favicon -->
+	<link rel="icon" href="assets/images/favicon.ico" />
+	<!-- /Favicon -->
+
 	<!-- STYLESHEETS -->      
 	<link href="assets/styles/reset.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/nanoscroller.css" rel="stylesheet" type="text/css" /> 

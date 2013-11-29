@@ -1,3 +1,7 @@
+/*
+    Initialize pusher values
+    To get currentTime from Desktop
+*/
 
 pusher.subscribe("mobile");
 
@@ -11,7 +15,10 @@ pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', functio
     //console.log(JSON.stringify(data));
 });
 
-
+/*
+    Change Window 
+    From Remote to Tweets
+*/
 var current = 'remote';
 function changeWindow(e){
     e.preventDefault();
@@ -31,7 +38,9 @@ function changeWindow(e){
     current = future;
 }
 
-// Twitter actions
+/*
+    Twitter Actions on Mobile
+*/
 tweet.init({
 
     textarea: '#tweet-box textarea[name=tweet]',
@@ -68,7 +77,10 @@ tweet.init({
     }
 })
 
-// LISTENERS 
+
+/*
+    Mobile Listeners
+*/
 $('header nav').on('click', 'a', changeWindow);
 
 $('ul#tweets').on('swipeleft', 'li.tweet', function(){
@@ -85,20 +97,3 @@ $(document).on('keydown', function(e){
        tweet.submit();
     }
 });
-
-$('div#play-btn').on('click', function(){
-    pusher.action('play');
-    if($(this).find('img').attr('src') == 'assets/images/mobile/mob-i-pause.png'){
-        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-play.png');
-    } else {
-        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-pause.png');
-    }
-});
-$('div#volume').on('click', function(){
-    pusher.action('mute');
-    if($(this).find('img').attr('src') == 'assets/images/mobile/mob-i-volume.png'){
-        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-volume-mute.png');
-    } else {
-        $(this).find('img').attr('src', 'assets/images/mobile/mob-i-volume.png');
-    }
-})

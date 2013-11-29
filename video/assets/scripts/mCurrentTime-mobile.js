@@ -1,3 +1,6 @@
+/*
+    currentTime Variable for Mobile
+*/
 var mCurrentTime = {
 	time:"0",
 	getTime: function(){

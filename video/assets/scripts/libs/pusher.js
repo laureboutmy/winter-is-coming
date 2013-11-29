@@ -26,7 +26,7 @@ var pusher = {
             //console.log(JSON.stringify(data));
         });
                 this.params.instance.subscribe(this.params.channel).bind('popinClose', function(data) {
-            $.('#mobile').removeClass('visible');
+            $('#mobile').removeClass('visible');
         });
        
     },

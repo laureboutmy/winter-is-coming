@@ -339,6 +339,7 @@
 <!-- SCRIPTS -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
+<script src="assets/scripts/libs/buzz.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-desktop.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>

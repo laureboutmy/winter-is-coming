@@ -59,6 +59,6 @@ var badges = {
 		for (badge in allBadges){
 			if(allBadges[badge]){ i ++ }
 		}
-		return i;
+		if(i > 1){ return i + ' badges'; } else { return i + ' badge'; }
 	}
 }

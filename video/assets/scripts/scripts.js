@@ -351,13 +351,15 @@ function displayPopin(e){
 // Badges initialization
 badges.init({
 	rendered: function(name){
-		console.log('badge ' + name + ' rendered');
 		$('.' + name).parent().addClass('claimed');
 		$('span.nb-badges').text(badges.getNumber());
 	},
 	claimed: function(name){
-		console.log('badge ' + name + ' claimed');
 		$('span.nb-badges').text(badges.getNumber());
+		$('div.notification').find('.badge').addClass(name);
+		$('div.notification').addClass('visible');
+		$('div.notification').delay(2000).queue(function(next) { $('div.notification').delay().removeClass('visible'); $('div.notification').find('.badge').removeClass(name); next(); })
+		
 	}
 });
 

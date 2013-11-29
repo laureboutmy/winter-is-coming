@@ -110,6 +110,7 @@ var timeline = {
 		}
 		
 		if(card.category == 'GIF'){ evtDiv.addClass('gif'); }
+		if(card.category == 'Visual FX'){ evtDiv.addClass('video'); }
 		card.displayed = true;
 
 		$(timeline.prop.timeline).prepend(evtDiv);

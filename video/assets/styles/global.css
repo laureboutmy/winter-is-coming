@@ -386,7 +386,7 @@ section#about.visible, section#mobile.visible { opacity: 1; z-index: 500; }
 section#mobile > div { width: 450px; position: absolute; top: 60px; left: 50%; margin-left: -225px; }
 section#mobile h2 { color: #666666; font-size: 1.500em; text-align: center; margin-bottom: 70px; }
 section#mobile img { display: block; margin: 0 auto; }
-section#about p { width: 640px; position: absolute; left: 50%; top: 0; margin-left: -320px; margin-top: 180px; color: #5d5d5d; font-size: 0.875em; line-height: 1.286em; font-weight: 300; letter-spacing: 0.071em; }
+section#about > p { width: 640px; position: absolute; left: 50%; top: 0; margin-left: -320px; margin-top: 180px; color: #5d5d5d; font-size: 0.875em; line-height: 1.286em; font-weight: 300; letter-spacing: 0.071em; }
 /* Badges */
 .badge { text-align: left; text-indent: -9999px; overflow: hidden; }
 .badge.big { background: url(../images/template/badges-big.png) no-repeat; margin: 0 auto; width: 181px; height: 156px; }

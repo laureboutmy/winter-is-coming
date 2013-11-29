@@ -181,6 +181,14 @@ function checkTime(currentTime) {
 	}
 }
 
+var sound = new buzz.sound("assets/audio/ramin-djawadi", {
+    formats: [ "mp3" ],
+    preload: true,
+    autoplay: false,
+    loop: true
+});
+
+
 /*
     Show Browser
 */
@@ -194,7 +202,9 @@ function showBrowser(e){
 	var url = $(this).data('url');
 
 	$('div.close-browser').addClass('visible');
-
+	if(sound.isPaused){
+		sound.play().setVolume(10);
+	}
 	if(!$('#wrapper-rel').hasClass('display-browser')){
 		$('#wrapper-rel').addClass('display-browser');
 		$('.close-browser').on('click', hideBrowser);
@@ -207,12 +217,14 @@ function showBrowser(e){
 		},
 		success: function(data){
 			$('#browser > div').html(data);
+
 		}
 	});
 	if($(this).hasClass('gif')){
 		$.getScript('assets/scripts/tumblr.js');
 		$.getScript('http://platform.tumblr.com/v1/share.js');
 	}
+	if($(this).hasClass('video')){ sound.stop(); }
 }
 
 /*
@@ -224,7 +236,9 @@ function hideBrowser(e){
 	$('div.close-browser').removeClass('visible');
 	$('#browser div.content').html('');
 	$('.close-browser').off('click', hideBrowser);
+	if(!sound.isPaused()){ sound.stop(); }
 	player.play();
+
 }
 
 /*

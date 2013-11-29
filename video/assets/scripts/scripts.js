@@ -426,7 +426,7 @@ $('#tweet-box textarea').on({
 	'keydown': countChar, 
 	'change': countChar
 });
-$('#player > div').on('mouseover', displayMenu);
+// $('#player > div').on('mouseover', displayMenu);
 $('a.about, a.mobile').on('click', displayPopin);
 
 $(document).on('keydown', function(e){ 

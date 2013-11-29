@@ -84,10 +84,10 @@ tweet.init({
 */
 $('header nav').on('click', 'a', changeWindow);
 
-$('ul#tweets').on('swipeleft', 'li.tweet', function(){
+$('ul#tweets').on('click', 'li.tweet', function(){
         $(this).find('div.actions').removeClass('visible');
     });
-$('ul#tweets').on('swiperight', 'li.tweet', function(){
+$('ul#tweets').on('click', 'li.tweet', function(){
         $(this).find('div.actions').addClass('visible');
     });
 $('#tweet-feed').on('click', 'button.reply', tweet.reply);

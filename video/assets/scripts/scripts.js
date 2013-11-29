@@ -248,7 +248,7 @@ function goToMarker(e){
 	e.preventDefault();
 	var key = $(this).data('key');
 	player.setTime(e, key);
-
+	console.log($('article.card[data-key=' + key + ']').offset());
 	$('#timeline div').animate({
 		scrollTop: $('article.card[data-key=' + key + ']').offset().top + 'px'
 	}, {

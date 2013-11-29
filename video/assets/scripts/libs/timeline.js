@@ -11,6 +11,7 @@ var timeline = {
 		this.prop = $.extend(this.params, options);
 	},
 
+	// Display cards in timeline 
 	render: function(card){
 
 		if(card.url){
@@ -128,6 +129,7 @@ var timeline = {
 
 	// },
 
+	// Add marker in progress bar 
 	addMarker: function(card){
 		var shortTitle = card.title.length;
 		if(shortTitle > 22){

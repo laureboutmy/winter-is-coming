@@ -30,6 +30,7 @@ function changeWindow(e){
     current = future;
 }
 
+// Twitter actions
 tweet.init({
 
     textarea: '#tweet-box textarea[name=tweet]',

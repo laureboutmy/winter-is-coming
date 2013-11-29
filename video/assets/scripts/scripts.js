@@ -10,6 +10,24 @@ if(localStorage.getItem('badgeDovecot') == null){
 var CURRENTTIME = 0;
 // $(".nano").nanoScroller();
 
+// Badges initialization
+badges.init({
+	rendered: function(name){
+		$('.' + name).parent().addClass('claimed');
+		$('span.nb-badges').text(badges.getNumber());
+	},
+	claimed: function(name){
+		$('span.nb-badges').text(badges.getNumber());
+		$('div.notification').find('.badge').addClass(name);
+		$('div.notification').addClass('visible');
+		$('div.notification').delay(4000).queue(function(){ 
+			$('div.notification').removeClass('visible').delay(4000).queue(function(){ 
+				$('div.notification').find('.badge').removeClass(name);
+			}) 
+		})
+		
+	}
+});
 // Video initialization
 player.init({
 	video: '#video',
@@ -348,18 +366,6 @@ function displayPopin(e){
 	});
 }
 
-// Badges initialization
-badges.init({
-	rendered: function(name){
-		console.log('badge ' + name + ' rendered');
-		$('.' + name).parent().addClass('claimed');
-		$('span.nb-badges').text(badges.getNumber());
-	},
-	claimed: function(name){
-		console.log('badge ' + name + ' claimed');
-		$('span.nb-badges').text(badges.getNumber());
-	}
-});
 
 // Facebook Custom Actions Initialization
 mood.init({
@@ -426,7 +432,7 @@ $('#tweet-box textarea').on({
 	'keydown': countChar, 
 	'change': countChar
 });
-$('#player > div').on('mouseover', displayMenu);
+// $('#player > div').on('mouseover', displayMenu);
 $('a.about, a.mobile').on('click', displayPopin);
 
 $(document).on('keydown', function(e){ 

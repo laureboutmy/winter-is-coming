@@ -70,9 +70,7 @@
 		</form>
 	</div>
 	<div id="tweet-feed">
-		<ul id="tweets">
-			
-		</ul>
+		<ul id="tweets"></ul>
 	</div>
 </section>
 <!-- SCRIPTS -->

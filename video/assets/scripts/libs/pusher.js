@@ -1,7 +1,7 @@
 var pusher = {
     params: {
         channel: window.location.hash.substring(1),
-        path: "/winter-is-coming/video/assets/pusher/mobile.php",
+        path: "assets/pusher/mobile.php",
         instance: new Pusher('d6d5c184ca85e911a2df')
     },
     listen: function() {

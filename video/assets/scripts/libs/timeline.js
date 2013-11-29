@@ -11,7 +11,6 @@ var timeline = {
 		this.prop = $.extend(this.params, options);
 	},
 
-	// Cards creation by categories
 	render: function(card){
 
 		if(card.url){
@@ -129,10 +128,13 @@ var timeline = {
 
 	// },
 
-	// Add marker in progress bar
 	addMarker: function(card){
 		var shortTitle = card.title.length;
-		if(shortTitle > 22){ shortTitle = card.title.substring(0,22) + '...'; } else { shortTitle = card.title; }
+		if(shortTitle > 22){
+			shortTitle = card.title.substring(0,22) + '...';
+		} else {
+			shortTitle = card.title;
+		}
 		var evtMarker = $('<a>').addClass('marker').attr('href', '#').attr('data-key', card.displayTime).append($('<span>').addClass('gradient').text(''));
 		if(card.title && card.imgMarker && card.category && card.time){
 			var tooltip = $('<div>').addClass('tooltip').append(

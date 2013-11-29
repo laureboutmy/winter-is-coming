@@ -10,7 +10,6 @@ if(localStorage.getItem('badgeDovecot') == null){
 var CURRENTTIME = 0;
 // $(".nano").nanoScroller();
 
-
 // Video initialization
 player.init({
 	video: '#video',
@@ -65,7 +64,7 @@ function setWidth(){
 }
 setWidth();
 
-// Enter fullscreen 
+// Enter fullscreen
 var isFullscreen = false;
 function enterFullscreen() {
 	var element = document.documentElement;
@@ -109,7 +108,7 @@ function changeSidebar(e){
 	} else if(futureSidebar == 'badges'){
 		$('#badges').addClass('visible');
 		$('#sidebar nav i.badges').addClass('current');
-	}
+	} 
 
 	if($('#tweet-box').hasClass('focused') && $('#tweet-box textarea').val().length == 0){ $('#tweet-box').removeClass('focused'); }
 	currentSidebar = futureSidebar;
@@ -118,20 +117,20 @@ function changeSidebar(e){
 // Jsonp
 var cards = cards;
 
-// Timeline initialization
+// Timeline initialisation
 timeline.init({
 	timeline: '#timeline .content',
 	rendered: function(){
-		console.log('displayed');
 		$('#timeline div.wait').addClass('hidden');
 		window.setTimeout(function(){
 			$('#timeline article.card.hidden, #timeline article.card.facebook.hidden, #timeline article.card.soundtrack.hidden, #timeline article.card.stats.hidden').removeClass('hidden');
+
 		}, 200);
 	}
 });
 
 
-// Link between the video and the cards
+// Link betweet the video and the cards
 function checkTime(currentTime) {
 	for (key in cards) {
 		var card = cards[key];
@@ -183,7 +182,6 @@ function hideBrowser(e){
 	player.play();
 }
 
-
 function goToMarker(e){
 	e.preventDefault();
 	var key = $(this).data('key');
@@ -196,7 +194,6 @@ function goToMarker(e){
 		easing: 'swing'
 	});
 }
-
 if(signedInTwitter){
 	$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 	$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
@@ -207,7 +204,6 @@ if(signedInTwitter){
 	$("#twitter-connect").hide();
 	$("#user").show();
 	$("#tweet-box").show();
-	$("#tweet-feed .content").show();
 	$('.tweets').tweetMachine('#GoT');
 	$("#tweet-feed .content").show();
 } else {
@@ -222,7 +218,7 @@ function twitterSignIn(e){
 		path: 'assets/twitter/twitterConnect.php',
 		callback: function(){
 			$.ajax({
-				url: 'http://laureboutmy.com/winter-is-coming/video/assets/twitter/responseConnect.php', 
+				url: 'assets/twitter/responseConnect.php', 
 				success: function(response) { 
 					$('#landing-page #unlock-badges .sign-in').addClass('hidden');
 					$('#landing-page #unlock-badges .signed-in').removeClass('hidden');
@@ -247,6 +243,7 @@ function twitterSignIn(e){
 		}
 	});
 }
+
 
 // Tweet actions initialization
 tweet.init({
@@ -330,16 +327,16 @@ function launchPlayer(e){
 	});
 }
 
-// function displayMenu(){
-// 	$('#main nav.menu').addClass('visible');
-// 	$('#main nav.menu').on('mouseover', function(){
-// 		window.clearTimeout(timeout);
-// 	});
-// 	var timeout = window.setTimeout(function(){
-// 		$('#main nav.menu').removeClass('visible');
-// 		$('#main nav.menu').off('mouseover');
-// 	}, 2000)
-// }
+//function displayMenu(){
+//	$('#main nav.menu').addClass('visible');
+//	$('#main nav.menu').on('mouseover', function(){
+//		window.clearTimeout(timeout);
+//	});
+//	var timeout = window.setTimeout(function(){
+//		$('#main nav.menu').removeClass('visible');
+//		$('#main nav.menu').off('mouseover');
+//	}, 2000)
+//}
 
 // Display and hide popin
 function displayPopin(e){
@@ -393,9 +390,9 @@ $('#timeline').on('click', 'ul.mood li', function(e){
 // Mobile, pusher
 pusher.subscribe('desktop');
 
-// Get session id and send it to mobile
+// Get session id to send it to mobile
 function getSessionId(){
-    var filePath = "/winter-is-coming/video/assets/qrcode/getSessionId.php";
+    var filePath = "assets/qrcode/getSessionId.php";
     xmlhttp = new XMLHttpRequest();
     xmlhttp.overrideMimeType('text/plain');
     xmlhttp.open("GET",filePath,false);
@@ -440,3 +437,18 @@ $(document).on('keydown', function(e){
 	}
 });
 
+// $('#timeline').on('click', 'ul.mood li', function(e){
+// 	var moodId = $(e.target).parent().attr("data-moodId");
+// 	console.log(moodId);
+// 	FB.getLoginStatus(function(response) {
+// 	  if (response.status === 'connected') {
+// 	  	mood.shareMood($(e.target).attr('data-mood'));
+// 	  	$("#timeline ul.mood[data-moodId='"+moodId+"']").children().addClass('disabled');
+// 	  	$("#timeline ul.mood li.disabled").on('click',function(){
+// 	  		return false;
+// 	  	});
+// 	  } else {
+// 	    FB.login(handleSessionReponse, {scope: scope});
+// 	  }
+// 	});
+// });

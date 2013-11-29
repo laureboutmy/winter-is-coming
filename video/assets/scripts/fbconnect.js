@@ -8,6 +8,10 @@ FB.init({
 	xfbml : true
 });
 
+/*
+	Sign in with twitter
+	And request for Publish Actions
+*/
 FB.getLoginStatus(handleSessionReponse);
 
 $("a.sign-in-facebook").on('click', function(){

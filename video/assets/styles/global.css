@@ -1,5 +1,5 @@
 /* @group Global */
-body { background: #000; color: #fff; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; }
+body { background: #000; color: #fff; font-weight: 300; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 a, a:link, a:active, a:visited { color: #fff; text-decoration: none; }
 .clear { clear: both; }
 .wrapper { width: 960px; margin: 0 auto; }

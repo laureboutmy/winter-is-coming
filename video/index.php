@@ -19,14 +19,6 @@
 	<meta name="description" content="">
 	<meta name="robots" content="index, follow" />
 
-	<!-- OPEN GRAPH -->
-	<meta property="fb:app_id" content="452234728214767" /> 
-    <meta property="og:type"   content="gotplayer:got_episode" /> 
-    <meta property="og:url"    content="http://winter-is-coming.dev:8888/video/" /> 
-    <meta property="og:title"  content="The Rains of Castamere" /> 
-    <meta property="og:image"  content="http://doriancamilleri.fr/player/customActionsHome/img/hodor.png" /> 
-	<!-- /OPEN GRAPH -->
-
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!--[if lt IE 9]>
@@ -38,7 +30,7 @@
 	<link rel="icon" href="assets/images/favicon.ico" />
 	<!-- /Favicon -->
 
-	<!-- STYLESHEETS -->      
+	<!-- STYLESHEETS -->  
 	<link href="assets/styles/reset.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/nanoscroller.css" rel="stylesheet" type="text/css" /> 
 	<link href="assets/styles/fonts.css" rel="stylesheet" type="text/css" />
@@ -104,7 +96,7 @@
 					<a class="sign-in-twitter"><i class="twitter"></i>Sign in with Twitter</a>
 				</div>
 				<div class="signed-in hidden">
-					<h2><span>Welcome.</span>
+					<h2><span class="welcome">Welcome.</span>
 					You’ve unlocked <span class="nb-badges">1 badge</span>, congrats!</h2>
 
 					<a href="#" class="sign-in-facebook"><i class="facebook"></i>Sign in with Facebook</a>
@@ -346,7 +338,6 @@
 <div id="fb-root"></div>
 
 <!-- SCRIPTS -->
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>

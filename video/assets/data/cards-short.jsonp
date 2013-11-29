@@ -125,7 +125,7 @@ cards = [
 		"displayed": false,
 		"displayTime": 2*60+49,
 		"category": "Visual FX",
-		"title": "The Twins Bridge",
+		"title": "The Twins Bridge VFX",
 		"description": "Watch the Twins Bridge appear from nowhere.",
 		"cta": "Watch",
 		"browser": true,

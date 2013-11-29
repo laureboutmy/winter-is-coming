@@ -1,5 +1,5 @@
 var pusher = {
-   
+// Pusher params
     params: {
         channel: window.location.hash.substring(1),
         path: "assets/pusher/mobile.php",
@@ -11,7 +11,7 @@ var pusher = {
     init: function(options){
         this.prop = $.extend(this.params, options);
     },
-
+// Pusher event listeners
     listen: function() {
         this.params.instance.subscribe(this.params.channel).bind('play', function(data) {
             player.playPause();
@@ -30,6 +30,7 @@ var pusher = {
         });
        
     },
+// Creating a RFC-compliant GUID/UUID, used as a Pusher channel.
     createGuid: function() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             var r = Math.random() * 16 | 0,
@@ -37,6 +38,7 @@ var pusher = {
             return v.toString(16);
         });
     },
+// Action code triggering Pusher PHP library
     action: function(action, message) {
         $.ajax({
             url: this.params.path,
@@ -46,6 +48,7 @@ var pusher = {
             }
         });
     },
+// Action code for timeActions
     timeAction: function(action, message) {
         $.ajax({
             url: this.params.path,
@@ -57,6 +60,7 @@ var pusher = {
         });
     },
     
+// Connect to Pusher. On desktop we're creating a GUID then using it as a channel. On mobile, we're using the channel stored previously on desktop.
     subscribe: function(platform) {
 
         if (platform == 'mobile') {

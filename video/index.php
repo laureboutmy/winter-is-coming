@@ -19,14 +19,6 @@
 	<meta name="description" content="">
 	<meta name="robots" content="index, follow" />
 
-	<!-- OPEN GRAPH -->
-	<meta property="fb:app_id" content="452234728214767" /> 
-    <meta property="og:type"   content="gotplayer:got_episode" /> 
-    <meta property="og:url"    content="http://winter-is-coming.dev:8888/video/" /> 
-    <meta property="og:title"  content="The Rains of Castamere" /> 
-    <meta property="og:image"  content="http://doriancamilleri.fr/player/customActionsHome/img/hodor.png" /> 
-	<!-- /OPEN GRAPH -->
-
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!--[if lt IE 9]>

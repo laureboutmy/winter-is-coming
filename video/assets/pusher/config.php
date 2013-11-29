@@ -1,4 +1,7 @@
 <?php
+/*
+    Initialize Pusher Constants
+*/
 error_reporting(E_ALL);
 
 define('APP_KEY', 'd6d5c184ca85e911a2df');

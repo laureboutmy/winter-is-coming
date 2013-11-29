@@ -1,16 +1,24 @@
+/*
+    Initialize pusher values
+    To get currentTime from Desktop
+*/
+
 pusher.subscribe("mobile");
 
-        pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
-            mCurrentTime.time=data;
-            //console.log(data);
-            //console.log(data.message);
-            //console.log(mCurrentTime.time);
-            //mCurrentTime.sendTime();
-            //pusher.action('sendTime')
-            //console.log(JSON.stringify(data));
-        });
+pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
+    mCurrentTime.time=data;
+    //console.log(data);
+    //console.log(data.message);
+    //console.log(mCurrentTime.time);
+    //mCurrentTime.sendTime();
+    //pusher.action('sendTime')
+    //console.log(JSON.stringify(data));
+});
 
-
+/*
+    Change Window 
+    From Remote to Tweets
+*/
 var current = 'remote';
 function changeWindow(e){
     e.preventDefault();
@@ -30,7 +38,9 @@ function changeWindow(e){
     current = future;
 }
 
-// Twitter actions
+/*
+    Twitter Actions on Mobile
+*/
 tweet.init({
 
     textarea: '#tweet-box textarea[name=tweet]',
@@ -67,6 +77,10 @@ tweet.init({
     }
 })
 
+
+/*
+    Mobile Listeners
+*/
 $('header nav').on('click', 'a', changeWindow);
 
 $('ul#tweets').on('swipeleft', 'li.tweet', function(){

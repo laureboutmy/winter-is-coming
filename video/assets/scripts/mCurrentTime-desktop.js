@@ -1,3 +1,6 @@
+/*
+    currentTime Variable for Desktop
+*/
 var mCurrentTime = {
 	time:'',
 	sendTime: function(){

@@ -4,6 +4,7 @@
 */
 
 pusher.subscribe("mobile");
+pusher.action('closePopin');
 
 pusher.params.instance.subscribe(pusher.params.channel).bind('sendTime', function(data) {
     mCurrentTime.time=data;

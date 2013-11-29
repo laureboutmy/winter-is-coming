@@ -163,10 +163,10 @@
 				</ul>
 			</nav>
 			<section id="player">
-				<div class="notification visible">
-					<div class="badge savant mini"></div>
+				<div class="notification">
+					<div class="badge mini"></div>
 					<h3>Congrats!</h3>
-					<p>You’ve just added the “Couch Potatoe” badge to your collection.</p>
+					<p>You’ve just added a badge to your collection.</p>
 				</div>
 				<video id="video" class="hidden" preload="none">
 					<source src="assets/videos/video.mp4" type="video/mp4">
@@ -328,8 +328,9 @@
 <div id="fb-root"></div>
 
 <!-- SCRIPTS -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="assets/scripts/libs/jquery.nanoscroller.min.js"></script>
 <script src="assets/scripts/libs/jquery.tweetMachine-desktop.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>

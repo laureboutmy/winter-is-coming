@@ -6,7 +6,7 @@ countdown.init({
 	days : 0,
 	hours : 0,
 	minutes : 0,
-	seconds : 1,
+	seconds : 10,
 	//-----------------------//
 
 	fadeCountDown : function(){
